@@ -15,3 +15,4 @@ figures/*.bak
 _region_.*
 prv_*
 *.backup
+*.zip
