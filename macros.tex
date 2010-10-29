@@ -1,0 +1,151 @@
+% operators
+ 
+\DeclareMathOperator{\divergence}{div}
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\Asym}{Asym}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\esssup}{ess\, sup}
+\DeclareMathOperator{\signum}{sgn}
+\DeclareMathOperator{\diam}{diam}
+
+\newcommand{\distxy}[2]{\ensuremath{\dist \left(#1, #2\right)}}
+
+% predicates
+\newcommand{\crit}{\mathrm{crit}}
+\newcommand{\define}{\mathrm{def}}
+
+% derivatives
+\newcommand{\diff}{\mathrm{d}}
+
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\tensor}[1]{\ensuremath{{\mathbb{#1}}}}
+
+\newcommand{\transpose}[1]{{#1}^\top}
+
+% Identity matrix
+\newcommand{\identity}{\ensuremath{\tensor{I}}}
+
+% Cauchy stress
+\newcommand{\cstress}{\tensor{T}}
+
+% deviatoric part of Caychy stress
+\newcommand{\dcstress}{\cstress - \left( \frac{1}{3}\Tr \cstress \right) \identity}
+
+% velocity
+\newcommand{\vv}{\ensuremath{\vec{v}}}
+
+% velocity gradient
+\newcommand{\gradv}{\ensuremath{\nabla \vv}}
+
+% skewsymmetric part of velocity gradient
+\newcommand{\gradasym}{\ensuremath{ \tensor{W}}}
+
+% symmetric part of velocity gradient
+\newcommand{\gradsym}{\ensuremath{ \tensor{D}}}
+
+% base vectors
+\newcommand{\bvecx}{\vec{e}_x}
+\newcommand{\bvecy}{\vec{e}_y}
+
+\newcommand{\bvecr}{\vec{e}_r}
+\newcommand{\bvect}{\vec{e}_{\theta}}
+\newcommand{\bvecz}{\vec{e}_z}
+
+% hypergeometric function
+\newcommand{\hypergeom}[4]{\ensuremath{ \mathrm{F}\left( \left[#1, #2 \right]; \left[ #3 \right]; #4\right)}}
+
+% sets
+\newcommand{\R}{\ensuremath{{\mathbb R}}}
+\newcommand{\C}{\ensuremath{{\mathbb C}}}
+\newcommand{\Q}{\ensuremath{{\mathbb Q}}}
+\newcommand{\N}{\ensuremath{{\mathbb N}}}
+\newcommand{\Z}{\ensuremath{{\mathbb Z}}}
+
+%\newcommand{\complement}[1]{\ensuremath{{#1}^c}}
+\newcommand{\closure}[1]{\ensuremath{\overline{#1}}}
+
+\newcommand{\dm}{\ensuremath{d}}
+\newcommand{\Rdim}{\ensuremath{\R^{\dm}}}
+
+
+% intervals
+\newcommand{\oi}[2]{\left(#1,#2\right)}
+\newcommand{\ui}[2]{\left[#1,#2\right]}
+\newcommand{\lui}[2]{\left[#1,#2\right)}
+\newcommand{\pui}[2]{\left(#1,#2\right]}
+
+% function spaces
+\newcommand{\CC}{\ensuremath{{\mathcal C}}}
+
+\newcommand{\hFce}[3]{\ensuremath{H_{#1,#2}(#3)}}
+\newcommand{\krL}{\mathcal{L}}
+
+% Lebesgue and Sobolev spaces
+\newcommand{\Sob}[3]{\ensuremath{W^{{#1},{#2}}\left( {#3} \right)}}
+\newcommand{\SobKP}[1][\Omega]{\Sob{k}{p}{#1}}
+\newcommand{\nSob}[4]{\ensuremath{\norm{#1}_{\Sob{#2}{#3}{#4}}}}
+\newcommand{\nSobKP}[1][\cdot]{\nSob{#1}{k}{p}{\Omega}}
+
+\newcommand{\Leb}[3][]{\ensuremath{L^{#2}_{#1} \left( {#3} \right)}}
+\newcommand{\LebP}[1][\Omega]{\Leb{p}{#1}}
+\newcommand{\nLeb}[3]{\ensuremath{\norm{#1}_{\Leb{#2}{#3}}}}
+\newcommand{\nLebP}[1][\cdot]{\nLeb{#1}{p}{\Omega}}
+
+\newcommand{\BMO}[1]{\ensuremath{BMO(#1)}}
+
+% Reynolds number
+\newcommand{\Reynolds}{\mathrm{Re}}
+
+% Integrals
+\newcommand{\newtonInt}{(N) \int}
+\newcommand{\riemannInt}{(R)\int}
+\newcommand{\lebInt}{(L)\int}
+\newcommand{\kurzweilInt}{(HK)\int}
+
+% convergence
+\newcommand{\ssto}{\rightrightarrows}
+\newcommand{\wto}{\rightharpoonup}
+\newcommand{\wsto}{\stackrel{*}{\rightharpoonup}}
+
+
+% scalar product, duality 
+\newcommand{\scalarProduct}[2]{\left(#1,#2\right)}
+\newcommand{\dual}[2]{\left\langle#1,#2\right\rangle}
+
+% domanin, kernel range 
+\newcommand{\range}{\ensuremath{{\mathcal R}}}
+\newcommand{\kernel}{\ensuremath{{\mathcal N}}}
+\newcommand{\domain}{\ensuremath{{\mathcal D}}}
+
+\newcommand{\da}[1][A]{\domain \left(#1\right)}
+\newcommand{\alam}{A_{\lambda}}
+
+% linear operators on X 
+\newcommand{\lx}{\mathcal{L}(X)} 
+\newcommand{\nlx}[1]{\| #1 \|_{\lx}}
+
+% norm
+\newcommand{\norm}[1]{\left\| #1 \right\|}
+\newcommand{\nx}[1]{\norm{#1}_{X}} 
+
+% resolvent
+\newcommand{\reza}[2][\lambda]{R_{#1}(#2)}
+\newcommand{\rez}[1][\lambda]{R_{#1}}
+\newcommand{\rhoa}[1][A]{\rho(#1)} % resolvent set
+
+% spectrum
+\newcommand{\siga}[1][A]{\sigma(#1)}
+\newcommand{\sigpa}[1][A]{\sigma_p(#1)} % point
+\newcommand{\sigca}[1][A]{\sigma_c(#1)} % continuous
+\newcommand{\sigra}[1][A]{\sigma_r(#1)} % residual
+
+\newcommand{\srad}{r_\sigma(A)} % spectral radius
+
+% limits and sums
+\newcommand{\limnek}{\lim_{n \rightarrow +\infty}} 
+\newcommand{\sumnek}{\sum_{n=1}^{+\infty}} 
+
+
+

@@ -1,0 +1,277 @@
+%\makeatletter
+% \@ifpackageloaded{tensor}% tensor is a package for a better typesetting of tensors
+% {
+% \renewcommand{\tnsr@Aux}[3][]{%
+% \mathpalette{\tnsr@Plt{#1}{#3}}{\mathrm #2}%
+% \tnsr@Wrn
+% }%\tnsr@Aux
+% }{%
+% \relax%
+% }
+% \makeatother
+
+
+% operators
+\DeclareMathOperator{\divergence}{div}
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\Asym}{Asym}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\signum}{sign}
+\DeclareMathOperator{\supp}{supp}
+
+
+% hyperbolic functions
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arccoth}{arccoth}
+
+% big o
+\newcommand{\bigo}[1]{\ensuremath{O\left(#1 \right)}}
+\newcommand{\smallo}[1]{\ensuremath{o\left(#1 \right)}}
+
+% exponential
+\newcommand{\exponential}[1]{\ensuremath{{\mathrm e}^{#1}}}
+
+% imaginary unit
+\newcommand{\iunit}{\ensuremath{\mathrm{i}}}
+
+
+% real and imaginary part
+\newcommand{\realp}{\mathrm{real}}
+\newcommand{\imagp}{\mathrm{imag}}
+
+%\newcommand{\Real}{\Re}
+%\newcommand{\Imag}{\Im}
+\providecommand{\Real}{\Re}
+\providecommand{\Imag}{\Im}
+
+
+% predicates
+\newcommand{\reference}{\mathrm{ref}}
+\newcommand{\crit}{\mathrm{crit}}
+\newcommand{\bydefinition}{\mathrm{def}}
+
+% derivatives
+\newcommand{\diff}{\mathrm{d}}
+
+% body
+\newcommand{\body}{{\mathcal B}}
+
+% vectors and tensors
+\renewcommand{\vec}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\greekvec}[1]{\ensuremath{\boldsymbol{#1}}}
+\newcommand{\tensorq}[1]{\ensuremath{\mathbb{#1}}}
+
+\newcommand{\transpose}[1]{#1^\top}
+\newcommand{\transposei}[1]{#1^{-\top}}
+\newcommand{\inverse}[1]{#1^{-1}}
+
+% Identity matrix
+\newcommand{\identity}{\ensuremath{\tensorq{I}}}
+
+% Cauchy stress
+\newcommand{\cstress}{\tensorq{T}}
+\newcommand{\cstressc}{\ensuremath{\mathrm T}}
+
+\newcommand{\ecstress}{\tensorq{S}}
+\newcommand{\ecstressc}{\ensuremath{\mathrm S}}
+
+% deformation, deformation gradient
+\newcommand{\deformation}{\greekvec{\chi}}
+\newcommand{\fgrad}{\tensorq{F}}
+\newcommand{\fgradrel}[3][]{\fgrad^{#1}_{#2}\left(#3\right)}
+
+
+\newcommand{\rcg}{\tensorq{C}}
+\newcommand{\rcgrel}[3][]{\rcg^{#1}_{#2}\left(#3\right)}
+
+\newcommand{\lcg}{\tensorq{B}}
+\newcommand{\lcgrel}[3][]{\lcg^{#1}_{#2}\left(#3\right)}
+
+\newcommand{\rotation}{\tensorq{R}}
+\newcommand{\rotationrel}[3][]{\rotation^{#1}_{#2}\left(#3\right)}
+
+\newcommand{\stretchu}{\tensorq{U}}
+\newcommand{\stretchurel}[3][]{\stretchu^{#1}_{#2}\left(#3\right)}
+
+% Rivlin-Ericksen tensor
+\newcommand{\rivlin}{{\tensorq{A}}}
+
+% deviatoric part of Cauchy stress
+\newcommand{\dcstress}{\cstress - \left( \frac{1}{3}\Tr \cstress \right) \identity}
+\newcommand{\dcstresssymb}{\cstress_{\delta}}
+
+% mean normal stress
+\newcommand{\cstressnorm}{\frac{1}{3}\Tr \cstress}
+
+% velocity and velocity gradient, (skew)symmetric part of velocity gradient
+\newcommand{\vecv}{\ensuremath{\vec{v}}}
+\newcommand{\gradv}{\ensuremath{\nabla \vecv}}
+\newcommand{\gradasym}{\ensuremath{\tensorq{W}}}
+\newcommand{\gradsym}{\ensuremath{\tensorq{D}}}
+\newcommand{\dgradsymsymb}{\ensuremath{\gradsym_{\delta}}}
+\newcommand{\gradvl}{\ensuremath{ \tensorq{L}}}
+
+\newcommand{\vecvc}{\mathrm{v}}
+
+% velocity and velocity gradient, (skew)symmetric part of velocity gradient, COMPONENTS
+\newcommand{\gradsymc}{\ensuremath{\mathrm D}}
+
+% functionals
+\newcommand{\functional}[1]{{\mathfrak #1}}
+\newcommand{\history}[3]{{\functional{#1}_{#2}^{#3}}}
+
+% base vectors
+\newcommand{\bvecx}{\vec{e}_{\hat{x}}}
+\newcommand{\bvecy}{\vec{e}_{\hat{y}}}
+%\newcommand{\bvecz}{\vec{e}_{\hat{z}}}
+
+\newcommand{\bvecr}{\vec{e}_{\hat{r}}}
+\newcommand{\bvect}{\vec{e}_{\hat{\theta}}}
+\newcommand{\bvecp}{\vec{e}_{\hat{\varphi}}}
+\newcommand{\bvecz}{\vec{e}_{\hat{z}}}
+
+% components
+\newcommand{\vhatx}[1][v]{{#1}^{\hat{x}}}
+\newcommand{\vhaty}[1][v]{{#1}^{\hat{y}}}
+%\newcommand{\bvhatz}{\vhat{e}_{\hat{z}}}
+
+\newcommand{\vhatr}[1][v]{{#1}^{\hat{r}}}
+\newcommand{\vhatt}[1][v]{{#1}^{\hat{\theta}}}
+\newcommand{\vhatp}[1][v]{{#1}^{\hat{\varphi}}}
+\newcommand{\vhatz}[1][v]{{#1}^{\hat{z}}}
+
+% base vectors, abstract covariant and contravariant basis
+\newcommand{\cobvec}[1]{\vec{g}_{#1}} % covariant base vector
+\newcommand{\conbvec}[1]{\vec{g}^{#1}} % contravariant base vector
+\newcommand{\cobvecn}[1]{\vec{g}_{\hat{#1}}} % covariant base vector
+\newcommand{\conbvecn}[1]{\vec{g}^{\hat{#1}}} % contravariant base vector
+
+\newcommand{\mtensor}{\tensorq{g}}
+\newcommand{\mtensorc}{{\mathrm g}}
+
+% hypergeometric function
+\newcommand{\hypergeom}[4]{\ensuremath{ \mathrm{F}\left( \left[#1, #2 \right]; \left[ #3 \right]; #4\right)}}
+
+% sets
+\newcommand{\R}{\ensuremath{{\mathbb R}}}
+\makeatletter
+\@ifpackageloaded{hyperref}% \C is defined in hyperref package
+{\renewcommand{\C}{\ensuremath{{\mathbb C}}}%
+}{%
+\newcommand{\C}{\ensuremath{{\mathbb C}}}%
+}
+\makeatother
+\newcommand{\Q}{\ensuremath{{\mathbb Q}}}
+\newcommand{\N}{\ensuremath{{\mathbb N}}}
+\newcommand{\Z}{\ensuremath{{\mathbb Z}}}
+
+% Reynolds, Womersley number, etc.
+\newcommand{\Reynolds}{\mathrm{Re}}
+\newcommand{\Womersley}{\mathrm{Wo}}
+\newcommand{\Rayleigh}{\mathrm{Ra}}
+\newcommand{\RayleighSqrt}{\mathrm{R}}
+\newcommand{\Prandtl}{\mathrm{Pr}}
+\newcommand{\Grashof}{\mathrm{Gr}}
+\newcommand{\Mach}{\mathrm{Ma}}
+\newcommand{\Froude}{\mathrm{Fr}}
+\newcommand{\Peclet}{\mathrm{Pe}}
+\newcommand{\Eckert}{\mathrm{Ec}}
+\newcommand{\Brinkman}{\mathrm{Br}}
+
+
+% Symetric and antisymetric tensors
+\newcommand{\asym}[1]{\ensuremath{\Asym \left( #1 \right)}}
+\newcommand{\sym}[1]{\ensuremath{\Sym \left( #1 \right)}}
+
+% Energy, free energy, entropy, temperature
+\newcommand{\ienergy}{\ensuremath{e}}
+\newcommand{\fenergy}{\ensuremath{\psi}} % free energy
+\newcommand{\entropy}{\ensuremath{\eta}} % entropy
+\newcommand{\temp}{\ensuremath{\theta}} % temperature
+\newcommand{\temptoref}{\ensuremath{\vartheta}} % (temperature - reference temperature)/(reference temperature)
+
+
+% Derivatives, partial derivatives, covariant derivatives 
+\newcommand{\pd}[2]{\ensuremath{\frac{\partial {#1}}{\partial {#2}}}}
+\newcommand{\ppd}[2]{\ensuremath{\frac{\partial^2 {#1}}{\partial {#2^2}}}}
+\newcommand{\dd}[2]{\ensuremath{\frac{\diff {#1}}{\diff {#2}}}}
+\newcommand{\cd}[2]{\ensuremath{\frac{\diff^* {#1}}{\diff {#2}}}}
+\newcommand{\ddd}[2]{\ensuremath{\frac{\diff^2 {#1}}{\diff {#2}^2}}}
+
+
+\newcommand{\fid}[1]{\ensuremath{\accentset{\triangledown}{#1}}}
+\newcommand{\fidd}[1]{\ensuremath{\accentset{\triangledown \! \triangledown}{#1}}}
+
+\makeatletter
+\@ifpackageloaded{tensor}% tensor is a package for a better typesetting of tensors
+{
+\newcommand{\codev}[2]{\ensuremath{{#1}|\indices{_{#2}}}}
+}{%
+\newcommand{\codev}[2]{\ensuremath{\left. {#1} \right|_{#2}}}
+}
+\makeatother
+
+
+% Bessel and Kelvin functions
+
+\newcommand{\BesselI}[2]{\ensuremath{{\mathrm I}_{#1}\left(#2\right)}} 
+\newcommand{\BesselK}[2]{\ensuremath{{\mathrm K}_{#1}\left(#2\right)}}
+\newcommand{\BesselJ}[2]{\ensuremath{{\mathrm J}_{#1}\left(#2\right)}}
+\newcommand{\BesselY}[2]{\ensuremath{{\mathrm Y}_{#1}\left(#2\right)}}
+
+\newcommand\BesselRoot[2]{\ensuremath{{\rm j}_{#1,#2}}}
+
+\newcommand{\KelvinBer}[2]{\ensuremath{{\mathrm{ber}}_{#1}\left(#2\right)}} 
+\newcommand{\KelvinBei}[2]{\ensuremath{{\mathrm{bei}}_{#1}\left(#2\right)}}
+\newcommand{\KelvinKer}[2]{\ensuremath{{\mathrm{ker}}_{#1}\left(#2\right)}}
+\newcommand{\KelvinKei}[2]{\ensuremath{{\mathrm{kei}}_{#1}\left(#2\right)}}
+
+% Chebyshev polynominals
+\newcommand{\Chebyshev}[2]{\ensuremath{{\mathrm T}_{#1}\left(#2\right)}} 
+
+
+% norms
+\newcommand{\norm}[2][]{\ensuremath{\left\|#2\right\|_{#1}}}
+
+% volume
+\makeatletter
+\@ifundefined{volume}{%
+\newcommand{\volume}[1][\Omega]{\ensuremath{#1}}}%
+{%
+\renewcommand{\volume}[1][\Omega]{\ensuremath{#1}}}
+\makeatother
+
+\newcommand{\svolume}[1][\Omega]{\ensuremath{\partial #1}}
+
+% volume and surface integral
+\newcommand{\intvolume}[2][\volume]{\int_{#1} #2\; \diff \vec{x}}
+\newcommand{\intsvolume}[2][\svolume]{\int_{#1} #2\; \diff \vec{S}}
+
+
+% products
+\newcommand{\tensortensor}[2]{\ensuremath{#1 \otimes #2}}
+\newcommand{\tensordot}[2]{\ensuremath{#1 : #2}}
+\newcommand{\vectordot}[2]{\ensuremath{#1 \bullet #2}}
+\newcommand{\vectorcross}[2]{\ensuremath{#1 \times #2}}
+
+% function spaces
+\newcommand{\scont}[2][\Omega]{\ensuremath{{\mathcal C}^{#2} \left(#1 \right)}}
+\newcommand{\sdist}[1][\Omega]{\ensuremath{{\mathcal D} \left(#1 \right)}}
+\newcommand{\sdistd}[1][\Omega]{\ensuremath{{\mathcal D}^\prime \left(#1 \right)}}
+
+\newcommand{\scdiv}[1][\Omega]{\ensuremath{{\mathcal V} \left(#1 \right)}}
+
+\newcommand{\loc}{\mathrm{loc}}
+
+\newcommand{\slebl}[2]{\ensuremath{L}^{#1}_{\loc} \left(#2 \right)}
+\newcommand{\sleb}[2]{\ensuremath{L}^{#1} \left(#2 \right)}
+
+
+\newcommand{\ssob}[3]{\ensuremath{W}^{#1, #2} \left(#3 \right)}
+
+% dualities, scalar products
+\newcommand{\fadual}[4]{\left\langle #1, #2\right\rangle_{#3, #4}}
+\newcommand{\fascal}[4]{\left\langle #1, #2\right\rangle_{#3, #4}}

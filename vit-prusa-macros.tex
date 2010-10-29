@@ -1,0 +1,240 @@
+% operators
+\DeclareMathOperator{\divergence}{div}
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\Asym}{Asym}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Tr}{Tr}
+
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arccosh}{arccosh}
+
+% big o
+\newcommand{\bigo}[1]{\ensuremath{{\mathcal O}\left(#1 \right)}}
+
+% exponential
+\newcommand{\exponential}[1]{\ensuremath{{\mathrm e}^{#1}}}
+
+% imaginary unit
+\newcommand{\iunit}{\mathrm{i}}
+
+% real and imaginary part
+\newcommand{\realp}{\mathrm{real}}
+\newcommand{\imagp}{\mathrm{imag}}
+
+%\newcommand{\Real}{\Re}
+%\newcommand{\Imag}{\Im}
+\providecommand{\Real}{\Re}
+\providecommand{\Imag}{\Im}
+
+
+% predicates
+\newcommand{\crit}{\mathrm{crit}}
+\newcommand{\bydefinition}{\mathrm{def}}
+
+% derivatives
+\newcommand{\diff}{\mathrm{d}}
+
+% vectors and tensors
+\renewcommand{\vec}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\greekvec}[1]{\ensuremath{\boldsymbol{#1}}}
+\newcommand{\tensor}[1]{\ensuremath{\mathbb{#1}}}
+
+\newcommand{\transpose}[1]{{#1}^\top}
+
+% Identity matrix
+\newcommand{\identity}{\ensuremath{\tensor{I}}}
+
+% Cauchy stress
+\newcommand{\cstress}{\tensor{T}}
+
+% deviatoric part of Cauchy stress
+\newcommand{\dcstress}{\cstress - \left( \frac{1}{3}\Tr \cstress \right) \identity}
+\newcommand{\dcstresssymb}{\cstress_{\delta}}
+
+% velocity and velocity gradient, (skew)symmetric part of velocity gradient
+\newcommand{\vv}{\ensuremath{\vec{v}}}
+\newcommand{\gradv}{\ensuremath{\nabla \vv}}
+\newcommand{\gradasym}{\ensuremath{ \tensor{W}}}
+\newcommand{\gradsym}{\ensuremath{ \tensor{D}}}
+\newcommand{\gradvl}{\ensuremath{ \tensor{L}}}
+
+% velocity and velocity gradient, (skew)symmetric part of velocity gradient, COMPONENTS
+\newcommand{\gradsymc}{\ensuremath{\mathrm D}}
+
+% base vectors
+\newcommand{\bvecx}{\vec{e}_{\hat{x}}}
+\newcommand{\bvecy}{\vec{e}_{\hat{y}}}
+%\newcommand{\bvecz}{\vec{e}_{\hat{z}}}
+
+\newcommand{\bvecr}{\vec{e}_{\hat{r}}}
+\newcommand{\bvect}{\vec{e}_{\hat{\theta}}}
+\newcommand{\bvecp}{\vec{e}_{\hat{\varphi}}}
+\newcommand{\bvecz}{\vec{e}_{\hat{z}}}
+
+% hypergeometric function
+\newcommand{\hypergeom}[4]{\ensuremath{\mathrm{F}\left( \left[#1, #2 \right]; \left[ #3 \right]; #4\right)}}
+
+% sets
+\newcommand{\R}{\ensuremath{{\mathbb R}}}
+\makeatletter
+\@ifpackageloaded{hyperref}% \C is defined in hyperref package
+{\renewcommand{\C}{\ensuremath{{\mathbb C}}}%
+}{%
+\newcommand{\C}{\ensuremath{{\mathbb C}}}%
+}
+\makeatother
+\newcommand{\Q}{\ensuremath{{\mathbb Q}}}
+\newcommand{\N}{\ensuremath{{\mathbb N}}}
+\newcommand{\Z}{\ensuremath{{\mathbb Z}}}
+
+% Reynolds, Womersley number, etc.
+\newcommand{\Reynolds}{\mathrm{Re}}
+\newcommand{\Womersley}{\mathrm{Wo}}
+\newcommand{\Rayleigh}{\mathrm{Ra}}
+\newcommand{\RayleighSqrt}{\mathrm{R}}
+\newcommand{\Prandtl}{\mathrm{Pr}}
+
+
+% Symetric and antisymetric tensors
+\newcommand{\asym}[1]{\ensuremath{\Asym \left( #1 \right)}}
+\newcommand{\sym}[1]{\ensuremath{\Sym \left( #1 \right)}}
+
+% Energy, free energy, entropy, temperature
+\newcommand{\ienergy}{\ensuremath{e}}
+\newcommand{\fenergy}{\ensuremath{\psi}} % free energy
+\newcommand{\entropy}{\ensuremath{\eta}} % entropy
+\newcommand{\temp}{\ensuremath{\theta}} % temperature
+
+
+\newcommand{\lag}[1]{\ensuremath{\widehat{#1}}}
+\newcommand{\emfield}{\mathtt{e}}
+\newcommand{\ef}{\mathtt{ef}}
+
+\newcommand{\obs}{\ensuremath{{\mathcal{S}}}}
+\newcommand{\obsprime}{\ensuremath{\obs^{\prime}}}
+
+\newcommand{\vx}{\ensuremath{\vec{x}}}
+\newcommand{\vxprime}{\ensuremath{\vx^\prime}}
+\newcommand{\vV}{\ensuremath{\vec{V}}}
+\newcommand{\vX}{\ensuremath{\vec{X}}}
+\newcommand{\vXprime}{\ensuremath{\vX^\prime}}
+
+\newcommand{\vchi}{\ensuremath{\vec{\chi}}}
+\newcommand{\vW}{\ensuremath{\vec{W}}}
+\newcommand{\tprime}{\ensuremath{t^\prime}}
+
+\newcommand{\tQ}{\ensuremath{\tensor{Q}}}
+
+\newcommand{\tF}{\ensuremath{\tensor{F}}}
+\newcommand{\tFc}{\ensuremath{\mathtt{F}}}
+\newcommand{\tC}{\ensuremath{\tensor{C}}}
+\newcommand{\tCc}{\ensuremath{\mathtt{C}}}
+
+\newcommand{\ttau}{\ensuremath{\tensor{\tau}}}
+\newcommand{\ttauc}{\ensuremath{\mathtt{\tau}}}
+
+\newcommand{\tfpk}{\ensuremath{\tensor{T}}}
+\newcommand{\tfpkc}{\ensuremath{\mathtt{T}}}
+
+\newcommand{\tspk}{\ensuremath{\tensor{\tilde{T}}}}
+\newcommand{\tspkc}{\ensuremath{\mathtt{\tilde{T}}}}
+
+\newcommand{\vq}{\ensuremath{\vec{q}}}
+
+\newcommand{\vF}{\ensuremath{\vec{F}}}
+\newcommand{\vFem}{\ensuremath{{\vF}_{\emfield}}}
+\newcommand{\Fem}{\ensuremath{F_{\emfield}}}
+
+\newcommand{\tL}{\ensuremath{\tensor{L}}}
+\newcommand{\tLem}{\ensuremath{\tL_{\emfield}}}
+\newcommand{\tLemc}{\ensuremath{\mathtt{L}_{\emfield}}}
+
+\newcommand{\vL}{\ensuremath{\vec{L}}}
+\newcommand{\vLem}{\ensuremath{\vL_{\emfield}}}
+\newcommand{\vLemc}{\ensuremath{L_{\emfield}}}
+
+\newcommand{\vE}{\ensuremath{\vec{E}}}
+\newcommand{\vEef}{\ensuremath{\vE_{\ef}}}
+\newcommand{\vEprime}{\ensuremath{\vE^\prime}}
+\newcommand{\vEtilda}{\ensuremath{\widetilde{\vec{E}}}}
+\newcommand{\vEtildac}{\ensuremath{\widetilde{E}}}
+
+\newcommand{\vB}{\ensuremath{\vec{B}}}
+\newcommand{\vBprime}{\ensuremath{\vB^\prime}}
+\newcommand{\vBtilda}{\ensuremath{\widetilde{\vec{B}}}}
+
+\newcommand{\vD}{\ensuremath{\vec{D}}}
+\newcommand{\vDprime}{\ensuremath{\vD^\prime}}
+
+\newcommand{\vH}{\ensuremath{\vec{H}}}
+\newcommand{\vHef}{\ensuremath{\vH_{\ef}}}
+\newcommand{\vHprime}{\ensuremath{\vH^\prime}}
+
+\newcommand{\vJ}{\ensuremath{\vec{J}}}
+\newcommand{\vJef}{\ensuremath{\vJ_{\ef}}}
+\newcommand{\vJprime}{\ensuremath{\vJ^\prime}}
+\newcommand{\vJtilda}{\ensuremath{\widetilde{\vJ}}}
+
+\newcommand{\vP}{\ensuremath{\vec{P}}}
+
+\newcommand{\vM}{\ensuremath{\vec{M}}}
+\newcommand{\vMef}{\ensuremath{\vM_{\ef}}}
+
+\newcommand{\sigmaprime}{\ensuremath{\sigma^\prime}}
+
+% Derivatives, partial derivatives, covariant derivatives 
+
+\newcommand{\pd}[2]{\ensuremath{\frac{\partial {#1}}{\partial {#2}}}}
+\newcommand{\pdd}[2]{\ensuremath{\frac{\partial^2 {#1}}{\partial {#2}^2}}}
+
+\newcommand{\dd}[2]{\ensuremath{\frac{\diff {#1}}{\diff {#2}}}}
+\newcommand{\cd}[2]{\ensuremath{\frac{\diff^* {#1}}{\diff {#2}}}}
+\newcommand{\ddd}[2]{\ensuremath{\frac{\diff^2 {#1}}{\diff {#2}^2}}}
+
+\newcommand{\codev}[2]{\ensuremath{\left. {#1} \right|_{#2}}}
+
+% Bessel and Kelvin functions
+
+\newcommand{\BesselI}[2]{\ensuremath{{\mathrm I}_{#1}\left(#2\right)}} 
+\newcommand{\BesselK}[2]{\ensuremath{{\mathrm K}_{#1}\left(#2\right)}}
+\newcommand{\BesselJ}[2]{\ensuremath{{\mathrm J}_{#1}\left(#2\right)}}
+\newcommand{\BesselY}[2]{\ensuremath{{\mathrm Y}_{#1}\left(#2\right)}}
+
+\newcommand\BesselRoot[2]{\ensuremath{{\rm j}_{#1,#2}}}
+
+\newcommand{\KelvinBer}[2]{\ensuremath{{\mathrm{ber}}_{#1}\left(#2\right)}} 
+\newcommand{\KelvinBei}[2]{\ensuremath{{\mathrm{bei}}_{#1}\left(#2\right)}}
+\newcommand{\KelvinKer}[2]{\ensuremath{{\mathrm{ker}}_{#1}\left(#2\right)}}
+\newcommand{\KelvinKei}[2]{\ensuremath{{\mathrm{kei}}_{#1}\left(#2\right)}}
+
+% norms
+\newcommand{\norm}[2][]{\ensuremath{\left\|#2\right\|_{#1}}}
+
+% volume
+%\newcommand{\volume}[1][\Omega]{\ensuremath{#1}}
+
+% volume integral
+\newcommand{\intvolume}[2][\volume]{\int_{#1} #2\; \diff \vec{x}}
+
+% products
+\newcommand{\tensortensor}[2]{\ensuremath{#1 \otimes #2}}
+\newcommand{\tensordot}[2]{\ensuremath{#1 : #2}}
+\newcommand{\vectordot}[2]{\ensuremath{#1 \bullet #2}}
+
+% function spaces
+\newcommand{\sdist}[1][\Omega]{\ensuremath{{\mathcal D}} \left(#1 \right)}
+\newcommand{\sdistd}[1][\Omega]{\ensuremath{{\mathcal D}^\prime} \left(#1 \right)}
+
+\newcommand{\scdiv}[1][\Omega]{\ensuremath{{\mathcal V}} \left(#1 \right)}
+
+\newcommand{\loc}{\mathrm{loc}}
+
+\newcommand{\slebl}[2]{\ensuremath{L}^{#1}_{\loc} \left(#2 \right)}
+\newcommand{\sleb}[2]{\ensuremath{L}^{#1} \left(#2 \right)}
+
+
+\newcommand{\ssob}[3]{\ensuremath{W}^{#1, #2} \left(#3 \right)}
+
+% dualities, scalar products
+\newcommand{\fadual}[4]{\left\langle #1, #2\right\rangle_{#3, #4}}
+\newcommand{\fascal}[4]{\left\langle #1, #2\right\rangle_{#3, #4}}
