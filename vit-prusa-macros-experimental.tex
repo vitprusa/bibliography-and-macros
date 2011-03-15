@@ -118,7 +118,7 @@
 \newcommand{\gradasym}{\ensuremath{\tensorq{W}}}
 \newcommand{\gradsym}{\ensuremath{\tensorq{D}}}
 \newcommand{\dgradsymsymb}{\ensuremath{\gradsym_{\delta}}}
-\newcommand{\gradvl}{\ensuremath{ \tensorq{L}}}
+\newcommand{\gradvl}{\ensuremath{\tensorq{L}}}
 
 \newcommand{\vecvc}{\mathrm{v}}
 
@@ -165,7 +165,7 @@
 \newcommand{\R}{\ensuremath{{\mathbb R}}}
 \makeatletter
 \@ifpackageloaded{hyperref}% \C is defined in hyperref package
-{\renewcommand{\C}{\ensuremath{{\mathbb C}}}%
+{\newcommand{\C}{\ensuremath{{\mathbb C}}}%
 }{%
 \newcommand{\C}{\ensuremath{{\mathbb C}}}%
 }
