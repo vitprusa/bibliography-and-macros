@@ -105,6 +105,9 @@
 % Rivlin-Ericksen tensor
 \newcommand{\rivlin}{{\tensorq{A}}}
 
+% generic tensor quantity
+\newcommand{\generictensor}{{\tensorq{A}}}
+
 % deviatoric part of Cauchy stress
 \newcommand{\dcstress}{\cstress - \left( \frac{1}{3}\Tr \cstress \right) \identity}
 \newcommand{\dcstresssymb}{\cstress_{\delta}}
@@ -165,7 +168,7 @@
 \newcommand{\R}{\ensuremath{{\mathbb R}}}
 \makeatletter
 \@ifpackageloaded{hyperref}% \C is defined in hyperref package
-{\newcommand{\C}{\ensuremath{{\mathbb C}}}%
+{\renewcommand{\C}{\ensuremath{{\mathbb C}}}%
 }{%
 \newcommand{\C}{\ensuremath{{\mathbb C}}}%
 }
@@ -208,9 +211,25 @@
 \newcommand{\cd}[2]{\ensuremath{\frac{\diff^* {#1}}{\diff {#2}}}}
 \newcommand{\ddd}[2]{\ensuremath{\frac{\diff^2 {#1}}{\diff {#2}^2}}}
 
-
+% Upper convected (Oldroyd) derivative
 \newcommand{\fid}[1]{\ensuremath{\accentset{\triangledown}{#1}}}
 \newcommand{\fidd}[1]{\ensuremath{\accentset{\triangledown \! \triangledown}{#1}}}
+
+% Lower convected derivative
+\newcommand{\lfid}[1]{\ensuremath{\accentset{\meddiamond}{#1}}}
+\newcommand{\lfidd}[1]{\ensuremath{\accentset{\meddiamond \! \meddiamond}{#1}}}
+
+% Jaumann derivative
+\newcommand{\jfid}[1]{\ensuremath{\accentset{\vartriangle}{#1}}}
+\newcommand{\jfidd}[1]{\ensuremath{\accentset{\vartriangle \! \vartriangle}{#1}}}
+
+% Green--Naghdi derivative
+\newcommand{\gfid}[1]{\ensuremath{\accentset{\medsquare}{#1}}}
+\newcommand{\gfidd}[1]{\ensuremath{\accentset{\medsquare \! \medsquare}{#1}}}
+
+% Truesdell derivative
+\newcommand{\tfid}[1]{\ensuremath{\accentset{\medcircle}{#1}}}
+\newcommand{\tfidd}[1]{\ensuremath{\accentset{\medcircle \! \medcircle}{#1}}}
 
 \makeatletter
 \@ifpackageloaded{tensor}% tensor is a package for a better typesetting of tensors
