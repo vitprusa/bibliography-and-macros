@@ -57,7 +57,7 @@
 \newcommand{\reference}{\mathrm{ref}}
 \newcommand{\crit}{\mathrm{crit}}
 \newcommand{\bydefinition}{\mathrm{def}}
-
+\newcommand{\traceless}[1]{{#1}_{\delta}}
 % derivatives
 \newcommand{\diff}{\mathrm{d}}
 
@@ -110,7 +110,7 @@
 
 % deviatoric part of Cauchy stress
 \newcommand{\dcstress}{\cstress - \left( \frac{1}{3}\Tr \cstress \right) \identity}
-\newcommand{\dcstresssymb}{\cstress_{\delta}}
+\newcommand{\dcstresssymb}{\traceless{\cstress}}
 
 % mean normal stress
 \newcommand{\cstressnorm}{\frac{1}{3}\Tr \cstress}
