@@ -280,7 +280,14 @@
 
 % products
 \newcommand{\tensortensor}[2]{\ensuremath{#1 \otimes #2}}
-\newcommand{\tensordot}[2]{\ensuremath{#1 : #2}}
+\makeatletter
+\@ifpackageloaded{MnSymbol} % : as binary operator needs MnSymbol package
+{
+\newcommand{\tensordot}[2]{\ensuremath{#1 \vdotdot #2}} 
+}{%
+\newcommand{\tensordot}[2]{\ensuremath{#1 : #2}} 
+}
+\makeatother
 \newcommand{\vectordot}[2]{\ensuremath{#1 \bullet #2}}
 \newcommand{\vectorcross}[2]{\ensuremath{#1 \times #2}}
 
