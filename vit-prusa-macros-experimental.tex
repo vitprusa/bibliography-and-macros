@@ -52,12 +52,12 @@
 \providecommand{\Real}{\Re}
 \providecommand{\Imag}{\Im}
 
-
 % predicates
 \newcommand{\reference}{\mathrm{ref}}
 \newcommand{\crit}{\mathrm{crit}}
 \newcommand{\bydefinition}{\mathrm{def}}
 \newcommand{\traceless}[1]{{#1}_{\delta}}
+
 % derivatives
 \newcommand{\diff}{\mathrm{d}}
 
@@ -67,7 +67,8 @@
 % vectors and tensors
 \renewcommand{\vec}[1]{\ensuremath{\mathbf{#1}}}
 \newcommand{\greekvec}[1]{\ensuremath{\boldsymbol{#1}}}
-\newcommand{\tensorq}[1]{\ensuremath{\mathbb{#1}}}
+\newcommand{\tensorq}[1]{\ensuremath{\mathbb{#1}}}      % tensorial quantity
+\newcommand{\tensorc}[1]{\ensuremath{\mathrm{#1}}}      % tensorial quantity components  
 
 \newcommand{\transpose}[1]{#1^\top}
 \newcommand{\transposei}[1]{#1^{-\top}}
@@ -88,20 +89,25 @@
 \newcommand{\fgrad}{\tensorq{F}}
 \newcommand{\fgradrel}[3][]{\fgrad^{#1}_{#2}\left(#3\right)}
 
-
+% right Cauchy-Green tensor
 \newcommand{\rcg}{\tensorq{C}}
 \newcommand{\rcgrel}[3][]{\rcg^{#1}_{#2}\left(#3\right)}
 
+% left Cauchy-Green tensor
 \newcommand{\lcg}{\tensorq{B}}
 \newcommand{\lcgrel}[3][]{\lcg^{#1}_{#2}\left(#3\right)}
 
+% rotation
 \newcommand{\rotation}{\tensorq{R}}
 \newcommand{\rotationrel}[3][]{\rotation^{#1}_{#2}\left(#3\right)}
 
+% stretch
 \newcommand{\stretchu}{\tensorq{U}}
 \newcommand{\stretchurel}[3][]{\stretchu^{#1}_{#2}\left(#3\right)}
 
+% linearized strain
 \newcommand{\linstrain}{\tensorq{e}}
+
 % Rivlin-Ericksen tensor
 \newcommand{\rivlin}{{\tensorq{A}}}
 
@@ -123,7 +129,7 @@
 \newcommand{\dgradsymsymb}{\ensuremath{\gradsym_{\delta}}}
 \newcommand{\gradvl}{\ensuremath{\tensorq{L}}}
 
-\newcommand{\vecvc}{\mathrm{v}}
+\newcommand{\vecvc}{\tensorc{v}}
 
 % velocity and velocity gradient, (skew)symmetric part of velocity gradient, COMPONENTS
 \newcommand{\gradsymc}{\ensuremath{\mathrm D}}
