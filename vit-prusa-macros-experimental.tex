@@ -52,12 +52,12 @@
 \providecommand{\Real}{\Re}
 \providecommand{\Imag}{\Im}
 
-
 % predicates
 \newcommand{\reference}{\mathrm{ref}}
 \newcommand{\crit}{\mathrm{crit}}
 \newcommand{\bydefinition}{\mathrm{def}}
 \newcommand{\traceless}[1]{{#1}_{\delta}}
+
 % derivatives
 \newcommand{\diff}{\mathrm{d}}
 
@@ -67,7 +67,8 @@
 % vectors and tensors
 \renewcommand{\vec}[1]{\ensuremath{\mathbf{#1}}}
 \newcommand{\greekvec}[1]{\ensuremath{\boldsymbol{#1}}}
-\newcommand{\tensorq}[1]{\ensuremath{\mathbb{#1}}}
+\newcommand{\tensorq}[1]{\ensuremath{\mathbb{#1}}}      % tensorial quantity
+\newcommand{\tensorc}[1]{\ensuremath{\mathrm{#1}}}      % tensorial quantity components  
 
 \newcommand{\transpose}[1]{#1^\top}
 \newcommand{\transposei}[1]{#1^{-\top}}
@@ -88,20 +89,25 @@
 \newcommand{\fgrad}{\tensorq{F}}
 \newcommand{\fgradrel}[3][]{\fgrad^{#1}_{#2}\left(#3\right)}
 
-
+% right Cauchy-Green tensor
 \newcommand{\rcg}{\tensorq{C}}
 \newcommand{\rcgrel}[3][]{\rcg^{#1}_{#2}\left(#3\right)}
 
+% left Cauchy-Green tensor
 \newcommand{\lcg}{\tensorq{B}}
 \newcommand{\lcgrel}[3][]{\lcg^{#1}_{#2}\left(#3\right)}
 
+% rotation
 \newcommand{\rotation}{\tensorq{R}}
 \newcommand{\rotationrel}[3][]{\rotation^{#1}_{#2}\left(#3\right)}
 
+% stretch
 \newcommand{\stretchu}{\tensorq{U}}
 \newcommand{\stretchurel}[3][]{\stretchu^{#1}_{#2}\left(#3\right)}
 
+% linearized strain
 \newcommand{\linstrain}{\tensorq{e}}
+
 % Rivlin-Ericksen tensor
 \newcommand{\rivlin}{{\tensorq{A}}}
 
@@ -123,7 +129,7 @@
 \newcommand{\dgradsymsymb}{\ensuremath{\gradsym_{\delta}}}
 \newcommand{\gradvl}{\ensuremath{\tensorq{L}}}
 
-\newcommand{\vecvc}{\mathrm{v}}
+\newcommand{\vecvc}{\tensorc{v}}
 
 % velocity and velocity gradient, (skew)symmetric part of velocity gradient, COMPONENTS
 \newcommand{\gradsymc}{\ensuremath{\mathrm D}}
@@ -152,6 +158,14 @@
 \newcommand{\vhatp}[1][v]{{#1}^{\hat{\varphi}}}
 \newcommand{\vhatz}[1][v]{{#1}^{\hat{z}}}
 
+% indices
+\newcommand{\hatx}{\hat{x}}
+\newcommand{\haty}{\hat{y}}
+\newcommand{\hatz}{\hat{z}}
+\newcommand{\hatr}{\hat{r}}
+\newcommand{\hatp}{\hat{\varphi}}
+\newcommand{\hatt}{\hat{\theta}}
+ 
 % base vectors, abstract covariant and contravariant basis
 \newcommand{\cobvec}[1]{\vec{g}_{#1}} % covariant base vector
 \newcommand{\conbvec}[1]{\vec{g}^{#1}} % contravariant base vector
@@ -309,3 +323,6 @@
 % dualities, scalar products
 \newcommand{\fadual}[4]{\left\langle #1, #2\right\rangle_{#3, #4}}
 \newcommand{\fascal}[4]{\left\langle #1, #2\right\rangle_{#3, #4}}
+
+% tensorial function
+\newcommand{\tensorf}[1]{{\mathfrak{#1}}}
