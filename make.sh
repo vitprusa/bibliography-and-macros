@@ -6,7 +6,7 @@ project_name="vit-prusa"
 function compile_project {
 
 cp ${project_name}.bib  ${project_name}.bib.backup
-bibtool -K -s ${project_name}.bib > ${project_name}.bib.sorted
+bibtool --preserve.keys=on -K -s ${project_name}.bib > ${project_name}.bib.sorted
 mv ${project_name}.bib.sorted ${project_name}.bib
 }
 
