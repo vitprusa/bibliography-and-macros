@@ -265,6 +265,15 @@
 }
 \makeatother
 
+\makeatletter
+\@ifpackageloaded{tensor}% tensor is a package for a better typesetting of tensors
+{
+\newcommand{\contradev}[2]{\ensuremath{{#1}|\indices{^{#2}}}}
+}{%
+\newcommand{\contradev}[2]{\ensuremath{\left. {#1} \right|^{#2}}}
+}
+\makeatother
+
 
 % Bessel and Kelvin functions
 
