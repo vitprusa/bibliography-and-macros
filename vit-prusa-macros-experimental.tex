@@ -13,6 +13,7 @@
 
 % operators
 \DeclareMathOperator{\divergence}{div}
+\DeclareMathOperator{\Divergence}{Div}
 \DeclareMathOperator{\rot}{rot}
 \DeclareMathOperator{\Asym}{Asym}
 \DeclareMathOperator{\Sym}{Sym}
@@ -92,6 +93,10 @@
 \newcommand{\ecstress}{\tensorq{S}}
 \newcommand{\ecstressc}{\ensuremath{\mathrm S}}
 
+% First Piola stress tensor
+\newcommand{\fpstress}{\tensorq{T}_{\mathrm{R}}}
+\newcommand{\fpstressc}{\ensuremath{{{\mathrm T}_{\mathrm R}}}}
+
 % deformation, deformation gradient
 \newcommand{\deformation}{\greekvec{\chi}}
 \newcommand{\fgrad}{\tensorq{F}}
@@ -114,7 +119,11 @@
 \newcommand{\stretchurel}[3][]{\stretchu^{#1}_{#2}\left(#3\right)}
 
 % linearized strain
-\newcommand{\linstrain}{\tensorq{e}}
+\newcommand{\linstrain}{\tensorq{\varepsilon}}
+
+% Lagrangean and Eulerian strain
+\newcommand{\lstrain}{\tensorq{E}}
+\newcommand{\estrain}{\tensorq{e}}
 
 % Rivlin-Ericksen tensor
 \newcommand{\rivlin}{{\tensorq{A}}}
