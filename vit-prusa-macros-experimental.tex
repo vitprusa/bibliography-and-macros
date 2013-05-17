@@ -29,14 +29,9 @@
 \DeclareMathOperator{\arccoth}{arccoth}
 
 % invariants of second order tensor
-\DeclareMathOperator{\invariantI}{I_1}
-\DeclareMathOperator{\invariantII}{I_2}
-\DeclareMathOperator{\invariantIII}{I_3}
-
-% moments of second order tensor
-\DeclareMathOperator{\invariantIm}{\tilde{I}_1}
-\DeclareMathOperator{\invariantIIm}{\tilde{I}_2}
-\DeclareMathOperator{\invariantIIIm}{\tilde{I}_3}
+\DeclareMathOperator{\invariantI}{I}
+\DeclareMathOperator{\invariantII}{II}
+\DeclareMathOperator{\invariantIII}{III}
 
 % big o
 \newcommand{\bigo}[1]{\ensuremath{O\left(#1 \right)}}
@@ -62,7 +57,7 @@
 \newcommand{\reference}{\mathrm{ref}}
 \newcommand{\crit}{\mathrm{crit}}
 \newcommand{\bydefinition}{\mathrm{def}}
-\newcommand{\traceless}[1]{#1_{\delta}}
+\newcommand{\traceless}[1]{{#1}_{\delta}}
 
 % derivatives
 \newcommand{\diff}{\mathrm{d}}
@@ -122,8 +117,6 @@
 % stretch
 \newcommand{\stretchu}{\tensorq{U}}
 \newcommand{\stretchurel}[3][]{\stretchu^{#1}_{#2}\left(#3\right)}
-\newcommand{\stretchv}{\tensorq{V}}
-\newcommand{\stretchvrel}[3][]{\stretchv^{#1}_{#2}\left(#3\right)}
 
 % linearized strain
 \newcommand{\linstrain}{\tensorq{\varepsilon}}
@@ -166,16 +159,14 @@
 \newcommand{\history}[3]{{\functional{#1}_{#2}^{#3}}}
 
 % base vectors
-\newcommand{\bvec}[1]{\vec{e}_{#1}}
+\newcommand{\bvecx}{\vec{e}_{\hat{x}}}
+\newcommand{\bvecy}{\vec{e}_{\hat{y}}}
+%\newcommand{\bvecz}{\vec{e}_{\hat{z}}}
 
-\newcommand{\bvecx}{\bvec{\hat{x}}}
-\newcommand{\bvecy}{\bvec{\hat{y}}}
-%\newcommand{\bvecz}{\bvec{\hat{z}}}
-
-\newcommand{\bvecr}{\bvec{\hat{r}}}
-\newcommand{\bvect}{\bvec{\hat{\theta}}}
-\newcommand{\bvecp}{\bvec{\hat{\varphi}}}
-\newcommand{\bvecz}{\bvec{\hat{z}}}
+\newcommand{\bvecr}{\vec{e}_{\hat{r}}}
+\newcommand{\bvect}{\vec{e}_{\hat{\theta}}}
+\newcommand{\bvecp}{\vec{e}_{\hat{\varphi}}}
+\newcommand{\bvecz}{\vec{e}_{\hat{z}}}
 
 % components
 \newcommand{\vhatx}[1][v]{{#1}^{\hat{x}}}
@@ -209,21 +200,14 @@
 
 % sets
 \newcommand{\R}{\ensuremath{{\mathbb R}}}
-% \makeatletter
-% \@ifpackageloaded{hyperref}% \C is defined in hyperref package
-% {\renewcommand{\C}{\ensuremath{{\mathbb C}}}%
-% }{%
-% \newcommand{\C}{\ensuremath{{\mathbb C}}}%
-% }
-% \makeatother
-% %\newcommand{\C}{\ensuremath{{\mathbb C}}}% The lines above are no longer needed?
-
-\makeatletter
-\@ifundefined{C}%
-{\newcommand{\C}{\ensuremath{{\mathbb C}}}}%
-{\renewcommand{\C}{\ensuremath{{\mathbb C}}}}
-\makeatother
-
+%\makeatletter
+%\@ifpackageloaded{hyperref}% \C is defined in hyperref package
+%{\renewcommand{\C}{\ensuremath{{\mathbb C}}}%
+%}{%
+%\newcommand{\C}{\ensuremath{{\mathbb C}}}%
+%}
+%\makeatother
+\renewcommand{\C}{\ensuremath{{\mathbb C}}}% The lines above are no longer needed?
 \newcommand{\Q}{\ensuremath{{\mathbb Q}}}
 \newcommand{\N}{\ensuremath{{\mathbb N}}}
 \newcommand{\Z}{\ensuremath{{\mathbb Z}}}
@@ -240,7 +224,6 @@
 \newcommand{\Peclet}{\mathrm{Pe}}
 \newcommand{\Eckert}{\mathrm{Ec}}
 \newcommand{\Brinkman}{\mathrm{Br}}
-\newcommand{\Deborah}{\mathrm{De}}
 
 
 % Symetric and antisymetric tensors
@@ -248,13 +231,13 @@
 \newcommand{\sym}[1]{\ensuremath{\Sym \left( #1 \right)}}
 
 % Energy, free energy, entropy, temperature
-\newcommand{\ienergy}{\ensuremath{e}}
+\newcommand{\ienergy}{\ensuremath{e}} % internal energy
 \newcommand{\fenergy}{\ensuremath{\psi}} % free energy
 \newcommand{\entropy}{\ensuremath{\eta}} % entropy
 \newcommand{\enthalpy}{\ensuremath{h}} % enthalpy
 \newcommand{\temp}{\ensuremath{\theta}} % temperature
 \newcommand{\temptoref}{\ensuremath{\vartheta}} % (temperature - reference temperature)/(reference temperature)
-
+\newcommand{\tenergy}{\ensuremath{E}} % total energy
 
 % Derivatives, partial derivatives, covariant derivatives 
 \newcommand{\pd}[2]{\ensuremath{\frac{\partial {#1}}{\partial {#2}}}}
@@ -333,14 +316,10 @@
 \makeatother
 
 \newcommand{\svolume}[1][\Omega]{\ensuremath{\partial #1}}
-\newcommand{\volumee}{\diff \mathrm{V}}
-\newcommand{\surfacee}{\diff \vec{S}}
-\newcommand{\surfacees}{\diff \mathrm{S}}
-\newcommand{\linee}{\diff \vec{x}}
 
 % volume and surface integral
-\newcommand{\intvolume}[2][\volume]{\int_{#1} #2\; \volumee}
-\newcommand{\intsvolume}[2][\svolume]{\int_{#1} #2\; \surfacee}
+\newcommand{\intvolume}[2][\volume]{\int_{#1} #2\; \diff \vec{x}}
+\newcommand{\intsvolume}[2][\svolume]{\int_{#1} #2\; \diff \vec{S}}
 
 
 % products
