@@ -99,7 +99,10 @@
 
 % deformation, deformation gradient
 \newcommand{\deformation}{\greekvec{\chi}}
+\newcommand{\deformationc}{\mathrm{\chi}}
+
 \newcommand{\fgrad}{\tensorq{F}}
+\newcommand{\fgradc}{\mathrm{F}}
 \newcommand{\fgradrel}[3][]{\fgrad^{#1}_{#2}\left(#3\right)}
 
 % right Cauchy-Green tensor
@@ -161,11 +164,24 @@
 \newcommand{\history}[3]{{\functional{#1}_{#2}^{#3}}}
 
 % base vectors
-\newcommand{\bvec}[1]{\vec{e}_{#1}}
+\newcommand{\bvec}[1]{\vec{e}_{#1}} % current configuration
+\newcommand{\Bvec}[1]{\vec{E}_{#1}} % reference configuration
+
+% dual base vectors
+\newcommand{\bvecd}[1]{\vec{e}^{#1}} % current configuration
+\newcommand{\Bvecd}[1]{\vec{E}^{#1}} % reference configuration
 
 \newcommand{\bvecx}{\bvec{\hat{x}}}
 \newcommand{\bvecy}{\bvec{\hat{y}}}
 %\newcommand{\bvecz}{\bvec{\hat{z}}}
+
+\newcommand{\BvecX}{\Bvec{\hat{X}}}
+\newcommand{\BvecY}{\Bvec{\hat{Y}}}
+\newcommand{\BvecZ}{\Bvec{\hat{Z}}}
+
+\newcommand{\BvecdX}{\Bvecd{\hat{X}}}
+\newcommand{\BvecdY}{\Bvecd{\hat{Y}}}
+\newcommand{\BvecdZ}{\Bvecd{\hat{Z}}}
 
 \newcommand{\bvecr}{\bvec{\hat{r}}}
 \newcommand{\bvect}{\bvec{\hat{\theta}}}
@@ -189,6 +205,9 @@
 \newcommand{\hatr}{\hat{r}}
 \newcommand{\hatp}{\hat{\varphi}}
 \newcommand{\hatt}{\hat{\theta}}
+\newcommand{\hatX}{\hat{X}}
+\newcommand{\hatY}{\hat{Y}}
+\newcommand{\hatZ}{\hat{Z}}
  
 % base vectors, abstract covariant and contravariant basis
 \newcommand{\cobvec}[1]{\vec{g}_{#1}} % covariant base vector
