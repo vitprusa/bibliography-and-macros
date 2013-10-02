@@ -120,6 +120,8 @@
 % stretch
 \newcommand{\stretchu}{\tensorq{U}}
 \newcommand{\stretchurel}[3][]{\stretchu^{#1}_{#2}\left(#3\right)}
+\newcommand{\stretchv}{\tensorq{V}}
+\newcommand{\stretchvrel}[3][]{\stretchv^{#1}_{#2}\left(#3\right)}
 
 % linearized strain
 \newcommand{\linstrain}{\tensorq{\varepsilon}}
@@ -338,7 +340,12 @@
 \renewcommand{\volume}[1][\Omega]{\ensuremath{#1}}}
 \makeatother
 
+% surface and volume elements
 \newcommand{\svolume}[1][\Omega]{\ensuremath{\partial #1}}
+\newcommand{\volumee}{\diff \mathrm{V}}
+\newcommand{\surfacee}{\diff \vec{S}}
+\newcommand{\surfacees}{\diff \mathrm{S}}
+\newcommand{\linee}{\diff \vec{x}}
 
 % volume and surface integral
 \newcommand{\intvolume}[2][\volume]{\int_{#1} #2\; \diff \vec{x}}
