@@ -99,7 +99,10 @@
 
 % deformation, deformation gradient
 \newcommand{\deformation}{\greekvec{\chi}}
+\newcommand{\deformationc}{\mathrm{\chi}}
+
 \newcommand{\fgrad}{\tensorq{F}}
+\newcommand{\fgradc}{\mathrm{F}}
 \newcommand{\fgradrel}[3][]{\fgrad^{#1}_{#2}\left(#3\right)}
 
 % right Cauchy-Green tensor
@@ -117,6 +120,8 @@
 % stretch
 \newcommand{\stretchu}{\tensorq{U}}
 \newcommand{\stretchurel}[3][]{\stretchu^{#1}_{#2}\left(#3\right)}
+\newcommand{\stretchv}{\tensorq{V}}
+\newcommand{\stretchvrel}[3][]{\stretchv^{#1}_{#2}\left(#3\right)}
 
 % linearized strain
 \newcommand{\linstrain}{\tensorq{\varepsilon}}
@@ -159,14 +164,30 @@
 \newcommand{\history}[3]{{\functional{#1}_{#2}^{#3}}}
 
 % base vectors
-\newcommand{\bvecx}{\vec{e}_{\hat{x}}}
-\newcommand{\bvecy}{\vec{e}_{\hat{y}}}
-%\newcommand{\bvecz}{\vec{e}_{\hat{z}}}
+\newcommand{\bvec}[1]{\vec{e}_{#1}} % current configuration
+\newcommand{\Bvec}[1]{\vec{E}_{#1}} % reference configuration
 
-\newcommand{\bvecr}{\vec{e}_{\hat{r}}}
-\newcommand{\bvect}{\vec{e}_{\hat{\theta}}}
-\newcommand{\bvecp}{\vec{e}_{\hat{\varphi}}}
-\newcommand{\bvecz}{\vec{e}_{\hat{z}}}
+% dual base vectors
+\newcommand{\bvecd}[1]{\vec{e}^{#1}} % current configuration
+\newcommand{\Bvecd}[1]{\vec{E}^{#1}} % reference configuration
+
+\newcommand{\bvecx}{\bvec{\hat{x}}}
+\newcommand{\bvecy}{\bvec{\hat{y}}}
+%\newcommand{\bvecz}{\bvec{\hat{z}}}
+
+\newcommand{\BvecX}{\Bvec{\hat{X}}}
+\newcommand{\BvecY}{\Bvec{\hat{Y}}}
+\newcommand{\BvecZ}{\Bvec{\hat{Z}}}
+
+\newcommand{\BvecdX}{\Bvecd{\hat{X}}}
+\newcommand{\BvecdY}{\Bvecd{\hat{Y}}}
+\newcommand{\BvecdZ}{\Bvecd{\hat{Z}}}
+
+\newcommand{\bvecr}{\bvec{\hat{r}}}
+\newcommand{\bvect}{\bvec{\hat{\theta}}}
+\newcommand{\bvecp}{\bvec{\hat{\varphi}}}
+\newcommand{\bvecz}{\bvec{\hat{z}}}
+
 
 % components
 \newcommand{\vhatx}[1][v]{{#1}^{\hat{x}}}
@@ -185,6 +206,9 @@
 \newcommand{\hatr}{\hat{r}}
 \newcommand{\hatp}{\hat{\varphi}}
 \newcommand{\hatt}{\hat{\theta}}
+\newcommand{\hatX}{\hat{X}}
+\newcommand{\hatY}{\hat{Y}}
+\newcommand{\hatZ}{\hat{Z}}
  
 % base vectors, abstract covariant and contravariant basis
 \newcommand{\cobvec}[1]{\vec{g}_{#1}} % covariant base vector
@@ -207,10 +231,11 @@
 %\newcommand{\C}{\ensuremath{{\mathbb C}}}%
 %}
 %\makeatother
-%\renewcommand{\C}{\ensuremath{{\mathbb C}}}% The lines above are no longer needed?
+\renewcommand{\C}{\ensuremath{{\mathbb C}}}% The lines above are no longer needed?
 \newcommand{\Q}{\ensuremath{{\mathbb Q}}}
 \newcommand{\N}{\ensuremath{{\mathbb N}}}
 \newcommand{\Z}{\ensuremath{{\mathbb Z}}}
+
 
 % Reynolds, Womersley number, etc.
 \newcommand{\Reynolds}{\mathrm{Re}}
@@ -315,7 +340,12 @@
 \renewcommand{\volume}[1][\Omega]{\ensuremath{#1}}}
 \makeatother
 
+% surface and volume elements
 \newcommand{\svolume}[1][\Omega]{\ensuremath{\partial #1}}
+\newcommand{\volumee}{\diff \mathrm{V}}
+\newcommand{\surfacee}{\diff \vec{S}}
+\newcommand{\surfacees}{\diff \mathrm{S}}
+\newcommand{\linee}{\diff \vec{x}}
 
 % volume and surface integral
 \newcommand{\intvolume}[2][\volume]{\int_{#1} #2\; \diff \vec{x}}
