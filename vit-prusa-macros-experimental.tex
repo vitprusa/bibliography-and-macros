@@ -224,14 +224,14 @@
 
 % sets
 \newcommand{\R}{\ensuremath{{\mathbb R}}}
-%\makeatletter
-%\@ifpackageloaded{hyperref}% \C is defined in hyperref package
-%{\renewcommand{\C}{\ensuremath{{\mathbb C}}}%
-%}{%
-%\newcommand{\C}{\ensuremath{{\mathbb C}}}%
-%}
-%\makeatother
-\renewcommand{\C}{\ensuremath{{\mathbb C}}}% The lines above are no longer needed?
+\makeatletter
+\@ifpackageloaded{hyperref}% \C is defined in hyperref package
+{\renewcommand{\C}{\ensuremath{{\mathbb C}}}%
+}{%
+\newcommand{\C}{\ensuremath{{\mathbb C}}}%
+}
+\makeatother
+%\renewcommand{\C}{\ensuremath{{\mathbb C}}}% The lines above are no longer needed?
 \newcommand{\Q}{\ensuremath{{\mathbb Q}}}
 \newcommand{\N}{\ensuremath{{\mathbb N}}}
 \newcommand{\Z}{\ensuremath{{\mathbb Z}}}
@@ -291,6 +291,9 @@
 \newcommand{\tfid}[1]{\ensuremath{\accentset{\medcircle}{#1}}}
 \newcommand{\tfidd}[1]{\ensuremath{\accentset{\medcircle \! \medcircle}{#1}}}
 
+% Material derivative (\dot with \overline)
+\newcommand{\mdif}[1]{\ensuremath{\dot{\overline{#1}}}}
+
 \makeatletter
 \@ifpackageloaded{tensor}% tensor is a package for a better typesetting of tensors
 {
@@ -340,12 +343,18 @@
 \renewcommand{\volume}[1][\Omega]{\ensuremath{#1}}}
 \makeatother
 
-% surface and volume elements
+% surface and volume elements (reference configuration)
 \newcommand{\svolume}[1][\Omega]{\ensuremath{\partial #1}}
 \newcommand{\volumee}{\diff \mathrm{V}}
 \newcommand{\surfacee}{\diff \vec{S}}
 \newcommand{\surfacees}{\diff \mathrm{S}}
-\newcommand{\linee}{\diff \vec{x}}
+\newcommand{\linee}{\diff \vec{X}}
+
+% surface and volume elements (current configuration)
+\newcommand{\cvolumee}{\diff \mathrm{v}}
+\newcommand{\csurfacee}{\diff \vec{s}}
+\newcommand{\csurfacees}{\diff \mathrm{s}}
+\newcommand{\clinee}{\diff \vec{x}}
 
 % volume and surface integral
 \newcommand{\intvolume}[2][\volume]{\int_{#1} #2\; \diff \vec{x}}
