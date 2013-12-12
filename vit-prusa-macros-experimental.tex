@@ -14,6 +14,8 @@
 % operators
 \DeclareMathOperator{\divergence}{div}
 \DeclareMathOperator{\Divergence}{Div}
+\DeclareMathOperator{\gradient}{grad}
+\DeclareMathOperator{\Gradient}{Grad}
 \DeclareMathOperator{\rot}{rot}
 \DeclareMathOperator{\Asym}{Asym}
 \DeclareMathOperator{\Sym}{Sym}
@@ -29,14 +31,9 @@
 \DeclareMathOperator{\arccoth}{arccoth}
 
 % invariants of second order tensor
-\DeclareMathOperator{\invariantI}{I_1}
-\DeclareMathOperator{\invariantII}{I_2}
-\DeclareMathOperator{\invariantIII}{I_3}
-
-% moments of second order tensor
-\DeclareMathOperator{\invariantIm}{\tilde{I}_1}
-\DeclareMathOperator{\invariantIIm}{\tilde{I}_2}
-\DeclareMathOperator{\invariantIIIm}{\tilde{I}_3}
+\DeclareMathOperator{\invariantI}{I}
+\DeclareMathOperator{\invariantII}{II}
+\DeclareMathOperator{\invariantIII}{III}
 
 % big o
 \newcommand{\bigo}[1]{\ensuremath{O\left(#1 \right)}}
@@ -62,7 +59,7 @@
 \newcommand{\reference}{\mathrm{ref}}
 \newcommand{\crit}{\mathrm{crit}}
 \newcommand{\bydefinition}{\mathrm{def}}
-\newcommand{\traceless}[1]{#1_{\delta}}
+\newcommand{\traceless}[1]{{#1}_{\delta}}
 
 % derivatives
 \newcommand{\diff}{\mathrm{d}}
@@ -104,7 +101,10 @@
 
 % deformation, deformation gradient
 \newcommand{\deformation}{\greekvec{\chi}}
+\newcommand{\deformationc}{\mathrm{\chi}}
+
 \newcommand{\fgrad}{\tensorq{F}}
+\newcommand{\fgradc}{\mathrm{F}}
 \newcommand{\fgradrel}[3][]{\fgrad^{#1}_{#2}\left(#3\right)}
 
 % right Cauchy-Green tensor
@@ -166,16 +166,30 @@
 \newcommand{\history}[3]{{\functional{#1}_{#2}^{#3}}}
 
 % base vectors
-\newcommand{\bvec}[1]{\vec{e}_{#1}}
+\newcommand{\bvec}[1]{\vec{e}_{#1}} % current configuration
+\newcommand{\Bvec}[1]{\vec{E}_{#1}} % reference configuration
+
+% dual base vectors
+\newcommand{\bvecd}[1]{\vec{e}^{#1}} % current configuration
+\newcommand{\Bvecd}[1]{\vec{E}^{#1}} % reference configuration
 
 \newcommand{\bvecx}{\bvec{\hat{x}}}
 \newcommand{\bvecy}{\bvec{\hat{y}}}
 %\newcommand{\bvecz}{\bvec{\hat{z}}}
 
+\newcommand{\BvecX}{\Bvec{\hat{X}}}
+\newcommand{\BvecY}{\Bvec{\hat{Y}}}
+\newcommand{\BvecZ}{\Bvec{\hat{Z}}}
+
+\newcommand{\BvecdX}{\Bvecd{\hat{X}}}
+\newcommand{\BvecdY}{\Bvecd{\hat{Y}}}
+\newcommand{\BvecdZ}{\Bvecd{\hat{Z}}}
+
 \newcommand{\bvecr}{\bvec{\hat{r}}}
 \newcommand{\bvect}{\bvec{\hat{\theta}}}
 \newcommand{\bvecp}{\bvec{\hat{\varphi}}}
 \newcommand{\bvecz}{\bvec{\hat{z}}}
+
 
 % components
 \newcommand{\vhatx}[1][v]{{#1}^{\hat{x}}}
@@ -194,6 +208,9 @@
 \newcommand{\hatr}{\hat{r}}
 \newcommand{\hatp}{\hat{\varphi}}
 \newcommand{\hatt}{\hat{\theta}}
+\newcommand{\hatX}{\hat{X}}
+\newcommand{\hatY}{\hat{Y}}
+\newcommand{\hatZ}{\hat{Z}}
  
 % base vectors, abstract covariant and contravariant basis
 \newcommand{\cobvec}[1]{\vec{g}_{#1}} % covariant base vector
@@ -209,24 +226,18 @@
 
 % sets
 \newcommand{\R}{\ensuremath{{\mathbb R}}}
-% \makeatletter
-% \@ifpackageloaded{hyperref}% \C is defined in hyperref package
-% {\renewcommand{\C}{\ensuremath{{\mathbb C}}}%
-% }{%
-% \newcommand{\C}{\ensuremath{{\mathbb C}}}%
-% }
-% \makeatother
-% %\newcommand{\C}{\ensuremath{{\mathbb C}}}% The lines above are no longer needed?
-
 \makeatletter
-\@ifundefined{C}%
-{\newcommand{\C}{\ensuremath{{\mathbb C}}}}%
-{\renewcommand{\C}{\ensuremath{{\mathbb C}}}}
+%\@ifpackageloaded{hyperref}% \C is defined in hyperref package
+%{\renewcommand{\C}{\ensuremath{{\mathbb C}}}%
+%}{%
+%\newcommand{\C}{\ensuremath{{\mathbb C}}}%
+%}
 \makeatother
-
+%\renewcommand{\C}{\ensuremath{{\mathbb C}}}% The lines above are no longer needed?
 \newcommand{\Q}{\ensuremath{{\mathbb Q}}}
 \newcommand{\N}{\ensuremath{{\mathbb N}}}
 \newcommand{\Z}{\ensuremath{{\mathbb Z}}}
+
 
 % Reynolds, Womersley number, etc.
 \newcommand{\Reynolds}{\mathrm{Re}}
@@ -240,7 +251,6 @@
 \newcommand{\Peclet}{\mathrm{Pe}}
 \newcommand{\Eckert}{\mathrm{Ec}}
 \newcommand{\Brinkman}{\mathrm{Br}}
-\newcommand{\Deborah}{\mathrm{De}}
 
 
 % Symetric and antisymetric tensors
@@ -248,13 +258,13 @@
 \newcommand{\sym}[1]{\ensuremath{\Sym \left( #1 \right)}}
 
 % Energy, free energy, entropy, temperature
-\newcommand{\ienergy}{\ensuremath{e}}
+\newcommand{\ienergy}{\ensuremath{e}} % internal energy
 \newcommand{\fenergy}{\ensuremath{\psi}} % free energy
 \newcommand{\entropy}{\ensuremath{\eta}} % entropy
 \newcommand{\enthalpy}{\ensuremath{h}} % enthalpy
 \newcommand{\temp}{\ensuremath{\theta}} % temperature
 \newcommand{\temptoref}{\ensuremath{\vartheta}} % (temperature - reference temperature)/(reference temperature)
-
+\newcommand{\tenergy}{\ensuremath{E}} % total energy
 
 % Derivatives, partial derivatives, covariant derivatives 
 \newcommand{\pd}[2]{\ensuremath{\frac{\partial {#1}}{\partial {#2}}}}
@@ -282,6 +292,9 @@
 % Truesdell derivative
 \newcommand{\tfid}[1]{\ensuremath{\accentset{\medcircle}{#1}}}
 \newcommand{\tfidd}[1]{\ensuremath{\accentset{\medcircle \! \medcircle}{#1}}}
+
+% Material derivative (\dot with \overline)
+\newcommand{\mdif}[1]{\ensuremath{\dot{\overline{#1}}}}
 
 \makeatletter
 \@ifpackageloaded{tensor}% tensor is a package for a better typesetting of tensors
@@ -332,15 +345,22 @@
 \renewcommand{\volume}[1][\Omega]{\ensuremath{#1}}}
 \makeatother
 
+% surface and volume elements (reference configuration)
 \newcommand{\svolume}[1][\Omega]{\ensuremath{\partial #1}}
 \newcommand{\volumee}{\diff \mathrm{V}}
 \newcommand{\surfacee}{\diff \vec{S}}
 \newcommand{\surfacees}{\diff \mathrm{S}}
-\newcommand{\linee}{\diff \vec{x}}
+\newcommand{\linee}{\diff \vec{X}}
+
+% surface and volume elements (current configuration)
+\newcommand{\cvolumee}{\diff \mathrm{v}}
+\newcommand{\csurfacee}{\diff \vec{s}}
+\newcommand{\csurfacees}{\diff \mathrm{s}}
+\newcommand{\clinee}{\diff \vec{x}}
 
 % volume and surface integral
-\newcommand{\intvolume}[2][\volume]{\int_{#1} #2\; \volumee}
-\newcommand{\intsvolume}[2][\svolume]{\int_{#1} #2\; \surfacee}
+\newcommand{\intvolume}[2][\volume]{\int_{#1} #2\; \diff \vec{x}}
+\newcommand{\intsvolume}[2][\svolume]{\int_{#1} #2\; \diff \vec{S}}
 
 
 % products
