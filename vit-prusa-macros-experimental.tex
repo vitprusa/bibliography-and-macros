@@ -23,7 +23,6 @@
 \DeclareMathOperator{\signum}{sign}
 \DeclareMathOperator{\supp}{supp}
 
-
 % hyperbolic functions
 \DeclareMathOperator{\arcsinh}{arcsinh}
 \DeclareMathOperator{\arccosh}{arccosh}
@@ -225,6 +224,10 @@
 \newcommand{\mtensor}{\tensorq{g}}
 \newcommand{\mtensorc}{{\mathrm g}}
 
+% Kronecker delta, Levi--Civitta symbol
+\newcommand{\kdelta}[1]{\tensor{\delta}{#1}}
+\newcommand{\lcepsilon}[1]{\tensor{\epsilon}{#1}}
+
 % hypergeometric function
 \newcommand{\hypergeom}[4]{\ensuremath{ \mathrm{F}\left( \left[#1, #2 \right]; \left[ #3 \right]; #4\right)}}
 
@@ -399,6 +402,9 @@
 % dualities, scalar products
 \newcommand{\fadual}[4]{\left\langle #1, #2\right\rangle_{#3, #4}}
 \newcommand{\fascal}[4]{\left\langle #1, #2\right\rangle_{#3, #4}}
+
+% dual space
+\newcommand{\dspace}[1]{#1^{\star}}
 
 % tensorial function
 \newcommand{\tensorf}[1]{{\mathfrak{#1}}}
