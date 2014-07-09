@@ -129,7 +129,16 @@
 \newcommand{\stretchvrel}[3][]{\stretchv^{#1}_{#2}\left(#3\right)}
 
 % linearized strain
+\makeatletter
+\@ifpackageloaded{bm}% 
+{%
+\newcommand{\linstrain}{\bbespilon} %requires \usepackage[bbgreekl]{mathbbol}
+% YES, the spelling is wrong, but this is how it is coded in the package
+}{%
 \newcommand{\linstrain}{\tensorq{\varepsilon}}
+}
+\makeatother
+\newcommand{\linstrainc}{\mathrm{\varepsilon}}
 
 % Lagrangean and Eulerian strain
 \newcommand{\lstrain}{\tensorq{E}}
@@ -263,6 +272,10 @@
 \newcommand{\Eckert}{\mathrm{Ec}}
 \newcommand{\Brinkman}{\mathrm{Br}}
 \newcommand{\Nusselt}{\mathrm{Nu}}
+
+% Young modulus, Poisson ratio
+\newcommand{\Young}{\mathrm{E}}
+\newcommand{\Poisson}{\mathrm{\nu}}
 
 
 % Symetric and antisymetric tensors
