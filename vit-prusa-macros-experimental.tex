@@ -112,6 +112,9 @@
 \newcommand{\fgradc}{\mathrm{F}}
 \newcommand{\fgradrel}[3][]{\fgrad^{#1}_{#2}\left(#3\right)}
 
+% displacement
+\newcommand{\displacement}{\vec{U}}
+
 % right Cauchy-Green tensor
 \newcommand{\rcg}{\tensorq{C}}
 \newcommand{\rcgrel}[3][]{\rcg^{#1}_{#2}\left(#3\right)}
@@ -147,7 +150,9 @@
 
 % Lagrangean and Eulerian strain
 \newcommand{\lstrain}{\tensorq{E}} % Green--Saint-Venant strain
-\newcommand{\estrain}{\tensorq{e}} % Euler--Almansi strain
+\newcommand{\lstrainc}{\tensorc{E}} % Green--Saint-Venant strain, components
+\newcommand{\estrain}{\tensorq{e}} % Euler--Almansi strain, components
+\newcommand{\estrainc}{\tensorc{e}} % Euler--Almansi strain, components
 
 % Rivlin-Ericksen tensor
 \newcommand{\rivlin}{{\tensorq{A}}}
@@ -239,8 +244,11 @@
 \newcommand{\cobvecn}[1]{\vec{g}_{\hat{#1}}} % covariant base vector
 \newcommand{\conbvecn}[1]{\vec{g}^{\hat{#1}}} % contravariant base vector
 
-\newcommand{\mtensor}{\tensorq{g}}
-\newcommand{\mtensorc}{{\mathrm g}}
+\newcommand{\mtensor}{\tensorq{g}}  % metric tensor
+\newcommand{\mtensorc}{{\mathrm g}} % metric tensor, components
+
+\newcommand{\mtensorref}{\tensorq{G}}  %metric tensor in reference configuration
+\newcommand{\mtensorrefc}{{\mathrm G}} %metric tensor in reference configuration, components
 
 % Kronecker delta, Levi--Civitta symbol
 \newcommand{\kdelta}[1]{\tensor{\delta}{#1}}
@@ -299,6 +307,15 @@
 \newcommand{\temp}{\ensuremath{\theta}} % temperature
 \newcommand{\temptoref}{\ensuremath{\vartheta}} % (temperature - reference temperature)/(reference temperature)
 \newcommand{\tenergy}{\ensuremath{E}} % total energy
+
+% Energy flux, heat flux
+\newcommand{\efluxc}{\vec{q}_{e}} % energy flux, current configuration
+\newcommand{\hfluxc}{\vec{q}}     % heat flux, current configuration
+\newcommand{\eflux}{\vec{Q}_{e}} % energy flux, reference configuration
+\newcommand{\hflux}{\vec{Q}}     % heat flux, reference configuration
+
+% Energy source
+\newcommand{\esourcec}{\ensuremath{q}} % energy source, current configuration
 
 % Derivatives, partial derivatives, covariant derivatives 
 \newcommand{\pd}[2]{\ensuremath{\frac{\partial {#1}}{\partial {#2}}}}
