@@ -300,25 +300,36 @@
 \newcommand{\sym}[1]{\ensuremath{\Sym \left( #1 \right)}}
 
 % Energy, free energy, entropy, temperature
-\newcommand{\ienergy}{\ensuremath{e}} % internal energy
-\newcommand{\fenergy}{\ensuremath{\psi}} % free energy
-\newcommand{\entropy}{\ensuremath{\eta}} % entropy
-\newcommand{\enthalpy}{\ensuremath{h}} % enthalpy
+\newcommand{\ienergy}{\ensuremath{e}} % specific internal energy (energy per unit mass)
+\newcommand{\fenergy}{\ensuremath{\psi}} % specific free energy
+\newcommand{\entropy}{\ensuremath{\eta}} % specific entropy
+\newcommand{\enthalpy}{\ensuremath{h}} % specific enthalpy
 \newcommand{\temp}{\ensuremath{\theta}} % temperature
 \newcommand{\temptoref}{\ensuremath{\vartheta}} % (temperature - reference temperature)/(reference temperature)
-\newcommand{\tenergy}{\ensuremath{E}} % total energy
+\newcommand{\tenergy}{\ensuremath{e_{\mathrm{tot}}}} % specific total energy
 
+% Net energy, free energy, entropy, ...
+\newcommand{\netienergy}{\ensuremath{E}} % net energy
+\newcommand{\netentropy}{\ensuremath{S}} % net entropy
+\newcommand{\netheat}{\ensuremath{Q}} % net heat
+ 
 % Density in reference configuration
 \newcommand{\rhor}{\rho_{\mathrm{R}}}
 
-% Energy flux, heat flux
-\newcommand{\efluxc}{\vec{q}_{e}} % energy flux, current configuration
-\newcommand{\hfluxc}{\vec{q}}     % heat flux, current configuration
-\newcommand{\eflux}{\vec{Q}_{e}} % energy flux, reference configuration
-\newcommand{\hflux}{\vec{Q}}     % heat flux, reference configuration
+% Energy flux, heat flux, entropy flux
+\newcommand{\efluxc}{\vec{j}_{e}} % energy flux, current configuration
+\newcommand{\eflux}{\vec{J}_{e}} % energy flux, reference configuration
 
-% Energy source
-\newcommand{\esourcec}{\ensuremath{q}} % energy source, current configuration
+\newcommand{\hfluxc}{\vec{j}_{q}}     % heat flux, current configuration
+\newcommand{\hflux}{\vec{J}_{q}}     % heat flux, reference configuration
+
+\newcommand{\entfluxc}{\vec{j}_{\entropy}} % entropy flux, current configurtion 
+\newcommand{\entflux}{\vec{J}_{\entropy}} % entropy flux, reference configuration
+
+% Energy source, entropy source
+\newcommand{\esourcec}{\ensuremath{q_{e}}} % energy source, current configuration
+\newcommand{\hsourcec}{\ensuremath{q}} % heat source, current configuration
+\newcommand{\entsourcec}{\ensuremath{q_{\entropy}}} % entropy source, current configuration
 
 % Derivatives, partial derivatives, covariant derivatives 
 \newcommand{\pd}[2]{\ensuremath{\frac{\partial {#1}}{\partial {#2}}}}
