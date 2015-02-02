@@ -1,0 +1,30 @@
+% This will work with \usepackage{thmtools} and corresponding chages in vit-prusa-env-list.tex
+% http://tex.stackexchange.com/questions/34405/shaded-theorems-thmtools-spanning-pages 
+
+% \definecolor{mybg}{rgb}{0.9,0.9,0.9}
+
+% \declaretheoremstyle[
+% headfont=\normalfont\bfseries,
+% notefont=\mdseries, notebraces={(}{)},
+% bodyfont=\normalfont\itshape,
+% postheadspace=0.5em,
+% preheadhook={\begin{mdframed}[backgroundcolor=mybg, %
+%   innertopmargin =0pt , splittopskip = \topskip, % 
+%   skipbelow= 10em, skipabove=\topskip, %
+%   topline=false,bottomline=false,leftline=false,rightline=false]},
+% postfoothook=\end{mdframed}
+% ]{mystyle}
+%\declaretheorem[style=mystyle]{theorem}
+
+%\usepackage{thmtools} Please add this to preamble!
+
+\declaretheorem[shaded,numberwithin=chapter]{theorem}
+\declaretheorem[shaded,sibling=theorem]{definition}
+\declaretheorem[shaded,sibling=theorem]{corollary}
+\declaretheorem[sibling=theorem]{lemma}
+\declaretheorem[sibling=theorem]{proposition}
+\declaretheorem[sibling=theorem]{example}
+\declaretheorem[sibling=theorem]{exercise}
+\declaretheorem[sibling=theorem]{problem}
+\declaretheorem[sibling=theorem]{remark}
+
