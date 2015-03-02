@@ -65,6 +65,10 @@
 \newcommand{\diff}{\mathrm{d}}
 \newcommand{\Diff}[1]{\mathrm{D}_{#1}} % For Frechet and Gateaux derivative
 
+% inexact differential
+\newcommand{\dbar}{{\mathchar'26\mkern-12mu \diff}}
+\newcommand{\idiff}{\dbar}
+
 % body
 \newcommand{\body}{{\mathcal B}}
 
@@ -112,6 +116,9 @@
 \newcommand{\fgradc}{\mathrm{F}}
 \newcommand{\fgradrel}[3][]{\fgrad^{#1}_{#2}\left(#3\right)}
 
+% displacement
+\newcommand{\displacement}{\vec{U}}
+
 % right Cauchy-Green tensor
 \newcommand{\rcg}{\tensorq{C}}
 \newcommand{\rcgrel}[3][]{\rcg^{#1}_{#2}\left(#3\right)}
@@ -119,6 +126,9 @@
 % left Cauchy-Green tensor
 \newcommand{\lcg}{\tensorq{B}}
 \newcommand{\lcgrel}[3][]{\lcg^{#1}_{#2}\left(#3\right)}
+
+%\newcommand{\piolastrain}{\tensorq{b}} % Piola deformation tensor (inverse of right Cauchy--Green)
+%\newcommand{\fingerstrain}{\tensorq{c}} % Finger deformation tensor (inverse of left Cauchy--Green)
 
 % rotation
 \newcommand{\rotation}{\tensorq{R}}
@@ -143,14 +153,17 @@
 \newcommand{\linstrainc}{\mathrm{\varepsilon}}
 
 % Lagrangean and Eulerian strain
-\newcommand{\lstrain}{\tensorq{E}}
-\newcommand{\estrain}{\tensorq{e}}
+\newcommand{\lstrain}{\tensorq{E}} % Green--Saint-Venant strain
+\newcommand{\lstrainc}{\tensorc{E}} % Green--Saint-Venant strain, components
+\newcommand{\estrain}{\tensorq{e}} % Euler--Almansi strain, components
+\newcommand{\estrainc}{\tensorc{e}} % Euler--Almansi strain, components
 
 % Rivlin-Ericksen tensor
 \newcommand{\rivlin}{{\tensorq{A}}}
 
 % generic tensor quantity
 \newcommand{\generictensor}{{\tensorq{A}}}
+\newcommand{\generictensorc}{\tensorc{A}} % component of the tensor
 
 % deviatoric part of Cauchy stress
 \newcommand{\dcstress}{\cstress - \left( \frac{1}{3}\Tr \cstress \right) \identity}
@@ -236,8 +249,11 @@
 \newcommand{\cobvecn}[1]{\vec{g}_{\hat{#1}}} % covariant base vector
 \newcommand{\conbvecn}[1]{\vec{g}^{\hat{#1}}} % contravariant base vector
 
-\newcommand{\mtensor}{\tensorq{g}}
-\newcommand{\mtensorc}{{\mathrm g}}
+\newcommand{\mtensor}{\tensorq{g}}  % metric tensor
+\newcommand{\mtensorc}{{\mathrm g}} % metric tensor, components
+
+\newcommand{\mtensorref}{\tensorq{G}}  %metric tensor in reference configuration
+\newcommand{\mtensorrefc}{{\mathrm G}} %metric tensor in reference configuration, components
 
 % Kronecker delta, Levi--Civitta symbol
 \newcommand{\kdelta}[1]{\tensor{\delta}{#1}}
@@ -289,13 +305,39 @@
 \newcommand{\sym}[1]{\ensuremath{\Sym \left( #1 \right)}}
 
 % Energy, free energy, entropy, temperature
-\newcommand{\ienergy}{\ensuremath{e}} % internal energy
-\newcommand{\fenergy}{\ensuremath{\psi}} % free energy
-\newcommand{\entropy}{\ensuremath{\eta}} % entropy
-\newcommand{\enthalpy}{\ensuremath{h}} % enthalpy
+\newcommand{\ienergy}{\ensuremath{e}} % specific internal energy (energy per unit mass)
+\newcommand{\fenergy}{\ensuremath{\psi}} % specific free energy
+\newcommand{\entropy}{\ensuremath{\eta}} % specific entropy
+\newcommand{\enthalpy}{\ensuremath{h}} % specific enthalpy
 \newcommand{\temp}{\ensuremath{\theta}} % temperature
 \newcommand{\temptoref}{\ensuremath{\vartheta}} % (temperature - reference temperature)/(reference temperature)
-\newcommand{\tenergy}{\ensuremath{E}} % total energy
+\newcommand{\tenergy}{\ensuremath{e_{\mathrm{tot}}}} % specific total energy (energy per unit mass), internal energy plus kinetic energy
+
+% Net energy, free energy, entropy, ...
+\newcommand{\netienergy}{\ensuremath{E}} % net energy
+\newcommand{\netentropy}{\ensuremath{S}} % net entropy
+\newcommand{\netheat}{\ensuremath{Q}} % net heat
+ 
+% Density in reference configuration
+\newcommand{\rhor}{\rho_{\mathrm{R}}}
+
+% Energy flux, heat flux, entropy flux
+\newcommand{\efluxc}{\vec{j}_{e}} % energy flux, current configuration
+\newcommand{\eflux}{\vec{J}_{e}} % energy flux, reference configuration
+
+\newcommand{\hfluxc}{\vec{j}_{q}}     % heat flux, current configuration
+\newcommand{\hflux}{\vec{J}_{q}}     % heat flux, reference configuration
+
+\newcommand{\entfluxc}{\vec{j}_{\entropy}} % entropy flux, current configurtion 
+\newcommand{\entflux}{\vec{J}_{\entropy}} % entropy flux, reference configuration
+
+% Energy source, entropy source
+\newcommand{\esourcec}{\ensuremath{q_{e}}} % energy source, current configuration
+\newcommand{\hsourcec}{\ensuremath{q}} % heat source, current configuration
+\newcommand{\entsourcec}{\ensuremath{q_{\entropy}}} % entropy source, current configuration
+
+% Entropy production
+\newcommand{\entprodc}{\xi} % entorpy production, current configuration
 
 % Derivatives, partial derivatives, covariant derivatives 
 \newcommand{\pd}[2]{\ensuremath{\frac{\partial {#1}}{\partial {#2}}}}
@@ -330,7 +372,7 @@
 \makeatletter
 \@ifpackageloaded{tensor}% tensor is a package for a better typesetting of tensors
 {
-\newcommand{\codev}[2]{\ensuremath{{#1}|\indices{_{#2}}}}
+\newcommand{\codev}[2]{\ensuremath{\left. {#1} \right|\indices{_{#2}}}}
 }{%
 \newcommand{\codev}[2]{\ensuremath{\left. {#1} \right|_{#2}}}
 }
@@ -339,7 +381,7 @@
 \makeatletter
 \@ifpackageloaded{tensor}% tensor is a package for a better typesetting of tensors
 {
-\newcommand{\contradev}[2]{\ensuremath{{#1}|\indices{^{#2}}}}
+\newcommand{\contradev}[2]{\ensuremath{\left. {#1} \right|\indices{^{#2}}}}
 }{%
 \newcommand{\contradev}[2]{\ensuremath{\left. {#1} \right|^{#2}}}
 }
