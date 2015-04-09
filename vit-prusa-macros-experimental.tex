@@ -118,6 +118,7 @@
 
 % displacement
 \newcommand{\displacement}{\vec{U}}
+\newcommand{\displacementc}{\mathrm{U}}
 
 % right Cauchy-Green tensor
 \newcommand{\rcg}{\tensorq{C}}
@@ -140,7 +141,7 @@
 \newcommand{\stretchv}{\tensorq{V}}
 \newcommand{\stretchvrel}[3][]{\stretchv^{#1}_{#2}\left(#3\right)}
 
-% linearized strain
+% linearized strain (symmetric part of displacement gradient), skew-symmetric part of displacement gradient
 \makeatletter
 \@ifpackageloaded{bm}% 
 {%
@@ -149,8 +150,17 @@
 }{%
 \newcommand{\linstrain}{\tensorq{\varepsilon}}
 }
+
+\@ifpackageloaded{bm}%
+{%
+\newcommand{\skewdgradient}{\bbomega} 
+}{%
+\newcommand{\skewdgradient}{\tensorq{\omega}}
+}
+
 \makeatother
 \newcommand{\linstrainc}{\mathrm{\varepsilon}}
+\newcommand{\skewdgradientc}{\mathrm{\omega}}
 
 % Lagrangean and Eulerian strain
 \newcommand{\lstrain}{\tensorq{E}} % Green--Saint-Venant strain
