@@ -56,10 +56,14 @@
 \providecommand{\Imag}{\Im}
 
 % predicates
+\newcommand{\charac}{\ensuremath{\mathrm{char}}} % characteristic quantity such as length scale, etc.
 \newcommand{\reference}{\mathrm{ref}}
 \newcommand{\crit}{\mathrm{crit}}
 \newcommand{\bydefinition}{\mathrm{def}}
 \newcommand{\traceless}[1]{{#1}_{\delta}}
+
+% dimensionless variables and functions
+\newcommand{\dimless}[1]{#1^\star}
 
 % derivatives
 \newcommand{\diff}{\mathrm{d}}
@@ -322,9 +326,11 @@
 \newcommand{\temp}{\ensuremath{\theta}} % temperature
 \newcommand{\temptoref}{\ensuremath{\vartheta}} % (temperature - reference temperature)/(reference temperature)
 \newcommand{\tenergy}{\ensuremath{e_{\mathrm{tot}}}} % specific total energy (energy per unit mass), internal energy plus kinetic energy
+\newcommand{\kenergy}{\ensuremath{e_{\mathrm{kin}}}} % specific kinetic energy (kinetic energy per unit mass)
 
 % Net energy, free energy, entropy, ...
 \newcommand{\netienergy}{\ensuremath{E}} % net energy
+\newcommand{\netkenergy}{\ensuremath{E_{\mathrm{kin}}}} % net kinetic energy
 \newcommand{\netentropy}{\ensuremath{S}} % net entropy
 \newcommand{\netheat}{\ensuremath{Q}} % net heat
  
