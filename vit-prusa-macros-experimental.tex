@@ -90,6 +90,7 @@
 \newcommand{\tensorq}[1]{\ensuremath{\mathbb{#1}}}      % tensorial quantity
 \newcommand{\tensorc}[1]{\ensuremath{\mathrm{#1}}}      % tensorial quantity components  
 
+\newcommand{\conjugate}[1]{#1^\star}
 \newcommand{\transpose}[1]{#1^\top}
 \newcommand{\transposei}[1]{#1^{-\top}}
 \newcommand{\inverse}[1]{#1^{-1}}
@@ -324,6 +325,8 @@
 \newcommand{\entropy}{\ensuremath{\eta}} % specific entropy
 \newcommand{\enthalpy}{\ensuremath{h}} % specific enthalpy
 \newcommand{\temp}{\ensuremath{\theta}} % temperature
+\newcommand{\thpressure}{\ensuremath{p_{\mathrm{th}}}} % thermodynamic pressure
+\newcommand{\mns}{\ensuremath{m}} % mean normal stress
 \newcommand{\temptoref}{\ensuremath{\vartheta}} % (temperature - reference temperature)/(reference temperature)
 \newcommand{\tenergy}{\ensuremath{e_{\mathrm{tot}}}} % specific total energy (energy per unit mass), internal energy plus kinetic energy
 \newcommand{\kenergy}{\ensuremath{e_{\mathrm{kin}}}} % specific kinetic energy (kinetic energy per unit mass)
@@ -342,6 +345,7 @@
 \newcommand{\eflux}{\vec{J}_{e}} % energy flux, reference configuration
 
 \newcommand{\hfluxc}{\vec{j}_{q}}     % heat flux, current configuration
+\newcommand{\hfluxcc}{\tensorc{j}_{q}}     % heat flux, current configuration, components
 \newcommand{\hflux}{\vec{J}_{q}}     % heat flux, reference configuration
 
 \newcommand{\entfluxc}{\vec{j}_{\entropy}} % entropy flux, current configurtion 
@@ -352,8 +356,13 @@
 \newcommand{\hsourcec}{\ensuremath{q}} % heat source, current configuration
 \newcommand{\entsourcec}{\ensuremath{q_{\entropy}}} % entropy source, current configuration
 
+% Thermodynamical fluxes and affinities
+\newcommand{\thfluxc}[1]{\vec{j}_{#1}} % thermodynamic flux, current configuration
+\newcommand{\thaffinityc}[1]{\vec{a}_{#1}} % thermodynamic affinity, current configuration
+
 % Entropy production
 \newcommand{\entprodc}{\xi} % entorpy production, current configuration
+\newcommand{\entprodctemp}{\zeta} % entorpy production times temperature, current configuration
 
 % Derivatives, partial derivatives, covariant derivatives 
 \newcommand{\pd}[2]{\ensuremath{\frac{\partial {#1}}{\partial {#2}}}}
