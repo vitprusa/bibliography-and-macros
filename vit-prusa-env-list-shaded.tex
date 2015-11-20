@@ -31,7 +31,8 @@
 \numberwithin{equation}{chapter}
 
 % Environment for solution, corresponds to the definition of "proof" environment as taken from amsbook.cls
-\newenvironment{proof}[1][\solutionname]{\par
+\makeatletter
+\newenvironment{solution}[1][\solutionname]{\par
   \pushQED{\qed}%
   \normalfont \topsep6\p@\@plus6\p@\relax
   \trivlist
@@ -43,3 +44,4 @@
   \popQED\endtrivlist\@endpefalse
 }
 \providecommand{\solutionname}{Solution}
+\makeatother
