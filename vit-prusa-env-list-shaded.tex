@@ -29,3 +29,17 @@
 \declaretheorem[sibling=theorem]{remark}
 
 \numberwithin{equation}{chapter}
+
+% Environment for solution, corresponds to the definition of "proof" environment as taken from amsbook.cls
+\newenvironment{proof}[1][\solutionname]{\par
+  \pushQED{\qed}%
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \trivlist
+  \itemindent\normalparindent
+  \item[\hskip\labelsep
+        \scshape
+    #1\@addpunct{.}]\ignorespaces
+}{%
+  \popQED\endtrivlist\@endpefalse
+}
+\providecommand{\solutionname}{Solution}
