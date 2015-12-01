@@ -215,27 +215,43 @@
 \newcommand{\bvecd}[1]{\vec{e}^{#1}} % current configuration
 \newcommand{\Bvecd}[1]{\vec{E}^{#1}} % reference configuration
 
+% Cartesian basis, current configuration
 \newcommand{\bvecx}{\bvec{\hat{x}}}
 \newcommand{\bvecy}{\bvec{\hat{y}}}
-%\newcommand{\bvecz}{\bvec{\hat{z}}}
+\newcommand{\bvecz}{\bvec{\hat{z}}}
 
+% Cartesian basis, reference configuration
 \newcommand{\BvecX}{\Bvec{\hat{X}}}
 \newcommand{\BvecY}{\Bvec{\hat{Y}}}
 \newcommand{\BvecZ}{\Bvec{\hat{Z}}}
 
+% Cartesian dual basis, reference configuration
 \newcommand{\BvecdX}{\Bvecd{\hat{X}}}
 \newcommand{\BvecdY}{\Bvecd{\hat{Y}}}
 \newcommand{\BvecdZ}{\Bvecd{\hat{Z}}}
 
+% Cartesian dual basis, current configuration
 \newcommand{\bvecdx}{\bvecd{\hat{x}}}
 \newcommand{\bvecdy}{\bvecd{\hat{y}}}
 \newcommand{\bvecdz}{\bvecd{\hat{z}}}
 
+% same as above but now in cylindrical coordinates
 \newcommand{\bvecr}{\bvec{\hat{r}}}
 \newcommand{\bvect}{\bvec{\hat{\theta}}}
 \newcommand{\bvecp}{\bvec{\hat{\varphi}}}
-\newcommand{\bvecz}{\bvec{\hat{z}}}
+%\newcommand{\bvecz}{\bvec{\hat{z}}}
 
+\newcommand{\bvecdr}{\bvecd{\hat{r}}}
+\newcommand{\bvecdt}{\bvecd{\hat{\theta}}}
+\newcommand{\bvecdp}{\bvecd{\hat{\varphi}}}
+
+\newcommand{\BvecR}{\Bvec{\hat{R}}}
+\newcommand{\BvecP}{\Bvec{\hat{\Phi}}}
+%\newcommand{\BvecZ}{\Bvec{\hat{Z}}}
+
+\newcommand{\BvecdR}{\Bvecd{\hat{R}}}
+\newcommand{\BvecdP}{\Bvecd{\hat{\Phi}}}
+%\newcommand{\BvecdZ}{\Bvecd{\hat{Z}}}
 
 % components
 \newcommand{\vhatx}[1][v]{{#1}^{\hat{x}}}
@@ -257,6 +273,12 @@
 \newcommand{\hatX}{\hat{X}}
 \newcommand{\hatY}{\hat{Y}}
 \newcommand{\hatZ}{\hat{Z}}
+
+% inner and outer radius (for some calcualtions)
+\newcommand{\Rin}{R_{\mathrm{in}}}
+\newcommand{\Rout}{R_{\mathrm{out}}}
+\newcommand{\rin}{r_{\mathrm{in}}}
+\newcommand{\rout}{r_{\mathrm{out}}}
  
 % base vectors, abstract covariant and contravariant basis
 \newcommand{\cobvec}[1]{\vec{g}_{#1}} % covariant base vector
