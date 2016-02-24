@@ -1,0 +1,25 @@
+% Use with:
+% \usepackage{xcolor}
+% \usepackage{mdframed}
+% \usepackage{newfloat}
+
+\DeclareFloatingEnvironment[fileext=sum,placement={!ht},name=Summary]{summaryflt}
+
+\newenvironment{summary}[1][]
+    {
+    \begin{summaryflt}[tb]
+        \begin{summarycont}[#1] %Content of the summary, "graphics" in provided by mdframe environment summarycont
+    }
+    {
+        \end{summarycont}
+        \end{summaryflt}
+    }
+
+\mdfdefinestyle{summarystyle}{%
+linecolor=black,linewidth=3pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=gray!20,
+innertopmargin=\topskip,
+}
+
+\mdtheorem[style=summarystyle]{summarycont}{Summary}
