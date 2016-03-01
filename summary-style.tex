@@ -3,6 +3,11 @@
 % \usepackage{mdframed}
 % \usepackage{newfloat}
 
+
+%
+% FLOATING SUMMARY
+%
+
 \DeclareFloatingEnvironment[fileext=sum,placement={!ht},name=Summary]{summaryflt}
 
 \newenvironment{summary}[1][]
@@ -23,3 +28,18 @@ innertopmargin=\topskip,
 }
 
 \mdtheorem[style=summarystyle]{summarycont}{Summary}
+
+
+%
+% SCHOLION
+%
+
+\newmdenv[style=scholionstyle]{scholion}
+\mdfdefinestyle{scholionstyle}{
+%  leftmargin=1cm, 
+%  rightmargin=2cm, 
+%  innerleftmargin=1cm, 
+%  innerrightmargin=1cm, 
+  backgroundcolor=gray!10,
+  roundcorner=10pt
+}
