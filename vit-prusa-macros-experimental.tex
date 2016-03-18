@@ -100,30 +100,34 @@
 
 % Cauchy stress
 \newcommand{\cstress}{\tensorq{T}}
-\newcommand{\cstressc}{\ensuremath{\mathrm T}}
+\newcommand{\cstressc}{\tensorc{T}}
 
 \newcommand{\ecstress}{\tensorq{S}}
-\newcommand{\ecstressc}{\ensuremath{\mathrm S}}
+\newcommand{\ecstressc}{\tensorc{S}}
 
 % First Piola stress tensor
 \newcommand{\fpstress}{\tensorq{T}_{\mathrm{R}}}
-\newcommand{\fpstressc}{\ensuremath{{{\mathrm T}_{\mathrm R}}}}
+\newcommand{\fpstressc}{\tensorc{T}_{\mathrm R}}
 
 % Second Piola--Kirchhoff stress tensor
 \newcommand{\spstress}{\tensorq{S}_{\mathrm{R}}}
 \newcommand{\spstressc}{\ensuremath{{{\mathrm S}_{\mathrm R}}}}
 
+% Couple stress tensor
+\newcommand{\couplestress}{\tensorq{M}}
+\newcommand{\couplestressc}{\tensorc{M}}
+
 % deformation, deformation gradient
 \newcommand{\deformation}{\greekvec{\chi}}
-\newcommand{\deformationc}{\mathrm{\chi}}
+\newcommand{\deformationc}{\tensorc{\chi}}
 
 \newcommand{\fgrad}{\tensorq{F}}
-\newcommand{\fgradc}{\mathrm{F}}
+\newcommand{\fgradc}{\tensorc{F}}
 \newcommand{\fgradrel}[3][]{\fgrad^{#1}_{#2}\left(#3\right)}
 
 % displacement
 \newcommand{\displacement}{\vec{U}}
-\newcommand{\displacementc}{\mathrm{U}}
+\newcommand{\displacementc}{\tensorc{U}}
 
 % right Cauchy-Green tensor
 \newcommand{\rcg}{\tensorq{C}}
@@ -201,7 +205,8 @@
 \newcommand{\vecvc}{\tensorc{v}}
 
 % velocity and velocity gradient, (skew)symmetric part of velocity gradient, COMPONENTS
-\newcommand{\gradsymc}{\ensuremath{\mathrm D}}
+\newcommand{\gradsymc}{\tensorc{D}}
+\newcommand{\gradasymc}{\tensorc{W}}
 
 % functionals
 \newcommand{\functional}[1]{{\mathfrak #1}}
