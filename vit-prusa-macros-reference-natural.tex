@@ -1,0 +1,38 @@
+\newcommand{\rplacer}{\kappa_0}       % placer, reference configuration
+\newcommand{\cplacer}{\kappa_t}       % placer, current configuration
+\newcommand{\nplacer}{\kappa_{\mathnormal{p}(\mathnormal{t})}}  % placer, natural configuration
+
+\newcommand{\refnat}{\mathrm{RN}} % reference -> natural
+\newcommand{\natcur}{\mathrm{NC}} % natural -> current
+\newcommand{\refcur}{\mathrm{RC}} % reference -> current
+
+% PRUSA
+% \newcommand{\fgradrn}{\ensuremath{\fgrad_{\refnat}}} % deformation gradient, reference -> natural
+% \newcommand{\fgradrng}{\ensuremath{\fgrad_{\refnat}}} % deformation gradient, reference -> natural, symbol G
+
+% \newcommand{\gradvlrn}{\ensuremath{\gradvl_{\refnat}}} % velocity gradient, reference -> natural
+% \newcommand{\gradsymrn}{\ensuremath{\gradsym_{\refnat}}} % symmetric part of the velocity gradient, reference -> natural
+% \newcommand{\gradasymrn}{\ensuremath{\gradasym_{\refnat}}} % skew symmetric part of the velocity gradient, reference -> natural
+% \newcommand{\lcgnc}{\ensuremath{\lcg_{\natcur}}} % left Cauchy--Green tensor, natural -> current
+% \newcommand{\rcgnc}{\ensuremath{\rcg_{\natcur}}} % right Cauchy--Green tensor, natural -> current
+
+% \newcommand{\fgradnc}{\ensuremath{\fgrad_{\natcur}}} % deformation gradient, natural -> current
+% \newcommand{\fgradrc}{\ensuremath{\fgrad_{\refcur}}} % deformation gradient, reference -> current
+
+
+% MALEK
+\newcommand{\fgradrn}{\ensuremath{\fgrad_{\rplacer(\body)\to \nplacer(\body)}}} % deformation gradient, reference -> natural
+\newcommand{\fgradrng}{\ensuremath{\tensorq{G}}} % deformation gradient, reference -> natural, symbol G
+
+\newcommand{\gradvlrn}{\ensuremath{\gradvl_{\nplacer}}} % velocity gradient, reference -> natural
+\newcommand{\gradsymrn}{\ensuremath{\gradsym_{\nplacer}}} % symmetric part of the velocity gradient, reference -> natural
+\newcommand{\gradasymrn}{\ensuremath{\gradasym_{\nplacer}}} % skew symmetric part of the velocity gradient, reference -> natural
+
+\newcommand{\lcgnc}{\ensuremath{\lcg_{\nplacer}}} % left Cauchy--Green tensor, natural -> current
+\newcommand{\lcgncc}{\ensuremath{\lcgc_{\nplacer}}} % left Cauchy--Green tensor, natural -> current, components
+
+\newcommand{\rcgnc}{\ensuremath{\rcg_{\nplacer}}} % right Cauchy--Green tensor, natural -> current
+\newcommand{\rcgncc}{\ensuremath{\rcgc_{\nplacer}}} % right Cauchy--Green tensor, natural -> current, components
+
+\newcommand{\fgradnc}{\ensuremath{\fgrad_{\nplacer}}} % deformation gradient, natural -> current
+\newcommand{\fgradrc}{\ensuremath{\fgrad}} % deformation gradient, reference -> current, components
