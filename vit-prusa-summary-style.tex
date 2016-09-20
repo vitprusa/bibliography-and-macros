@@ -1,0 +1,47 @@
+% Use with:
+% \usepackage{xcolor}
+% \usepackage{mdframed}
+% \usepackage{newfloat}
+
+
+%
+% FLOATING SUMMARY
+%
+
+\DeclareFloatingEnvironment[fileext=sum,placement={!ht},name=Summary]{summaryflt}
+
+\newenvironment{summary}[1][]
+    {
+    \begin{summaryflt}[tb]
+        \begin{summarycont}[#1] %Content of the summary, "graphics" in provided by mdframe environment summarycont
+    }
+    {
+        \end{summarycont}
+        \end{summaryflt}
+    }
+
+\mdfdefinestyle{summarystyle}{%
+linecolor=black,linewidth=3pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=gray!20,
+innertopmargin=\topskip,
+}
+
+\mdtheorem[style=summarystyle]{summarycont}{Summary}
+
+
+%
+% SCHOLION
+%
+
+\newmdenv[style=scholionstyle]{scholion}
+\mdfdefinestyle{scholionstyle}{
+  % leftmargin=1cm, 
+  % rightmargin=2cm, 
+  % innerleftmargin=1cm, 
+  % innerrightmargin=1cm, 
+  skipabove=1em,
+  skipbelow=1em,
+  backgroundcolor=gray!10,
+  roundcorner=10pt
+}

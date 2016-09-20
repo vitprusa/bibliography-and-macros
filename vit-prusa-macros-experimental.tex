@@ -100,37 +100,43 @@
 
 % Cauchy stress
 \newcommand{\cstress}{\tensorq{T}}
-\newcommand{\cstressc}{\ensuremath{\mathrm T}}
+\newcommand{\cstressc}{\tensorc{T}}
 
 \newcommand{\ecstress}{\tensorq{S}}
-\newcommand{\ecstressc}{\ensuremath{\mathrm S}}
+\newcommand{\ecstressc}{\tensorc{S}}
 
 % First Piola stress tensor
 \newcommand{\fpstress}{\tensorq{T}_{\mathrm{R}}}
-\newcommand{\fpstressc}{\ensuremath{{{\mathrm T}_{\mathrm R}}}}
+\newcommand{\fpstressc}{\tensorc{T}_{\mathrm R}}
 
 % Second Piola--Kirchhoff stress tensor
 \newcommand{\spstress}{\tensorq{S}_{\mathrm{R}}}
 \newcommand{\spstressc}{\ensuremath{{{\mathrm S}_{\mathrm R}}}}
 
+% Couple stress tensor
+\newcommand{\couplestress}{\tensorq{M}}
+\newcommand{\couplestressc}{\tensorc{M}}
+
 % deformation, deformation gradient
 \newcommand{\deformation}{\greekvec{\chi}}
-\newcommand{\deformationc}{\mathrm{\chi}}
+\newcommand{\deformationc}{\tensorc{\chi}}
 
 \newcommand{\fgrad}{\tensorq{F}}
-\newcommand{\fgradc}{\mathrm{F}}
+\newcommand{\fgradc}{\tensorc{F}}
 \newcommand{\fgradrel}[3][]{\fgrad^{#1}_{#2}\left(#3\right)}
 
 % displacement
 \newcommand{\displacement}{\vec{U}}
-\newcommand{\displacementc}{\mathrm{U}}
+\newcommand{\displacementc}{\tensorc{U}}
 
 % right Cauchy-Green tensor
 \newcommand{\rcg}{\tensorq{C}}
+\newcommand{\rcgc}{\tensorc{C}}        
 \newcommand{\rcgrel}[3][]{\rcg^{#1}_{#2}\left(#3\right)}
 
 % left Cauchy-Green tensor
 \newcommand{\lcg}{\tensorq{B}}
+\newcommand{\lcgc}{\tensorc{B}}        
 \newcommand{\lcgrel}[3][]{\lcg^{#1}_{#2}\left(#3\right)}
 
 %\newcommand{\piolastrain}{\tensorq{b}} % Piola deformation tensor (inverse of right Cauchy--Green)
@@ -195,13 +201,17 @@
 \newcommand{\dgradsymsymb}{\ensuremath{\gradsym_{\delta}}}
 \newcommand{\gradvl}{\ensuremath{\tensorq{L}}}
 
+% surface velocity
+\newcommand{\unders}[1]{\ensuremath{\underaccent{\mathrm{s}}{#1}}}
+
 \newcommand{\gradsymop}{\nabla_{\mathrm{sym}}}
 \newcommand{\gradasymop}{\nabla_{\mathrm{asym}}}
 
 \newcommand{\vecvc}{\tensorc{v}}
 
 % velocity and velocity gradient, (skew)symmetric part of velocity gradient, COMPONENTS
-\newcommand{\gradsymc}{\ensuremath{\mathrm D}}
+\newcommand{\gradsymc}{\tensorc{D}}
+\newcommand{\gradasymc}{\tensorc{W}}
 
 % functionals
 \newcommand{\functional}[1]{{\mathfrak #1}}
@@ -215,37 +225,53 @@
 \newcommand{\bvecd}[1]{\vec{e}^{#1}} % current configuration
 \newcommand{\Bvecd}[1]{\vec{E}^{#1}} % reference configuration
 
+% Cartesian basis, current configuration
 \newcommand{\bvecx}{\bvec{\hat{x}}}
 \newcommand{\bvecy}{\bvec{\hat{y}}}
-%\newcommand{\bvecz}{\bvec{\hat{z}}}
+\newcommand{\bvecz}{\bvec{\hat{z}}}
 
+% Cartesian basis, reference configuration
 \newcommand{\BvecX}{\Bvec{\hat{X}}}
 \newcommand{\BvecY}{\Bvec{\hat{Y}}}
 \newcommand{\BvecZ}{\Bvec{\hat{Z}}}
 
+% Cartesian dual basis, reference configuration
 \newcommand{\BvecdX}{\Bvecd{\hat{X}}}
 \newcommand{\BvecdY}{\Bvecd{\hat{Y}}}
 \newcommand{\BvecdZ}{\Bvecd{\hat{Z}}}
 
+% Cartesian dual basis, current configuration
 \newcommand{\bvecdx}{\bvecd{\hat{x}}}
 \newcommand{\bvecdy}{\bvecd{\hat{y}}}
 \newcommand{\bvecdz}{\bvecd{\hat{z}}}
 
+% same as above but now in cylindrical coordinates
 \newcommand{\bvecr}{\bvec{\hat{r}}}
 \newcommand{\bvect}{\bvec{\hat{\theta}}}
 \newcommand{\bvecp}{\bvec{\hat{\varphi}}}
-\newcommand{\bvecz}{\bvec{\hat{z}}}
+%\newcommand{\bvecz}{\bvec{\hat{z}}}
 
+\newcommand{\bvecdr}{\bvecd{\hat{r}}}
+\newcommand{\bvecdt}{\bvecd{\hat{\theta}}}
+\newcommand{\bvecdp}{\bvecd{\hat{\varphi}}}
+
+\newcommand{\BvecR}{\Bvec{\hat{R}}}
+\newcommand{\BvecP}{\Bvec{\hat{\Phi}}}
+%\newcommand{\BvecZ}{\Bvec{\hat{Z}}}
+
+\newcommand{\BvecdR}{\Bvecd{\hat{R}}}
+\newcommand{\BvecdP}{\Bvecd{\hat{\Phi}}}
+%\newcommand{\BvecdZ}{\Bvecd{\hat{Z}}}
 
 % components
-\newcommand{\vhatx}[1][v]{{#1}^{\hat{x}}}
-\newcommand{\vhaty}[1][v]{{#1}^{\hat{y}}}
+\newcommand{\vhatx}[1][\vecvc]{{#1}^{\hat{x}}}
+\newcommand{\vhaty}[1][\vecvc]{{#1}^{\hat{y}}}
 %\newcommand{\bvhatz}{\vhat{e}_{\hat{z}}}
 
-\newcommand{\vhatr}[1][v]{{#1}^{\hat{r}}}
-\newcommand{\vhatt}[1][v]{{#1}^{\hat{\theta}}}
-\newcommand{\vhatp}[1][v]{{#1}^{\hat{\varphi}}}
-\newcommand{\vhatz}[1][v]{{#1}^{\hat{z}}}
+\newcommand{\vhatr}[1][\vecvc]{{#1}^{\hat{r}}}
+\newcommand{\vhatt}[1][\vecvc]{{#1}^{\hat{\theta}}}
+\newcommand{\vhatp}[1][\vecvc]{{#1}^{\hat{\varphi}}}
+\newcommand{\vhatz}[1][\vecvc]{{#1}^{\hat{z}}}
 
 % indices
 \newcommand{\hatx}{\hat{x}}
@@ -257,6 +283,12 @@
 \newcommand{\hatX}{\hat{X}}
 \newcommand{\hatY}{\hat{Y}}
 \newcommand{\hatZ}{\hat{Z}}
+
+% inner and outer radius (for some calcualtions)
+\newcommand{\Rin}{R_{\mathrm{in}}}
+\newcommand{\Rout}{R_{\mathrm{out}}}
+\newcommand{\rin}{r_{\mathrm{in}}}
+\newcommand{\rout}{r_{\mathrm{out}}}
  
 % base vectors, abstract covariant and contravariant basis
 \newcommand{\cobvec}[1]{\vec{g}_{#1}} % covariant base vector
@@ -266,6 +298,12 @@
 
 \newcommand{\mtensor}{\tensorq{g}}  % metric tensor
 \newcommand{\mtensorc}{{\mathrm g}} % metric tensor, components
+
+% Christoffel symbols
+\newcommand{\christoffel}[2]{\tensor{\Gamma}{^{#1}_{#2}}}
+
+% mean curvature
+\newcommand{\meancurvature}{\mathrm{K}} % mean curvature
 
 \newcommand{\mtensorref}{\tensorq{G}}  %metric tensor in reference configuration
 \newcommand{\mtensorrefc}{{\mathrm G}} %metric tensor in reference configuration, components
@@ -314,7 +352,6 @@
 \newcommand{\Young}{\mathrm{E}}
 \newcommand{\Poisson}{\mathrm{\nu}}
 
-
 % Symetric and antisymetric tensors
 \newcommand{\asym}[1]{\ensuremath{\Asym \left( #1 \right)}}
 \newcommand{\sym}[1]{\ensuremath{\Sym \left( #1 \right)}}
@@ -323,7 +360,9 @@
 \newcommand{\ienergy}{\ensuremath{e}} % specific internal energy (energy per unit mass)
 \newcommand{\fenergy}{\ensuremath{\psi}} % specific free energy
 \newcommand{\entropy}{\ensuremath{\eta}} % specific entropy
-\newcommand{\enthalpy}{\ensuremath{h}} % specific enthalpy
+\newcommand{\entalphy}{\ensuremath{h}} % specific enthalpy
+\newcommand{\gibbs}{\ensuremath{g}} % specific Gibbs free energy
+
 \newcommand{\temp}{\ensuremath{\theta}} % temperature
 \newcommand{\thpressure}{\ensuremath{p_{\mathrm{th}}}} % thermodynamic pressure
 \newcommand{\mns}{\ensuremath{m}} % mean normal stress
@@ -459,6 +498,9 @@
 % volume and surface integral
 \newcommand{\intvolume}[2][\volume]{\int_{#1} #2\; \volumee}
 \newcommand{\intsvolume}[2][\svolume]{\int_{#1} #2\; \surfacee}
+
+% surface Jacobian
+\newcommand{\surfacej}{\mathrm{j}}
 
 % products
 \newcommand{\tensortensor}[2]{\ensuremath{#1 \otimes #2}}
