@@ -169,8 +169,16 @@
 \newcommand{\skewdgradient}{\tensorq{\omega}}
 }
 
+\@ifpackageloaded{bm}%
+{%
+\newcommand{\linstress}{\bbtau} % stress in linearise elasticity
+}{%
+\newcommand{\linstress}{\tensorq{\tau}}
+}
 \makeatother
+
 \newcommand{\linstrainc}{\mathrm{\varepsilon}}
+\newcommand{\linstressc}{\mathrm{\tau}}
 \newcommand{\skewdgradientc}{\mathrm{\omega}}
 
 % Lagrangean and Eulerian strain
