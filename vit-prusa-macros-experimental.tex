@@ -368,7 +368,10 @@
 \newcommand{\sym}[1]{\ensuremath{\Sym \left( #1 \right)}}
 
 % Energy, free energy, entropy, temperature
+\newcommand{\tenergy}{\ensuremath{e}_{\mathrm{tot}}} % specific total energy (energy per unit mass), sum of specific internal energy and the specific kinetic energy
 \newcommand{\ienergy}{\ensuremath{e}} % specific internal energy (energy per unit mass)
+\newcommand{\menergy}{\ensuremath{e}_{\mathrm{mech}}} % specific mechanical energy (energy per unit mass), kinetic energy plus internal energy minus thermal contribution
+\newcommand{\kenergy}{\ensuremath{e_{\mathrm{kin}}}} % specific kinetic energy (kinetic energy per unit mass)
 \newcommand{\fenergy}{\ensuremath{\psi}} % specific free energy
 \newcommand{\entropy}{\ensuremath{\eta}} % specific entropy
 \newcommand{\entalphy}{\ensuremath{h}} % specific enthalpy
@@ -378,11 +381,12 @@
 \newcommand{\thpressure}{\ensuremath{p_{\mathrm{th}}}} % thermodynamic pressure
 \newcommand{\mns}{\ensuremath{m}} % mean normal stress
 \newcommand{\temptoref}{\ensuremath{\vartheta}} % (temperature - reference temperature)/(reference temperature)
-\newcommand{\tenergy}{\ensuremath{e_{\mathrm{tot}}}} % specific total energy (energy per unit mass), internal energy plus kinetic energy
-\newcommand{\kenergy}{\ensuremath{e_{\mathrm{kin}}}} % specific kinetic energy (kinetic energy per unit mass)
 
 % Net energy, free energy, entropy, ...
-\newcommand{\netienergy}{\ensuremath{E}} % net energy
+\newcommand{\nettenergy}{\ensuremath{E}_{\mathrm{tot}}} % net total energy
+\newcommand{\netmenergy}{\ensuremath{E}_{\mathrm{mech}}} % net mechanical energy
+\newcommand{\netthenergy}{\ensuremath{E}_{\mathrm{therm}}} % net thermal energy
+\newcommand{\netienergy}{\ensuremath{E}} % net internal energy
 \newcommand{\netkenergy}{\ensuremath{E_{\mathrm{kin}}}} % net kinetic energy
 \newcommand{\netentropy}{\ensuremath{S}} % net entropy
 \newcommand{\netheat}{\ensuremath{Q}} % net heat
