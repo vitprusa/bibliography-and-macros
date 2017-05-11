@@ -1,4 +1,4 @@
-
+?
 @Misc{		  :advanced-numerical-differential-equation-solving-in-the-wolfram-language,
   key		= "Wolfram Research, Inc.",
   organization	= "Wolfram Research, Inc.",
@@ -1911,7 +1911,6 @@
   number	= "4",
   pages		= "325--351",
   year		= "2008",
-  note		= "",
   doi		= "10.1016/j.ijengsci.2007.11.008",
   author	= "Barot, G. and Rao, I. J. and Rajagopal, K. R."
 }
@@ -3536,6 +3535,48 @@
   mrnumber	= {MR1874071 (2002k:65160)}
 }
 
+@Article{	  boyer.f.lapuerta.c.ea:cahn-hilliardnavier-stokes,
+  author	= "Boyer, F. and Lapuerta, C. and Minjeaud, S. and Piar, B.
+		  and Quintard, M.",
+  title		= "{C}ahn--{H}illiard/{N}avier--{S}tokes model for the
+		  simulation of three-phase flows",
+  journal	= "Transport in Porous Media",
+  year		= "2010",
+  volume	= "82",
+  number	= "3",
+  pages		= "463--483",
+  abstract	= "In this article, we describe some aspects of the diffuse
+		  interface modelling of incompressible flows, composed of
+		  three immiscible components, without phase change. In the
+		  diffuse interface methods, system evolution is driven by
+		  the minimisation of a free energy. The originality of our
+		  approach, derived from the Cahn--Hilliard model, comes from
+		  the particular form of energy we proposed in Boyer and
+		  Lapuerta (M2AN Math Model Numer Anal, 40:653--987,2006),
+		  which, among other interesting properties, ensures
+		  consistency with the two-phase model. The modelling of
+		  three-phase flows is further completed by coupling the
+		  Cahn--Hilliard system and the Navier--Stokes equations
+		  where surface tensions are taken into account through
+		  volume capillary forces. These equations are discretized in
+		  time and space paying attention to the fact that most of
+		  the main properties of the original model (volume
+		  conservation and energy estimate) have to be maintained at
+		  the discrete level. An adaptive refinement method is
+		  finally used to obtain an accurate resolution of very thin
+		  moving internal layers, while limiting the total number of
+		  cells in the grids all along the simulation. Different
+		  numerical results are given, from the validation case of
+		  the lens spreading between two phases (contact angles and
+		  pressure jumps), to the study of mass transfer through a
+		  liquid/liquid interface crossed by a single rising gas
+		  bubble. The numerical applications are performed with large
+		  ratio between densities and viscosities and three different
+		  surface tensions.",
+  issn		= "1573-1634",
+  doi		= "10.1007/s11242-009-9408-z"
+}
+
 @Article{	  boyer.f.minjeaud.s:hierarchy,
   author	= {Boyer, Franck and Minjeaud, Sebastian},
   title		= {Hierarchy of consistent n-component {C}ahn--{H}illiard
@@ -3546,6 +3587,18 @@
   pages		= {2885-2928},
   year		= {2014},
   doi		= {10.1142/S0218202514500407}
+}
+
+@Article{	  boyer.f.minjeaud.s:numerical,
+  author	= {Boyer, Franck and Minjeaud, Sebastian},
+  title		= {Numerical schemes for a three component {C}ahn--{H}illiard
+		  model},
+  doi		= "10.1051/m2an/2010072",
+  journal	= {ESAIM: Mathematical Modelling and Numerical Analysis},
+  year		= 2011,
+  volume	= 45,
+  number	= 4,
+  pages		= "697--738"
 }
 
 @Article{	  brandts.jh.korotov.s.ea:discrete,
@@ -4368,6 +4421,21 @@
   mrclass	= {35B41 (34D45 34G20 35L70 37L30)},
   mrnumber	= {2522993 (2010f:35026)},
   doi		= {10.1016/j.aml.2009.01.027}
+}
+
+@Article{	  burczak.j.malek.j.ea:stress-diffusive,
+  author	= {Burczak, J. and M{\'a}lek, J. and Minakowski, P.},
+  title		= "Stress-diffusive regularizations of non-dissipative
+		  rate-type materials",
+  journal	= {ArXiv e-prints},
+  archiveprefix	= "arXiv",
+  eprint	= {1702.01988},
+  primaryclass	= "math.AP",
+  keywords	= {Mathematics - Analysis of PDEs, 35Q35, 74D10, 35A01},
+  year		= 2017,
+  month		= feb,
+  adsurl	= {http://adsabs.harvard.edu/abs/2017arXiv170201988B},
+  adsnote	= {Provided by the SAO/NASA Astrophysics Data System}
 }
 
 @InCollection{	  burda.p.novotny.j.ea:accurate,
@@ -9275,6 +9343,18 @@
   url		= {http://dx.doi.org/10.1007/s00021-011-0091-9}
 }
 
+@Book{		  feireisl.e.karper.tg.ea:mathematical-theory-of-compressible-viscous-fluids--analysis-and-numerics-,
+  author	= {Feireisl, E. and Karper, Trygve G. and Pokorn\'y, Milan},
+  title		= {Mathematical theory of compressible viscous fluids:
+		  {A}nalysis and numerics},
+  year		= {2016},
+  publisher	= {Basel: Birkh\"auser/Springer},
+  language	= {English},
+  doi		= {10.1007/978-3-319-44835-0},
+  msc2010	= {76-02 76N15 35Q30},
+  zbl		= {1356.76001}
+}
+
 @Article{	  feireisl.e.lu.y.ea:dissipative,
   author	= {Feireisl, Eduard and Lu, Yong and S{\"u}li, Endre},
   title		= {Dissipative weak solutions to compressible
@@ -12076,7 +12156,7 @@
 		  Dargush, Gary F.",
   title		= "Skew-symmetric couple-stress fluid mechanics",
   journal	= "Acta Mech.",
-  year		= "2015",
+  year		= "2014",
   volume	= "226",
   number	= "3",
   pages		= "871--895",
@@ -12166,6 +12246,46 @@
   mrclass	= {34.00},
   mrnumber	= {MR0118901 (22 \#9670)},
   mrreviewer	= {R. Conti}
+}
+
+@Article{	  hall.rb.rajagopal.kr:diffusion,
+  author	= {Hall, R. B. and Rajagopal, K. R.},
+  title		= {Diffusion of a fluid through an anisotropically chemically
+		  reacting thermoelastic body within the context of mixture
+		  theory},
+  journal	= {Math. Mech. Solids},
+  volume	= {17},
+  number	= {2},
+  pages		= {131--164},
+  year		= {2012},
+  doi		= {10.1177/1081286511407754},
+  abstract	= { A mixture theory approach is used to analyze the change
+		  in response characteristics of an anisotropic, non-linear
+		  viscoelastic fluid diffusing through a finitely deforming
+		  thermoelastic body of arbitrary symmetry wherein the fluid
+		  chemically reacts with the solid. It is assumed for
+		  simplicity that it is possible to characterize the reaction
+		  as having a single step and as one in which the reaction
+		  products remain within the body, thereby modifying the
+		  solid constituent. The effects of the reaction on the solid
+		  that render it anisotropic are quantified by means of a
+		  tensorial parameter that tracks the extent of the reaction
+		  in different directions. Both diffusion-dominated
+		  (diffusion of the reactants is far more rapid than the
+		  reaction) and reaction-dominated (the reaction is far more
+		  rapid than the diffusion of the reactants) processes are
+		  considered. Constitutive equations are derived from the
+		  requirement that the rate of entropy production be
+		  maximized, which makes it possible to characterize the
+		  behavior of the body through the specification of three
+		  scalar functions: the rate of entropy production function
+		  for the mixture, and the Helmholtz free energies of each of
+		  the constituents. It is noted that the model may be applied
+		  to regions of bodies with locally homogeneous damage, that
+		  is, regions damaged at a small enough scale to mimic an
+		  anisotropically porous continuum. Macroscale damage may
+		  also be modeled via the boundary conditions described in
+		  Section 5. }
 }
 
 @Book{		  halmos.pr:finite-dimensional,
@@ -12664,7 +12784,7 @@
 		  framework},
   publisher	= {SP Birkhäuser Verlag Basel},
   keywords	= {Primary 76A02; 76T30; Secondary 00A71; 76A99},
-  author	= {Heida, Martin and M\'alek, Josef and Rajagopal, K. R.},
+  author	= {Heida, M. and M\'alek, J. and Rajagopal, K. R.},
   pages		= {145-169},
   language	= {English}
 }
@@ -12704,7 +12824,7 @@
   pages		= "126--156",
   year		= "2013",
   doi		= "10.1016/j.ijengsci.2012.09.005",
-  author	= "Heida, Martin"
+  author	= "Heida, M."
 }
 
 @Article{	  heimdal.a.stylen.a.ea:real-time,
@@ -13081,6 +13201,20 @@
   mrnumber	= {2313003 (2008d:76039)},
   mrreviewer	= {John Volker},
   doi		= {10.1007/978-3-540-46533-1}
+}
+
+@Article{	  holder.o:ueber,
+  author	= {H\"older, O.},
+  title		= {Ueber einen {M}ittelwerthsatz},
+  journal	= {Nachr. Ges. Wiss.G\"ottingen},
+  year		= {1889},
+  optkey	= {},
+  optvolume	= {},
+  optnumber	= {},
+  pages		= {38--47},
+  optmonth	= {},
+  optnote	= {},
+  optannote	= {}
 }
 
 @Article{	  holmes.cb.cates.me.ea:glass,
@@ -15027,6 +15161,31 @@
   doi		= {10.1007/s10492-009-0010-z}
 }
 
+@Article{	  karra.s.rajagopal.kr:model,
+  author	= "Karra, S. and Rajagopal, K. R.",
+  title		= "A model for the thermo-oxidative degradation of
+		  polyimides",
+  journal	= "Mech. Time Depend. Mater.",
+  year		= "2012",
+  volume	= "16",
+  number	= "3",
+  pages		= "329--342",
+  abstract	= "Polyimides, due to their superior mechanical behavior at
+		  high temperatures, are used in a variety of applications
+		  that include aerospace, automobile and electronic packaging
+		  industries, as matrices for composites, as adhesives etc.
+		  In this paper, we extend our previous model in S. Karra and
+		  K. Rajagopal (Mech. Mater. 43(1):54--61, 2011), to include
+		  thermo-oxidative degradation of these high temperature
+		  polyimides. Appropriate forms for the Helmholtz potential
+		  and the rate of dissipation are chosen to describe the
+		  degradation. The results for a specific boundary value
+		  problem, using our model, compares well with the
+		  experimental creep data for PMR-15 resin that is aged in
+		  air.",
+  doi		= "10.1007/s11043-011-9165-6"
+}
+
 @Article{	  karra.s.rajagopal.kr:thermodynamic,
   author	= "Karra, S. and Rajagopal, K. R.",
   title		= "A thermodynamic framework to develop rate-type models for
@@ -15043,14 +15202,14 @@
 @Article{	  karra.s:modeling,
   title		= "Modeling the diffusion of a fluid through viscoelastic
 		  polyimides",
-  journal	= "Mechanics of Materials",
+  journal	= "Mech. Mater.",
   volume	= "66",
   number	= "0",
   pages		= "120--133",
   year		= "2013",
   note		= "",
   doi		= "10.1016/j.mechmat.2013.06.012",
-  author	= "Karra, Satish"
+  author	= "Karra, S."
 }
 
 @PhDThesis{	  karra.s:thermomechanical,
@@ -15896,6 +16055,52 @@
   pages		= {155--166}
 }
 
+@Article{	  krishnan.jm.rajagopal.kr:triaxial,
+  title		= "Triaxial testing and stress relaxation of asphalt
+		  concrete",
+  journal	= "Mech. Mater.",
+  volume	= "36",
+  number	= "9",
+  pages		= "849--864",
+  year		= "2004",
+  doi		= "10.1016/j.mechmat.2003.08.003",
+  author	= "Krishnan, J. Murali and Rajagopal, K. R."
+}
+
+@Article{	  krishnan.jm.rao.cl:mechanics,
+  title		= "Mechanics of air voids reduction of asphalt concrete using
+		  mixture theory ",
+  journal	= "Int. J. Eng. Sci.",
+  volume	= "38",
+  number	= "12",
+  pages		= "1331--1354",
+  year		= "2000",
+  note		= "",
+  issn		= "0020-7225",
+  doi		= "10.1016/S0020-7225(99)00075-0",
+  author	= "J. Murali Krishnan and C. Lakshmana Rao",
+  keywords	= "Refusal air void content ",
+  abstract	= "Asphalt concrete used in flexible highway pavements has
+		  5–8\% air voids immediately after laying of the roadway.
+		  Constitutive laws for asphalt concrete developed till now
+		  have modelled the mix as a linear elastic or viscoelastic
+		  material and have not taken into account the effect of
+		  voids concentration on the mechanical behaviour of the
+		  material. In the present study the theory of mixtures is
+		  used to model asphalt concrete. Asphalt concrete is
+		  considered to be a mixture of aggregate matrix, asphalt and
+		  air in a purely mechanical system in which the thermal
+		  effects and chemical reactions are ignored. Constitutive
+		  relation for each component of the mixture is assumed to be
+		  dependent only on the kinematical quantities associated
+		  with each component. The resulting hyperbolic conservation
+		  equations are solved by an upwind finite volume scheme
+		  coupled with an operator splitting technique for a
+		  quasi-static type of loading. The numerical scheme is used
+		  to simulate the variation of air voids content across the
+		  thickness of a typical road pavement. "
+}
+
 @Book{		  kronrod.as:nodes,
   author	= "Kronrod, A.S.",
   title		= "Nodes and weights of quadrature formulas. Sixteen-place
@@ -16109,12 +16314,31 @@
   doi		= {10.1007/978-1-4757-3978-7}
 }
 
+@InCollection{	  kwack.j.kang.s.ea:time-dependent,
+  author	= "Kwack, JaeHyuk and Kang, Soonpil and Bhat, Geetha and
+		  Masud, Arif",
+  editor	= "Bazilevs, Yuri and Takizawa, Kenji",
+  title		= "Time-dependent outflow boundary conditions for blood flow
+		  in the arterial system",
+  booktitle	= "Advances in computational fluid-structure interaction and
+		  flow simulation: {N}ew methods and challenging
+		  computations",
+  year		= "2016",
+  publisher	= "Springer",
+  pages		= "359--377",
+  isbn		= "978-3-319-40827-9",
+  doi		= "10.1007/978-3-319-40827-9_28"
+}
+
 @Article{	  kwack.j.masud.a.ea:stabilized,
   author	= {Kwack, JaeHyuk and Masud, Arif and Rajagopal, K. R.},
   title		= {Stabilized mixed three-field formulation for a generalized
 		  incompressible {O}ldroyd-{B} model},
   journal	= {Int. J. Numer. Meth. Fluids},
   doi		= {10.1002/fld.4287},
+  volume	= {83},
+  issue		= {9},
+  pages		= {704--734},
   keywords	= {biofluidics, biomechanics, VMS: variational multiscale,
 		  incompressible flow, non-Newtonian, stabilized method},
   year		= {2016}
@@ -17416,6 +17640,19 @@
   address	= "Praha"
 }
 
+@PhDThesis{	  lyapunov.am:general,
+  author	= {Lyapunov, A. M.},
+  title		= {The general problem of the stability of motion},
+  school	= {Moscow University},
+  year		= {1892},
+  optkey	= {},
+  opttype	= {},
+  optaddress	= {},
+  optmonth	= {},
+  optnote	= {},
+  optannote	= {}
+}
+
 @Article{	  machlup.s.onsager.l:fluctuations,
   author	= {Machlup, S. and Onsager, L.},
   title		= {Fluctuations and irreversible process 2. {S}ystems with
@@ -17687,7 +17924,7 @@
   optcrossref	= {},
   optkey	= {},
   publisher	= {Springer},
-  year		= {2016},
+  year		= {2017},
   editor	= {Giga, Y. and Novotn\'y, A.},
   optvolume	= {},
   optnumber	= {},
@@ -19305,6 +19542,47 @@
   month		= {November},
   optnote	= {},
   optannote	= {}
+}
+
+@Article{	  moon.s.cui.f.ea:constitutive,
+  title		= "Constitutive modeling of the mechanics associated with
+		  triple shape memory polymers",
+  journal	= "Int. J. Eng. Sci.",
+  volume	= "96",
+  number	= "",
+  pages		= "86--110",
+  year		= "2015",
+  doi		= "10.1016/j.ijengsci.2015.06.003",
+  author	= "Moon, S. and Cui, F. and Rao, I. J.",
+  keywords	= "Multiple natural configurations ",
+  abstract	= "Abstract Shape memory polymers (SMPs) are smart materials
+		  that alter their shape in response to external stimuli.
+		  Dual-shape \{SMPs\} are widely recognized and are
+		  characterized by two shapes involved in a typical shape
+		  memory cycle. Recently, triple-shape memory polymers
+		  (TSMPs) have been introduced that have the ability to
+		  remember three shapes. Thermo-sensitive \{TSMPs\} can
+		  perform two sequential shape changes in response to heat,
+		  which were programed previously in a triple-shape creation
+		  process (TSCP). \{TSMPs\} are technologically significant
+		  as their development of has led to emergence of many
+		  complex potential applications that cannot be achieved by
+		  dual-shape polymers (Zhao et al., 2013). Crystallizable
+		  \{TSMPs\} are a class of thermo-sensitive TSMPs, where the
+		  shape creation is due to formation of crystalline phases.
+		  Different \{TSCPs\} have been reported which enable to
+		  control the triple shape capability of these materials. In
+		  this work the mechanical behavior of \{TSMPs\} has been
+		  modeled using a framework that has been developed recently
+		  for studying crystallization in polymers (Rao, 2003; Rao
+		  and Rajagopal, 2001, 2002, 2004). The framework has been
+		  used successfully to model \{SMPs\} (Barot and Rao, 2006;
+		  Barot et al., 2008), light activated \{SMPs\} (Sodhi and
+		  Rao, 2010) and is based upon the theory of multiple natural
+		  configurations. The model has been used to simulate a
+		  uni-axial deformation cycle for different types of
+		  \{TSCPs\} and the results have been compared with
+		  experimental data. "
 }
 
 @Article{	  mooney.m:test,
@@ -22496,6 +22774,93 @@
   author	= "Rajagopal, K. R. and Srinivasa, A. R."
 }
 
+@Article{	  rajagopal.kr.srinivasa.ar:mechanics,
+  title		= "Mechanics of the inelastic behavior of materials. {P}art
+		  {II}: {I}nelastic response",
+  journal	= "Int. J. Plasticity",
+  volume	= "14",
+  number	= "10--11",
+  pages		= "969--995",
+  year		= "1998",
+  doi		= "10.1016/S0749-6419(98)00041-2",
+  author	= "Rajagopal, K. R. and Srinivasa, A. R.",
+  abstract	= "This is the second of a two part paper dealing with the
+		  inelastic response of materials. Part I (see Rajagopal and
+		  Srinivasa, 1998 International Journal of Plasticity 14,
+		  945–967) dealt with the structure of the constitutive
+		  equations for the elastic response of a material with
+		  multiple natural configurations. We now focus attention on
+		  the evolution of the natural configurations. We introduce
+		  two functions-the Helmholtz potential and the rate of
+		  dissipation function—representing the rate of conversion
+		  of mechanical work into heat. Motivated by, and
+		  generalizing the work of Ziegler (1963) in Progress in
+		  Solid Mechanics, Vol. 4, North-Holland, Amsterdam/New York;
+		  (1983) An Introduction to Thermodynamics, North-Holland,
+		  Amsterdam/New York) we then assume that the evolution of
+		  the natural configurations occurs in such a way that the
+		  rate of dissipation is maximized. This maximization is
+		  subject to the constraint that the rate of dissipation is
+		  equal to the difference between the rate of mechanical
+		  working and the rate of increase of the Helmholtz potential
+		  per unit volume. This then allows us to derive the
+		  constitutive equations for the stress response and the
+		  evolution of the natural configurations from these two
+		  scalar functions. Of course, the maximum rate of
+		  dissipation criterion that is stated here is only an
+		  assumption that holds for a certain class of materials
+		  under consideration. Our quest is to see whether such an
+		  assumption gives reasonable results. In the process, we
+		  hope to gain insight into the nature of such materials. We
+		  demonstrate that the resulting constitutive equations allow
+		  for response with and without yielding behavior and obtain
+		  a generalization of the normality and convexity conditions.
+		  We also show that, in the limit of quasistatic
+		  deformations, if one considers materials that possess
+		  yielding behavior, then the constitutive equations reduce
+		  to those corresponding to the strain space formulation of
+		  the rate independent theory of plasticity (see e.g. Naghdi
+		  (1990) Journal of Applied Mathematics and Physics A345,
+		  425–458.). Moreover, in this limit, the maximum rate of
+		  dissipation criterion, as stated here, is equivalent to the
+		  work inequality of Naghdi and Trapp (1975) Quartely Journal
+		  of Mechanics and Applied Mathematics 28, 25–46). The main
+		  results together with an illustrative example are
+		  presented. "
+}
+
+@Article{	  rajagopal.kr.srinivasa.ar:mechanics*1,
+  title		= "Mechanics of the inelastic behavior of materials. {P}art
+		  {I}: {T}heoretical underpinnings",
+  journal	= "Int. J. Plasticity",
+  volume	= "14",
+  number	= "10--11",
+  pages		= "945--967",
+  year		= "1998",
+  doi		= "10.1016/S0749-6419(98)00037-0",
+  author	= "Rajagopal, K. R. and Srinivasa, A. R.",
+  abstract	= "This is the first of a two-part paper that is concerned
+		  with the modeling of the behavior of inelastic materials
+		  from a continuum viewpoint, taking into account changes in
+		  the elastic response and material symmetry that occur due
+		  to changes in the microstructure of the material. The first
+		  part discusses some of the fundamental issues that must be
+		  addressed when modeling the elastic response of these
+		  materials. In particular, we discuss in detail the far
+		  reaching effects of the notion of materials with families
+		  of elastic response functions with corresponding natural
+		  configurations that was introduced by Wineman and Rajagopal
+		  (1990, Archives of Mechanics, 42, 53–75) and Rajagopal
+		  and Wineman (1992, Int. J. Plasticity 8, 385–395) for the
+		  study of the inelastic behavior of polymeric materials and
+		  later generalized and extended to the study of deformation
+		  twinning of polycrystals by Rajagopal and Srinivasa (1995
+		  Int. J. Plasticity 11(6), 653–678, 1997, 13(1/2) 1–35).
+		  For these materials, a definition of material symmetry is
+		  introduced, that makes it possible to discuss the concept
+		  of “evolving material symmetry”. "
+}
+
 @Article{	  rajagopal.kr.srinivasa.ar:modeling,
   title		= "Modeling anisotropic fluids within the framework of bodies
 		  with multiple natural configurations",
@@ -22624,6 +22989,45 @@
   pages		= "715-729",
   year		= "2008",
   doi		= {10.1007/s00033-007-7039-1}
+}
+
+@Article{	  rajagopal.kr.srinivasa.ar:on*9,
+  author	= "Rajagopal, K. R. and Srinivasa, A. R.",
+  title		= "On the thermomechanics of materials that have multiple
+		  natural configurations -- {P}art {II}: {T}winning and solid
+		  to solid phase transformation",
+  journal	= "Z. angew. Math. Phys.",
+  year		= "2004",
+  volume	= "55",
+  number	= "6",
+  pages		= "1074--1093",
+  abstract	= "Many bodies, both solid and fluid, are capable of being
+		  stress-free in numerous configurations that are not related
+		  to each other through a rigid body motion. Moreover, it is
+		  possible that these bodies could have different material
+		  symmetries in these different stress-free ``natural''
+		  configurations. In order to describe the response of such
+		  bodies, it is necessary to know the manner in which these
+		  ``natural'' configurations evolve as well as a class of
+		  response functions for the stress that are determined by
+		  kinematical quantities that are measured from these
+		  evolving natural configurations. In this review article, we
+		  provide a framework to describe the mechanics of such
+		  bodies whose ``natural configurations'' evolve during a
+		  thermodynamic process. The framework is capable of
+		  describing a variety of responses and has been used to
+		  describe traditional metal plasticity, twinning,
+		  traditional viscoelasticity of both solids and fluids,
+		  solid-to-solid phase transitions, polymer crystallization,
+		  response of multi-network polymers, and anisotropic
+		  liquids. The classical theories of elastic solids and
+		  viscous fluids are included as special cases of the
+		  framework. After a review of the salient features of the
+		  framework, we briefly discuss the status of
+		  viscoelasticity, traditional plasticity, twinning and solid
+		  to solid phase transitions within the context of the
+		  framework.",
+  doi		= "10.1007/s00033-004-4020-0"
 }
 
 @Article{	  rajagopal.kr.srinivasa.ar:thermodynamic,
@@ -24892,6 +25296,19 @@
   mrnumber	= {2761242 (2011k:76010)}
 }
 
+@InCollection{	  saccomandi.g:phenomenology,
+  author	= "Saccomandi, Giuseppe",
+  editor	= "Saccomandi, Giuseppe and Ogden, Raymond W.",
+  title		= "Phenomenology of Rubber-Like Materials",
+  booktitle	= "Mechanics and thermomechanics of rubberlike solids",
+  year		= "2004",
+  publisher	= "Springer",
+  address	= "Vienna",
+  pages		= "91--134",
+  isbn		= "978-3-7091-2540-3",
+  doi		= "10.1007/978-3-7091-2540-3\_3"
+}
+
 @Article{	  saccomandi.g:some,
   author	= {Saccomandi, Giuseppe},
   title		= {Some unsteady exact pseudo-plane solutions for the
@@ -26553,6 +26970,97 @@
   doi		= "10.1016/0022-0396(81)90077-2",
   author	= "Smoller, J. and Wasserman, A.",
   abstract	= ""
+}
+
+@Article{	  sodhi.js.cruz.pr.ea:inhomogeneous,
+  title		= "Inhomogeneous deformations of light activated shape memory
+		  polymers",
+  journal	= "Int. J. Eng. Sci.",
+  volume	= "89",
+  number	= "",
+  pages		= "1--17",
+  year		= "2015",
+  doi		= "10.1016/j.ijengsci.2014.11.010",
+  author	= "Sodhi, J. S. and Cruz, P. R. and Rao, I. J.",
+  keywords	= "Inhomogeneous deformations ",
+  abstract	= "Abstract Shape memory polymers (SMP’s) belong to a large
+		  family of shape memory materials, which are defined by
+		  their capacity to store a deformed (temporary) shape and
+		  recover an original (parent) shape. SMP’s have the
+		  ability to change size and shape when activated through a
+		  suitable trigger. This trigger, which can be heating the
+		  polymer or exposing it to light of a specific frequency, is
+		  responsible for the new temporary shape. Return to the
+		  original shape can be achieved by a suitable reverse
+		  trigger. Light Activated Shape Memory Polymers (LASMP) are
+		  recently developed smart materials which are synthesized
+		  with special photosensitive molecules. These molecules when
+		  exposed to Ultraviolet (UV) light at specific wavelengths,
+		  form covalent crosslinks that are responsible for providing
+		  \{LASMP\} with their temporary shape. Light activation
+		  removes temperature constraints faced by thermoresponsive
+		  \{SMP\} for medical applications and also brings the added
+		  advantage of remote activation. Thus \{LASMP\} find use in
+		  a variety of applications ranging from \{MEMS\} devices to
+		  widespread usage for biomedical devices such as intravenous
+		  needles and stents. Furthermore, the aerospace industry has
+		  found use for these materials for applications ranging from
+		  easily deployable space structures to morphing wing
+		  aircraft. The authors have introduced a constitutive model
+		  to model the mechanics of these \{LASMP\} (Sodhi &amp; Rao,
+		  2010). The modeling is done using a framework based on the
+		  theory of multiple natural configurations. A few homogenous
+		  and inhomogeneous examples were solved in Sodhi and Rao
+		  (2010), but with tacit understanding that the intensity of
+		  light and hence the extent of reaction is homogenous
+		  throughout the polymer sample. In this paper we use the
+		  developed model to solve a series of inhomogeneous
+		  deformation boundary value problems of interest with
+		  inhomogeneous exposure to light. "
+}
+
+@Article{	  sodhi.js.rao.ij:modeling,
+  title		= "Modeling the mechanics of light activated shape memory
+		  polymers",
+  journal	= "Int. J. Eng. Sci.",
+  volume	= "48",
+  number	= "11",
+  pages		= "1576--1589",
+  year		= "2010",
+  doi		= "10.1016/j.ijengsci.2010.05.003",
+  author	= "Sodhi, J. S. and Rao, I. J.",
+  keywords	= "Anisotropic response ",
+  abstract	= "Shape memory polymers (SMP’s) are a relatively new kind
+		  of smart materials and have significant technological
+		  applications ranging from biomedical devices to aerospace
+		  technology. First generation SMP’s relied on changes in
+		  temperature to fix the temporary shape and have been
+		  studied quite extensively in the past. In the last few
+		  years a new generation of SMP’s have been synthesized in
+		  which the temporary shape is fixed by exposure to light at
+		  specific wavelengths (typically in the Ultraviolet, UV,
+		  range). Exposure to light at certain wavelengths causes
+		  photosensitive molecules, which are grafted on the polymer
+		  chains comprising the material, to form covalent bonds.
+		  These bonds act as crosslinks and are responsible for the
+		  temporary shape. On exposure to light at a different
+		  wavelength these bonds cleave and the material returns to
+		  its original shape. Our research focuses on modeling the
+		  mechanics associated with such light activated shape memory
+		  polymers (LASMP’s) undergoing complex deformations. The
+		  modeling is done using a framework based on the theory of
+		  multiple natural configurations taking into consideration
+		  the different aspects of modeling this material, which
+		  include developing a model for the original virgin network
+		  and for the other networks with different stress-free
+		  states, formed due to exposure to light. In addition to
+		  this, we also model the initiation and the formation of the
+		  light activated networks and the reverse transition
+		  resulting in the dissolution of these networks. Anisotropy
+		  in the mechanical response is also incorporated into the
+		  model. The model is then used to simulate results for
+		  specific boundary value problems, such as uni-axial
+		  extension and inflation of a cylinder. "
 }
 
 @Article{	  sohr.h.wahl.w:on,
@@ -28607,6 +29115,29 @@
   mrreviewer	= {Davide Bigoni},
   doi		= {10.1007/s001610100054},
   url		= {http://dx.doi.org/10.1007/s001610100054}
+}
+
+@Article{	  tuma.k.stupkiewicz.s.ea:size,
+  title		= "Size effects in martensitic microstructures:
+		  {F}inite-strain phase field model versus sharp-interface
+		  approach",
+  journal	= "J. Mech. Phys. Solids",
+  volume	= "95",
+  pages		= "284--307",
+  year		= "2016",
+  doi		= "10.1016/j.jmps.2016.04.013",
+  author	= "T\r{u}ma, K. and Stupkiewicz, S. and Petryk, H."
+}
+
+@Article{	  tuma.k.stupkiewicz.s:phase-field,
+  title		= "Phase-field study of size-dependent morphology of
+		  austenite-twinned martensite interface in {CuAlNi}",
+  journal	= "Int. J. Solids Struct.",
+  volume	= "97--98",
+  pages		= "89--100",
+  year		= "2016",
+  doi		= "10.1016/j.ijsolstr.2016.07.040",
+  author	= "T\r{u}ma, K. and Stupkiewicz, S."
 }
 
 @InCollection{	  turek.s.hron.j:numerical,
