@@ -541,19 +541,22 @@
 \newcommand{\vectorcross}[2]{\ensuremath{#1 \times #2}}
 
 % function spaces
-\newcommand{\scont}[2][\Omega]{\ensuremath{{\mathcal C}^{#2} \left(#1 \right)}}
-\newcommand{\sdist}[1][\Omega]{\ensuremath{{\mathcal D} \left(#1 \right)}}
-\newcommand{\sdistd}[1][\Omega]{\ensuremath{{\mathcal D}^\prime \left(#1 \right)}}
+\newcommand{\scont}[2][\Omega]{\ensuremath{{\mathcal C}^{#2} \left(#1 \right)}} % space of continuous functions
+\newcommand{\sdist}[1][\Omega]{\ensuremath{{\mathcal D} \left(#1 \right)}} % space of smooth functions with compact support
+\newcommand{\sdistd}[1][\Omega]{\ensuremath{{\mathcal D}^\prime \left(#1 \right)}} % dual to the space of smooth functions with compact support
+
+\newcommand{\schwartzd}[1][\Omega]{\ensuremath{{\mathcal S}^\prime \left(#1 \right)}}   % Schwatrz space
+\newcommand{\schwartz}[1][\Omega]{\ensuremath{{\mathcal S} \left(#1 \right)}}           % dual to Schwartz space           
 
 \newcommand{\scdiv}[1][\Omega]{\ensuremath{{\mathcal V} \left(#1 \right)}}
 
 \newcommand{\loc}{\mathrm{loc}}
 
-\newcommand{\slebl}[2]{\ensuremath{L}^{#1}_{\loc} \left(#2 \right)}
-\newcommand{\sleb}[2]{\ensuremath{L}^{#1} \left(#2 \right)}
+\newcommand{\slebl}[2]{\ensuremath{L}^{#1}_{\loc} \left(#2 \right)} % Lebesgue space, local
+\newcommand{\sleb}[2]{\ensuremath{L}^{#1} \left(#2 \right)} % Lebesgue space
 
 
-\newcommand{\ssob}[3]{\ensuremath{W}^{#1, #2} \left(#3 \right)}
+\newcommand{\ssob}[3]{\ensuremath{W}^{#1, #2} \left(#3 \right)} % Sobolev space
 
 % dualities, scalar products
 \newcommand{\fadual}[4]{\left\langle #1, #2\right\rangle_{#3, #4}}
