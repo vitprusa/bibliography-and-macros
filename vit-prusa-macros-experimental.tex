@@ -176,7 +176,7 @@
 
 \@ifpackageloaded{bm}%
 {%
-\newcommand{\linstress}{\bbtau} % stress in linearise elasticity
+\newcommand{\linstress}{\bbtau} % stress in linearised elasticity
 }{%
 \newcommand{\linstress}{\tensorq{\tau}}
 }
@@ -399,6 +399,8 @@
  
 % Specific heat at constant volume 
 \newcommand{\cheatvol}{\ensuremath{c_{\mathrm{V}}}}
+% Specific heat at constant volume 
+\newcommand{\cheatpressure}{\ensuremath{c_{\mathrm{P}}}}
 
 % Density in reference configuration
 \newcommand{\rhor}{\rho_{\mathrm{R}}}
@@ -552,11 +554,13 @@
 
 \newcommand{\loc}{\mathrm{loc}}
 
-\newcommand{\slebl}[2]{\ensuremath{L}^{#1}_{\loc} \left(#2 \right)} % Lebesgue space, local
-\newcommand{\sleb}[2]{\ensuremath{L}^{#1} \left(#2 \right)} % Lebesgue space
+\newcommand{\slebl}[2]{\ensuremath{L}^{#1}_{\loc} \left(#2 \right)}     % Lebesgue space, locally
+\newcommand{\sleb}[2]{\ensuremath{L}^{#1} \left(#2 \right)}             % Lebesgue space
 
 
-\newcommand{\ssob}[3]{\ensuremath{W}^{#1, #2} \left(#3 \right)} % Sobolev space
+\newcommand{\ssob}[3]{\ensuremath{W}^{#1, #2} \left(#3 \right)}         % Sobolev space
+\newcommand{\ssobzero}[3]{\ensuremath{W}_{0}^{#1, #2} \left(#3 \right)} % Sobolev space, functions with zero trace
+
 
 % dualities, scalar products
 \newcommand{\fadual}[4]{\left\langle #1, #2\right\rangle_{#3, #4}}
