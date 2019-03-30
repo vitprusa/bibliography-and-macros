@@ -107,6 +107,12 @@
 \newcommand{\cstress}{\tensorq{T}}
 \newcommand{\cstressc}{\tensorc{T}}
 
+% Cauchy stress, thermodynamically determined part
+\newcommand{\thcstress}{\ensuremath{\cstress_{\mathrm{th}}}} 
+\newcommand{\tracelessthcstress}{\traceless{\left(\thcstress\right)}} % traceless part
+\newcommand{\tracelessthcstressrho}{\traceless{\left(\cstress_{\mathrm{th}, \rho}\right)}} % traceless part divided by rho
+
+% Extra stress tensor
 \newcommand{\ecstress}{\tensorq{S}}
 \newcommand{\ecstressc}{\tensorc{S}}
 
@@ -129,6 +135,9 @@
 \newcommand{\fgrad}{\tensorq{F}}
 \newcommand{\fgradc}{\tensorc{F}}
 \newcommand{\fgradrel}[3][]{\fgrad^{#1}_{#2}\left(#3\right)}
+
+% determinant of deformation gradient
+\newcommand{\detfgrad}{J}
 
 % displacement
 \newcommand{\displacement}{\vec{U}}
@@ -195,6 +204,10 @@
 % Hencky strain
 \newcommand{\henckystrain}{\tensorq{H}} % Hencky strain
 \newcommand{\henckystrainc}{\tensorc{H}} % Hencky strain, components
+
+\newcommand{\devhencky}{\overline{\tensorq{H}}} % Hencky strain, deviatoric part via deviatoric deformation
+\newcommand{\devhenckyc}{\overline{\tensorc{H}}} % Hencky strain, deviatoric part via deviatoric deformation, components
+
 
 % Rivlin-Ericksen tensor
 \newcommand{\rivlin}{{\tensorq{A}}}
@@ -385,6 +398,7 @@
 
 \newcommand{\temp}{\ensuremath{\theta}} % temperature
 \newcommand{\thpressure}{\ensuremath{p_{\mathrm{th}}}} % thermodynamic pressure
+
 \newcommand{\mns}{\ensuremath{m}} % mean normal stress
 \newcommand{\temptoref}{\ensuremath{\vartheta}} % (temperature - reference temperature)/(reference temperature)
 
