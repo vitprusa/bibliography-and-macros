@@ -71,6 +71,7 @@
 % derivatives
 \newcommand{\diff}{\mathrm{d}}
 \newcommand{\Diff}[1][]{\mathrm{D}_{#1}} % For Frechet and Gateaux derivative
+\newcommand{\hDiff}[2][]{\mathrm{D}^{#1}_{#2}} % Higher order Frechet and Gateaux derivative
 
 % inexact differential
 \newcommand{\dbar}{{\mathchar'26\mkern-12mu \diff}}
@@ -519,6 +520,7 @@
 
 % volume and surface integral
 \newcommand{\intvolume}[2][\volume]{\int_{#1} #2\; \volumee}
+\newcommand{\intcvolume}[2][\volume]{\int_{#1} #2\; \cvolumee}
 \newcommand{\intsvolume}[2][\svolume]{\int_{#1} #2\; \surfacee}
 
 % surface Jacobian
