@@ -1,4 +1,4 @@
-This project shall be used as a share library for all LaTeX documents.
+This project shall be used as a shared library for all LaTeX documents.
 
 * vit-prusa-macros-experimental.tex
 This is the file that contains macros for frequently used LaTeX constructs. (Especially in continuum mechanics.) This global should not be a subject fro frequent changes, if there is a need to redefine a macro, it should be done on the local level (i.e. in a new macro file in the project directory) using \renewcommand command.
