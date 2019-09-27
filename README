@@ -6,5 +6,11 @@ This is the file that contains macros for frequently used LaTeX constructs. (Esp
 * vit-prusa.bib
 This is the bibliography file. It is maintained by the bibtool script, see file make.sh. Once you add an entry to the bibliography, the bibliography must be rebuilt using bibtool.
 
+* vit-prusa-env-list-shaded.tex
+Shaded backgorund environments (theorem, lemma).
+
+* vit-prusa-env-list.tex
+Standard environments (theorem, lemma) without shaded background.
+
 * print/vit-prusa-bibliography.tex
 Compiling this file in LaTeX creates a document where all bibliography referencese are printed alphabetically.
