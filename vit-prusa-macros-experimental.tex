@@ -22,8 +22,9 @@
 \DeclareMathOperator{\Tr}{Tr}
 \DeclareMathOperator{\signum}{sign}
 \DeclareMathOperator{\supp}{supp}
-\DeclareMathOperator{\cof}{cof}
+\DeclareMathOperator{\cof}{cof} % cofactor
 \DeclareMathOperator{\residue}{res}
+\DeclareMathOperator{\ad}{ad} % adjoint ad_X (Y) = [X,Y]  
 
 % Kernel, range, rank
 \DeclareMathOperator{\kernelop}{{\mathcal N}}
@@ -330,14 +331,25 @@
 \newcommand{\rin}{r_{\mathrm{in}}}
 \newcommand{\rout}{r_{\mathrm{out}}}
  
-% base vectors, abstract covariant and contravariant basis
+% base vectors, abstract covariant and contravariant basis, current configuration
 \newcommand{\cobvec}[1]{\vec{g}_{#1}} % covariant base vector
 \newcommand{\conbvec}[1]{\vec{g}^{#1}} % contravariant base vector
 \newcommand{\cobvecn}[1]{\vec{g}_{\hat{#1}}} % covariant base vector
 \newcommand{\conbvecn}[1]{\vec{g}^{\hat{#1}}} % contravariant base vector
 
+% base vectors, abstract covariant and contravariant basis, reference configuration
+\newcommand{\coBvec}[1]{\vec{G}_{#1}} % covariant base vector
+\newcommand{\conBvec}[1]{\vec{G}^{#1}} % contravariant base vector
+\newcommand{\coBvecn}[1]{\vec{G}_{\hat{#1}}} % covariant base vector
+\newcommand{\conBvecn}[1]{\vec{G}^{\hat{#1}}} % contravariant base vector
+
+% current configuration
 \newcommand{\mtensor}{\tensorq{g}}  % metric tensor
 \newcommand{\mtensorc}{{\mathrm g}} % metric tensor, components
+
+% reference configuration
+\newcommand{\mTensor}{\tensorq{G}}  % metric tensor
+\newcommand{\mTensorc}{{\mathrm G}} % metric tensor, components
 
 % Christoffel symbols
 \newcommand{\christoffel}[2]{\tensor{\Gamma}{^{#1}_{#2}}}
