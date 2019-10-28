@@ -25,6 +25,7 @@
 \DeclareMathOperator{\cof}{cof} % cofactor
 \DeclareMathOperator{\residue}{res}
 \DeclareMathOperator{\ad}{ad} % adjoint ad_X (Y) = [X,Y]  
+\DeclareMathOperator{\distanceop}{dist} % distance in a metric space
 
 % Kernel, range, rank
 \DeclareMathOperator{\kernelop}{{\mathcal N}}
@@ -546,6 +547,9 @@
 % norms
 \newcommand{\norm}[2][]{\ensuremath{\left\|#2\right\|_{#1}}}
 \newcommand{\absnorm}[1]{\ensuremath{\left|#1\right|}}
+
+% distance
+\newcommand{\distance}[3][]{\distanceop_{#1}\left(#2, #3\right)} % distance in a metric space
 
 % volume
 \makeatletter
