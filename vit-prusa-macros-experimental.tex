@@ -22,8 +22,15 @@
 \DeclareMathOperator{\Tr}{Tr}
 \DeclareMathOperator{\signum}{sign}
 \DeclareMathOperator{\supp}{supp}
-\DeclareMathOperator{\cof}{cof}
+\DeclareMathOperator{\cof}{cof} % cofactor
 \DeclareMathOperator{\residue}{res}
+\DeclareMathOperator{\ad}{ad} % adjoint ad_X (Y) = [X,Y]  
+\DeclareMathOperator{\distanceop}{dist} % distance in a metric space
+
+% Kernel, range, rank
+\DeclareMathOperator{\kernelop}{{\mathcal N}}
+\DeclareMathOperator{\rangeop}{{\mathcal R}}
+\DeclareMathOperator{\rankop}{rank}
 
 % jump
 \newcommand{\jumpdis}[1]{\ensuremath{\left\lsem #1 \right\rsem}} % difference between function values at the point of jump discontinuity
@@ -66,6 +73,11 @@
 \newcommand{\bydefinition}{\mathrm{def}}
 \newcommand{\traceless}[1]{{#1}_{\delta}}
 
+\newcommand{\elastic}{\mathrm{el}}
+\newcommand{\plastic}{\mathrm{pl}}
+\newcommand{\yield}{\mathrm{yield}}
+\newcommand{\thermal}{\mathrm{th}}
+
 % dimensionless variables and functions
 \newcommand{\dimless}[1]{#1^\star}
 
@@ -92,7 +104,7 @@
 \relax% do nothing
 }
 \makeatother
-\newcommand{\tensorq}[1]{\ensuremath{\mathbb{#1}}}      % tensorial quantity
+\newcommand{\tensorq}[1]{{\ensuremath{\mathbb{#1}}}}      % tensorial quantity
 \newcommand{\tensorc}[1]{\ensuremath{\mathrm{#1}}}      % tensorial quantity components  
 
 \newcommand{\conjugate}[1]{#1^\star}
@@ -245,7 +257,7 @@
 
 % functionals
 \newcommand{\functional}[1]{{\mathfrak #1}}
-\newcommand{\history}[3]{{\functional{#1}_{#2}^{#3}}}
+\newcommand{\fhistory}[3]{{\functional{#1}_{#2}^{#3}}}
 
 % base vectors
 \newcommand{\bvec}[1]{\vec{e}_{#1}} % current configuration
@@ -320,14 +332,25 @@
 \newcommand{\rin}{r_{\mathrm{in}}}
 \newcommand{\rout}{r_{\mathrm{out}}}
  
-% base vectors, abstract covariant and contravariant basis
+% base vectors, abstract covariant and contravariant basis, current configuration
 \newcommand{\cobvec}[1]{\vec{g}_{#1}} % covariant base vector
 \newcommand{\conbvec}[1]{\vec{g}^{#1}} % contravariant base vector
 \newcommand{\cobvecn}[1]{\vec{g}_{\hat{#1}}} % covariant base vector
 \newcommand{\conbvecn}[1]{\vec{g}^{\hat{#1}}} % contravariant base vector
 
+% base vectors, abstract covariant and contravariant basis, reference configuration
+\newcommand{\coBvec}[1]{\vec{G}_{#1}} % covariant base vector
+\newcommand{\conBvec}[1]{\vec{G}^{#1}} % contravariant base vector
+\newcommand{\coBvecn}[1]{\vec{G}_{\hat{#1}}} % covariant base vector
+\newcommand{\conBvecn}[1]{\vec{G}^{\hat{#1}}} % contravariant base vector
+
+% current configuration
 \newcommand{\mtensor}{\tensorq{g}}  % metric tensor
 \newcommand{\mtensorc}{{\mathrm g}} % metric tensor, components
+
+% reference configuration
+\newcommand{\mTensor}{\tensorq{G}}  % metric tensor
+\newcommand{\mTensorc}{{\mathrm G}} % metric tensor, components
 
 % Christoffel symbols
 \newcommand{\christoffel}[2]{\tensor{\Gamma}{^{#1}_{#2}}}
@@ -525,6 +548,9 @@
 \newcommand{\norm}[2][]{\ensuremath{\left\|#2\right\|_{#1}}}
 \newcommand{\absnorm}[1]{\ensuremath{\left|#1\right|}}
 
+% distance
+\newcommand{\distance}[3][]{\distanceop_{#1}\left(#2, #3\right)} % distance in a metric space
+
 % volume
 \makeatletter
 \@ifundefined{volume}{%
@@ -542,14 +568,15 @@
 
 % surface and volume elements (current configuration)
 \newcommand{\cvolumee}{\diff \mathrm{v}}
-\newcommand{\csurfacee}{\diff \vec{s}}
+\newcommand{\csurfacee}{{\diff \vec{s}}}
 \newcommand{\csurfacees}{\diff \mathrm{s}}
-\newcommand{\clinee}{\diff \vec{x}}
+\newcommand{\clinee}{{\diff \vec{x}}}
 
 % volume and surface integral
 \newcommand{\intvolume}[2][\volume]{\int_{#1} #2\; \volumee} % volume integral, reference configuration
 \newcommand{\intcvolume}[2][\volume]{\int_{#1} #2\; \cvolumee} % volume integral, current configuration
 \newcommand{\intsvolume}[2][\svolume]{\int_{#1} #2\; \surfacee} % surface integral, reference configuration
+\newcommand{\intcsvolume}[2][\svolume]{\int_{#1} #2\; \csurfacee} % surface integral, current configuration
 
 % surface Jacobian
 \newcommand{\surfacej}{\mathrm{j}}
@@ -566,6 +593,8 @@
 \makeatother
 \newcommand{\vectordot}[2]{\ensuremath{#1 \bullet #2}}
 \newcommand{\vectorcross}[2]{\ensuremath{#1 \times #2}}
+
+\newcommand{\liebracket}[2]{\ensuremath{\left[#1, #2\right]}}
 
 % function spaces
 \newcommand{\scont}[2][\Omega]{\ensuremath{{\mathcal C}^{#2} \left(#1 \right)}} % space of continuous functions
