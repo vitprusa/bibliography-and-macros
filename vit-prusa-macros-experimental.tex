@@ -143,7 +143,7 @@
 \newcommand{\fgradc}{\tensorc{F}}
 \newcommand{\fgradrel}[3][]{\fgrad^{#1}_{#2}\left(#3\right)}
 
-% determinant of deformation gradient
+% determinant of deformation gradient, Jacobian
 \newcommand{\detfgrad}{J}
 
 % displacement
@@ -159,6 +159,9 @@
 \newcommand{\lcg}{\tensorq{B}}
 \newcommand{\lcgc}{\tensorc{B}}        
 \newcommand{\lcgrel}[3][]{\lcg^{#1}_{#2}\left(#3\right)}
+\newcommand{\lcgb}{\overline{\lcg}} % rescaled left Cauchy--Green tensor, theory of slightly compressible materials
+\newcommand{\lcgbc}{\overline{\lcgc}} % rescaled left Cauchy--Green tensor, theory of slightly compressible materials, components
+
 
 %\newcommand{\piolastrain}{\tensorq{b}} % Piola deformation tensor (inverse of right Cauchy--Green)
 %\newcommand{\fingerstrain}{\tensorq{c}} % Finger deformation tensor (inverse of left Cauchy--Green)
