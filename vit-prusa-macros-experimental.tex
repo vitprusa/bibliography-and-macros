@@ -143,7 +143,7 @@
 \newcommand{\fgradc}{\tensorc{F}}
 \newcommand{\fgradrel}[3][]{\fgrad^{#1}_{#2}\left(#3\right)}
 
-% determinant of deformation gradient
+% determinant of deformation gradient, Jacobian
 \newcommand{\detfgrad}{J}
 
 % displacement
@@ -159,6 +159,9 @@
 \newcommand{\lcg}{\tensorq{B}}
 \newcommand{\lcgc}{\tensorc{B}}        
 \newcommand{\lcgrel}[3][]{\lcg^{#1}_{#2}\left(#3\right)}
+\newcommand{\lcgb}{\overline{\lcg}} % rescaled left Cauchy--Green tensor, theory of slightly compressible materials
+\newcommand{\lcgbc}{\overline{\lcgc}} % rescaled left Cauchy--Green tensor, theory of slightly compressible materials, components
+
 
 %\newcommand{\piolastrain}{\tensorq{b}} % Piola deformation tensor (inverse of right Cauchy--Green)
 %\newcommand{\fingerstrain}{\tensorq{c}} % Finger deformation tensor (inverse of left Cauchy--Green)
@@ -418,7 +421,8 @@
 \newcommand{\entalphy}{\ensuremath{h}} % specific enthalpy
 \newcommand{\gibbs}{\ensuremath{g}} % specific Gibbs free energy
 
-\newcommand{\temp}{\ensuremath{\theta}} % temperature
+\newcommand{\temp}{\ensuremath{\theta}} % temperature, Eulerian description
+\newcommand{\Temp}{\ensuremath{\Theta}} % temperature, Lagrangian description
 \newcommand{\thpressure}{\ensuremath{p_{\mathrm{th}}}} % thermodynamic pressure
 
 \newcommand{\mns}{\ensuremath{m}} % mean normal stress
@@ -469,8 +473,9 @@
 \newcommand{\thaffinityc}[1]{\vec{a}_{#1}} % thermodynamic affinity, current configuration
 
 % Entropy production
-\newcommand{\entprodc}{\xi} % entorpy production, current configuration
-\newcommand{\entprodctemp}{\zeta} % entorpy production times temperature, current configuration
+\newcommand{\entprodc}{\xi} % entropy production, current configuration
+%  The entropy evolution equation is written as \rho \dd{\entropy}{t} + \divx \entfluxc = \entprodc
+\newcommand{\entprodctemp}{\zeta} % entropy production times temperature, current configuration
 
 % Derivatives, partial derivatives, covariant derivatives 
 \newcommand{\pd}[2]{\ensuremath{\frac{\partial {#1}}{\partial {#2}}}}
@@ -586,6 +591,7 @@
 \newcommand{\tensordot}[2]{\ensuremath{#1 : #2}} 
 }
 \makeatother
+\newcommand{\tensortensorbox}[2]{\ensuremath{#1 \boxtimes #2}}
 \newcommand{\vectordot}[2]{\ensuremath{#1 \bullet #2}}
 \newcommand{\vectorcross}[2]{\ensuremath{#1 \times #2}}
 
