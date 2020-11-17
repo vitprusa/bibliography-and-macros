@@ -961,6 +961,44 @@
   doi		= {10.1137/0520056}
 }
 
+@Article{	  amestoy.pr.duff.is.ea:fully,
+  author	= {Amestoy, Patrick R. and Duff, Iain S. and L'Excellent,
+		  Jean-Yves and Koster, Jacko},
+  title		= {A fully asynchronous multifrontal solver using distributed
+		  dynamic scheduling},
+  year		= {2001},
+  volume	= {23},
+  number	= {1},
+  doi		= {10.1137/S0895479899358194},
+  abstract	= {In this paper, we analyze the main features and discuss
+		  the tuning of the algorithms for the direct solution of
+		  sparse linear systems on distributed memory computers
+		  developed in the context of a long term European research
+		  project. The algorithms use a multifrontal approach and are
+		  especially designed to cover a large class of problems. The
+		  problems can be symmetric positive definite, general
+		  symmetric, or unsymmetric matrices, both possibly rank
+		  deficient, and they can be provided by the user in several
+		  formats. The algorithms achieve high performance by
+		  exploiting parallelism coming from the sparsity in the
+		  problem and that available for dense matrices. The
+		  algorithms use a dynamic distributed task scheduling
+		  technique to accommodate numerical pivoting and to allow
+		  the migration of computational tasks to lightly loaded
+		  processors. Large computational tasks are divided into
+		  subtasks to enhance parallelism. Asynchronous communication
+		  is used throughout the solution process to efficiently
+		  overlap communication with computation.We illustrate our
+		  design choices by experimental results obtained on an SGI
+		  Origin 2000 and an IBM SP2 for test matrices provided by
+		  industrial partners in the PARASOL project.},
+  journal	= {SIAM J. Matrix Anal. Appl.},
+  pages		= {15--41},
+  keywords	= {Gaussian elimination, asynchronous parallelism,
+		  multifrontal methods, distributed memory computation,
+		  sparse linear equations, dynamic scheduling}
+}
+
 @Article{	  amos.de:algorithm-644,
   author	= "D. E. Amos",
   title		= "{Algorithm 644}: {A} Portable Package for {Bessel}
