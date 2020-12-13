@@ -107,17 +107,21 @@
 \newcommand{\transposei}[1]{#1^{-\top}}
 \newcommand{\inverse}[1]{#1^{-1}}
 
-% Identity matrix
-\newcommand{\identity}{\ensuremath{\tensorq{I}}}
+% Identity matrix and zero matrix
+\newcommand{\identity}{\ensuremath{\tensorq{I}}} % identity
+\newcommand{\tensorzero}{{\mathbb{O}}} % zero tensor
 
 % Cauchy stress
 \newcommand{\cstress}{\tensorq{T}}
 \newcommand{\cstressc}{\tensorc{T}}
 
 % Cauchy stress, thermodynamically determined part
+%\DeclareMathSymbol{\robustrho}{\mathord}{letters}{"1A} % If I want to write \fid{\thcstressrho} it sometimes happes that the greek letters in subscript get crippled, this happens expecially in MDPI class. This tirck protects \rho. It would work also for other greek letters, the codes are given in  fontdef.dtx
 \newcommand{\thcstress}{\ensuremath{\cstress_{\mathrm{th}}}} 
+%\newcommand{\thcstressrho}{\ensuremath{\cstress_{\mathrm{th},\, \robustrho}}} % thermodynamically determined part divided by rho
+\newcommand{\thcstressrho}{\ensuremath{\cstress_{\mathrm{th},\, \mathnormal{\rho}}}} % thermodynamically determined part divided by rho
 \newcommand{\tracelessthcstress}{\traceless{\left(\thcstress\right)}} % traceless part
-\newcommand{\tracelessthcstressrho}{\traceless{\left(\cstress_{\mathrm{th}, \rho}\right)}} % traceless part divided by rho
+\newcommand{\tracelessthcstressrho}{\traceless{\left(\cstress_{\mathrm{th},\, \rho}\right)}} % traceless part divided by rho
 
 % Extra stress tensor
 \newcommand{\ecstress}{\tensorq{S}}
