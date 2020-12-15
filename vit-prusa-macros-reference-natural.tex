@@ -47,10 +47,21 @@
 \newcommand{\fgradel}{\ensuremath{\fgrad_{\elastic}}} % deformation gradient, elastic part
 \newcommand{\fgradpl}{\ensuremath{\fgrad_{\plastic}}} % deformation gradient, plastic part
 
+\newcommand{\detfgradnc}{\ensuremath{J_{\nplacer}}} % determinant of deformation gradient, elastic part, natural -> current
+
 % HENCKY STRAIN (for the NATURAL->CURRENT response)
 \newcommand{\henckystrainnc}{\tensorq{H}_{\nplacer}} % Hencky strain
 \newcommand{\henckystrainncc}{\tensorc{H}_{\nplacer}} % Hencky strain, components
 
+\newcommand{\henckync}{\henckystrainnc} % Hencky strain, different command for backward compatibility
+\newcommand{\henckyncc}{\henckystrainncc} % Hencky strain, components
+
 \newcommand{\devhenckync}{\overline{\tensorq{H}_{\nplacer}}} % Hencky strain, deviatoric part via deviatoric deformation
 \newcommand{\devhenckyncc}{\overline{\tensorc{H}_{\nplacer}}} % Hencky strain, deviatoric part via deviatoric deformation, components
+
+\newcommand{\sphenckync}{h_{\nplacer}} % Hencky strain, spherical part via deviatoric deformation
+
+% STRESS ASSOCIATED TO THE HENCKY STRAIN (for the NATURAL->CURRENT response)
+\newcommand{\thcstressnc}{\ensuremath{\cstress_{\nplacer}}} 
+\newcommand{\thcstressncrho}{\ensuremath{\cstress_{\nplacer,\, \mathnormal{\rho}}}} % thermodynamically determined part divided by rho
 
