@@ -56,12 +56,32 @@
 \newcommand{\henckync}{\henckystrainnc} % Hencky strain, different command for backward compatibility
 \newcommand{\henckyncc}{\henckystrainncc} % Hencky strain, components
 
-\newcommand{\devhenckync}{\overline{\tensorq{H}_{\nplacer}}} % Hencky strain, deviatoric part via deviatoric deformation
-\newcommand{\devhenckyncc}{\overline{\tensorc{H}_{\nplacer}}} % Hencky strain, deviatoric part via deviatoric deformation, components
+\newcommand{\devhenckync}{\overline{\henckync}} % Hencky strain, deviatoric part via deviatoric deformation
+\newcommand{\devhenckyncc}{\overline{\henckyncc}} % Hencky strain, deviatoric part via deviatoric deformation, components
+
+\newcommand{\devhenckyncdelta}{\tensorq{H}_{\nplacer, \, \mathnormal{\delta}}} % Hencky strain, deviatoric part as a traceless part
+\newcommand{\devhenckyncdeltac}{\tensorc{H}_{\nplacer, \, \mathnormal{\delta}}} % Hencky strain, deviatoric part as a traceless part
+
+\newcommand{\devhenckystrainnc}{\devhenckync} % Hencky strain, deviatoric part, different command for backward compatibility
+\newcommand{\devhenckystrainncc}{\devhenckyncc}
 
 \newcommand{\sphenckync}{h_{\nplacer}} % Hencky strain, spherical part via deviatoric deformation
+\newcommand{\sphenckystrainnc}{\sphenckync} % Hencky strain, spherical part via deviatoric deformation
 
 % STRESS ASSOCIATED TO THE HENCKY STRAIN (for the NATURAL->CURRENT response)
-\newcommand{\thcstressnc}{\ensuremath{\cstress_{\nplacer}}} 
-\newcommand{\thcstressncrho}{\ensuremath{\cstress_{\nplacer,\, \mathnormal{\rho}}}} % thermodynamically determined part divided by rho
+\newcommand{\thcstressnc}{\ensuremath{\cstress_{\nplacer}}}
+\newcommand{\devthcstressncdelta}{\ensuremath{\cstress_{\nplacer, \, \mathnormal{\delta}}}} % deviatoric part
+\newcommand{\thpressurenc}{\ensuremath{p_{\nplacer}}} % thermodynamic pressure associated to the elastic response
+
+
+\newcommand{\thcstressncrho}{\ensuremath{\tensorq{S}_{\nplacer}}} % thermodynamically determined part divided by rho
+\newcommand{\thcstressncrhoc}{\ensuremath{\tensorc{S}_{\nplacer}}} % thermodynamically determined part divided by rho, components
+
+\newcommand{\devthcstressncrho}{\ensuremath{\tensorq{S}_{\nplacer,\, \mathnormal{\delta}}}} % thermodynamically determined part divided by rho, deviatoric part
+
+\newcommand{\thpressurencrho}{\ensuremath{s_{\nplacer}}} % thermodynamic pressure associated to the elastic response, divided by rho
+
+% \newcommand{\thcstressncrho}{\ensuremath{\tensorq{S}}} % thermodynamically determined part divided by rho
+% \newcommand{\devthcstressncrho}{\ensuremath{\tensorq{S}_{\mathnormal{\delta}}}} % thermodynamically determined part divided by rho, deviatoric part
+% \newcommand{\thpressurencrho}{\ensuremath{s}} % thermodynamic pressure associated to the elastic response, divided by rho
 
