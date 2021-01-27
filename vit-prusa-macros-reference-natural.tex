@@ -1,6 +1,7 @@
 \newcommand{\rplacer}{\kappa_0}       % placer, reference configuration
+\newcommand{\rrplacer}{\kappa_R}       % placer, reference configuration
 \newcommand{\cplacer}{\kappa_t}       % placer, current configuration
-\newcommand{\nplacer}{\kappa_{\mathnormal{p}(\mathnormal{t})}}  % placer, natural configuration
+\newcommand{\nplacer}{\mathnormal{\kappa}_{\mathnormal{p}(\mathnormal{t})}}  % placer, natural configuration
 
 \newcommand{\refnat}{\mathrm{RN}} % reference -> natural
 \newcommand{\natcur}{\mathrm{NC}} % natural -> current
@@ -36,3 +37,51 @@
 
 \newcommand{\fgradnc}{\ensuremath{\fgrad_{\nplacer}}} % deformation gradient, natural -> current
 \newcommand{\fgradrc}{\ensuremath{\fgrad}} % deformation gradient, reference -> current, components
+
+% OTHER NOTATIONS
+\newcommand{\fgradtot}{\ensuremath{\fgrad_{\rrplacer}}} % total deformation gradient
+
+\newcommand{\elastic}{\mathrm{e}} % elastic
+\newcommand{\plastic}{\mathrm{p}} % plastic
+
+\newcommand{\fgradel}{\ensuremath{\fgrad_{\elastic}}} % deformation gradient, elastic part
+\newcommand{\fgradpl}{\ensuremath{\fgrad_{\plastic}}} % deformation gradient, plastic part
+
+\newcommand{\detfgradnc}{\ensuremath{J_{\nplacer}}} % determinant of deformation gradient, elastic part, natural -> current
+
+% HENCKY STRAIN (for the NATURAL->CURRENT response)
+\newcommand{\henckystrainnc}{\tensorq{H}_{\nplacer}} % Hencky strain
+\newcommand{\henckystrainncc}{\tensorc{H}_{\nplacer}} % Hencky strain, components
+
+\newcommand{\henckync}{\henckystrainnc} % Hencky strain, different command for backward compatibility
+\newcommand{\henckyncc}{\henckystrainncc} % Hencky strain, components
+
+\newcommand{\devhenckync}{\overline{\henckync}} % Hencky strain, deviatoric part via deviatoric deformation
+\newcommand{\devhenckyncc}{\overline{\henckyncc}} % Hencky strain, deviatoric part via deviatoric deformation, components
+
+\newcommand{\devhenckyncdelta}{\tensorq{H}_{\nplacer, \, \mathnormal{\delta}}} % Hencky strain, deviatoric part as a traceless part
+\newcommand{\devhenckyncdeltac}{\tensorc{H}_{\nplacer, \, \mathnormal{\delta}}} % Hencky strain, deviatoric part as a traceless part
+
+\newcommand{\devhenckystrainnc}{\devhenckync} % Hencky strain, deviatoric part, different command for backward compatibility
+\newcommand{\devhenckystrainncc}{\devhenckyncc}
+
+\newcommand{\sphenckync}{h_{\nplacer}} % Hencky strain, spherical part via deviatoric deformation
+\newcommand{\sphenckystrainnc}{\sphenckync} % Hencky strain, spherical part via deviatoric deformation
+
+% STRESS ASSOCIATED TO THE HENCKY STRAIN (for the NATURAL->CURRENT response)
+\newcommand{\thcstressnc}{\ensuremath{\cstress_{\nplacer}}}
+\newcommand{\devthcstressncdelta}{\ensuremath{\cstress_{\nplacer, \, \mathnormal{\delta}}}} % deviatoric part
+\newcommand{\thpressurenc}{\ensuremath{p_{\nplacer}}} % thermodynamic pressure associated to the elastic response
+
+
+\newcommand{\thcstressncrho}{\ensuremath{\tensorq{S}_{\nplacer}}} % thermodynamically determined part divided by rho
+\newcommand{\thcstressncrhoc}{\ensuremath{\tensorc{S}_{\nplacer}}} % thermodynamically determined part divided by rho, components
+
+\newcommand{\devthcstressncrho}{\ensuremath{\tensorq{S}_{\nplacer,\, \mathnormal{\delta}}}} % thermodynamically determined part divided by rho, deviatoric part
+
+\newcommand{\thpressurencrho}{\ensuremath{s_{\nplacer}}} % thermodynamic pressure associated to the elastic response, divided by rho
+
+% \newcommand{\thcstressncrho}{\ensuremath{\tensorq{S}}} % thermodynamically determined part divided by rho
+% \newcommand{\devthcstressncrho}{\ensuremath{\tensorq{S}_{\mathnormal{\delta}}}} % thermodynamically determined part divided by rho, deviatoric part
+% \newcommand{\thpressurencrho}{\ensuremath{s}} % thermodynamic pressure associated to the elastic response, divided by rho
+

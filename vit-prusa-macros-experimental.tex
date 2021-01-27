@@ -107,17 +107,21 @@
 \newcommand{\transposei}[1]{#1^{-\top}}
 \newcommand{\inverse}[1]{#1^{-1}}
 
-% Identity matrix
-\newcommand{\identity}{\ensuremath{\tensorq{I}}}
+% Identity matrix and zero matrix
+\newcommand{\identity}{\ensuremath{\tensorq{I}}} % identity
+\newcommand{\tensorzero}{{\mathbb{O}}} % zero tensor
 
 % Cauchy stress
 \newcommand{\cstress}{\tensorq{T}}
 \newcommand{\cstressc}{\tensorc{T}}
 
 % Cauchy stress, thermodynamically determined part
+%\DeclareMathSymbol{\robustrho}{\mathord}{letters}{"1A} % If I want to write \fid{\thcstressrho} it sometimes happes that the greek letters in subscript get crippled, this happens expecially in MDPI class. This tirck protects \rho. It would work also for other greek letters, the codes are given in  fontdef.dtx
 \newcommand{\thcstress}{\ensuremath{\cstress_{\mathrm{th}}}} 
+%\newcommand{\thcstressrho}{\ensuremath{\cstress_{\mathrm{th},\, \robustrho}}} % thermodynamically determined part divided by rho
+\newcommand{\thcstressrho}{\ensuremath{\cstress_{\mathrm{th},\, \mathnormal{\rho}}}} % thermodynamically determined part divided by rho
 \newcommand{\tracelessthcstress}{\traceless{\left(\thcstress\right)}} % traceless part
-\newcommand{\tracelessthcstressrho}{\traceless{\left(\cstress_{\mathrm{th}, \rho}\right)}} % traceless part divided by rho
+\newcommand{\tracelessthcstressrho}{\traceless{\left(\cstress_{\mathrm{th},\, \rho}\right)}} % traceless part divided by rho
 
 % Extra stress tensor
 \newcommand{\ecstress}{\tensorq{S}}
@@ -421,7 +425,8 @@
 \newcommand{\entalphy}{\ensuremath{h}} % specific enthalpy
 \newcommand{\gibbs}{\ensuremath{g}} % specific Gibbs free energy
 
-\newcommand{\temp}{\ensuremath{\theta}} % temperature
+\newcommand{\temp}{\ensuremath{\theta}} % temperature, Eulerian description
+\newcommand{\Temp}{\ensuremath{\Theta}} % temperature, Lagrangian description
 \newcommand{\thpressure}{\ensuremath{p_{\mathrm{th}}}} % thermodynamic pressure
 
 \newcommand{\mns}{\ensuremath{m}} % mean normal stress
@@ -472,8 +477,9 @@
 \newcommand{\thaffinityc}[1]{\vec{a}_{#1}} % thermodynamic affinity, current configuration
 
 % Entropy production
-\newcommand{\entprodc}{\xi} % entorpy production, current configuration
-\newcommand{\entprodctemp}{\zeta} % entorpy production times temperature, current configuration
+\newcommand{\entprodc}{\xi} % entropy production, current configuration
+%  The entropy evolution equation is written as \rho \dd{\entropy}{t} + \divx \entfluxc = \entprodc
+\newcommand{\entprodctemp}{\zeta} % entropy production times temperature, current configuration
 
 % Derivatives, partial derivatives, covariant derivatives 
 \newcommand{\pd}[2]{\ensuremath{\frac{\partial {#1}}{\partial {#2}}}}
@@ -592,6 +598,7 @@
 \newcommand{\tensortensorbox}[2]{\ensuremath{#1 \boxtimes #2}}
 \newcommand{\vectordot}[2]{\ensuremath{#1 \bullet #2}}
 \newcommand{\vectorcross}[2]{\ensuremath{#1 \times #2}}
+\newcommand{\tensorschur}[2]{\ensuremath{#1 \circ #2}} % Schur/Hadamard product
 
 \newcommand{\liebracket}[2]{\ensuremath{\left[#1, #2\right]}}
 
