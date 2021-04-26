@@ -637,8 +637,22 @@
 \newcommand{\secondnsd}{N_2}
 
 % Laplace and Fourier transform
-\newcommand{\laplacetransform}[2]{{\mathcal L}\left[#1\right]\left(#2\right)}
-\newcommand{\fourriertransform}[2]{{\mathcal F}\left[#1\right]\left(#2\right)}
+\newcommand{\laplacetransforms}{{\mathcal L}}
+\newcommand{\laplacetransform}[2]{\laplacetransforms \left[#1\right]\left(#2\right)}
+\newcommand{\inverselaplacetransform}[2]{\inverse{\laplacetransforms} \left[#1\right]\left(#2\right)}
+
+\newcommand{\fouriertransforms}{{\mathcal F}}
+\newcommand{\fouriertransform}[2]{\fouriertransforms \left[#1\right]\left(#2\right)}
+\newcommand{\inversefouriertransform}[2]{\inverse{\fouriertransforms} \left[#1\right]\left(#2\right)}
+
+% Radon transformation
+\newcommand{\radontransforms}{{\mathcal R}}
+\newcommand{\radontransform}[2]{\radontransforms \left[#1\right]\left(#2\right)}
+\newcommand{\inverseradontransform}[2]{\inverse{\radontransforms} \left[#1\right]\left(#2\right)}
+
+% Hilbert transformation
+\newcommand{\hilbertransforms}{{\mathcal H}}
+\newcommand{\hilberttransform}[2]{\hilberttransforms \left[#1\right]\left(#2\right)}
 
 % Lagrangian
 \newcommand{\lagrangian}{{\mathcal L}}
