@@ -26,6 +26,8 @@
 \DeclareMathOperator{\residue}{res}
 \DeclareMathOperator{\ad}{ad} % adjoint ad_X (Y) = [X,Y]  
 \DeclareMathOperator{\distanceop}{dist} % distance in a metric space
+\DeclareMathOperator{\principalvalue}{p.v.} % Cauchy principal value
+
 
 % Kernel, range, rank
 \DeclareMathOperator{\kernelop}{{\mathcal N}}
@@ -337,14 +339,14 @@
 % base vectors, abstract covariant and contravariant basis, current configuration
 \newcommand{\cobvec}[1]{\vec{g}_{#1}} % covariant base vector
 \newcommand{\conbvec}[1]{\vec{g}^{#1}} % contravariant base vector
-\newcommand{\cobvecn}[1]{\vec{g}_{\hat{#1}}} % covariant base vector
-\newcommand{\conbvecn}[1]{\vec{g}^{\hat{#1}}} % contravariant base vector
+\newcommand{\cobvecn}[1]{\vec{g}_{\hat{#1}}} % covariant base vector, normalised
+\newcommand{\conbvecn}[1]{\vec{g}^{\hat{#1}}} % contravariant base vector, normalised
 
 % base vectors, abstract covariant and contravariant basis, reference configuration
 \newcommand{\coBvec}[1]{\vec{G}_{#1}} % covariant base vector
 \newcommand{\conBvec}[1]{\vec{G}^{#1}} % contravariant base vector
-\newcommand{\coBvecn}[1]{\vec{G}_{\hat{#1}}} % covariant base vector
-\newcommand{\conBvecn}[1]{\vec{G}^{\hat{#1}}} % contravariant base vector
+\newcommand{\coBvecn}[1]{\vec{G}_{\hat{#1}}} % covariant base vector, normalised
+\newcommand{\conBvecn}[1]{\vec{G}^{\hat{#1}}} % contravariant base vector, normalised
 
 % current configuration
 \newcommand{\mtensor}{\tensorq{g}}  % metric tensor
@@ -607,7 +609,7 @@
 \newcommand{\sdist}[1][\Omega]{\ensuremath{{\mathcal D} \left(#1 \right)}} % space of smooth functions with compact support
 \newcommand{\sdistd}[1][\Omega]{\ensuremath{{\mathcal D}^\prime \left(#1 \right)}} % dual to the space of smooth functions with compact support
 
-\newcommand{\schwartzd}[1][\Omega]{\ensuremath{{\mathcal S}^\prime \left(#1 \right)}}   % Schwatrz space
+\newcommand{\schwartzd}[1][\Omega]{\ensuremath{{\mathcal S}^\prime \left(#1 \right)}}   % Schwartz space
 \newcommand{\schwartz}[1][\Omega]{\ensuremath{{\mathcal S} \left(#1 \right)}}           % dual to Schwartz space           
 
 \newcommand{\scdiv}[1][\Omega]{\ensuremath{{\mathcal V} \left(#1 \right)}}
@@ -625,6 +627,8 @@
 % dualities, scalar products
 \newcommand{\fadual}[4]{\left\langle #1, #2\right\rangle_{#3, #4}}
 \newcommand{\fascal}[4]{\left\langle #1, #2\right\rangle_{#3, #4}}
+\newcommand{\ddual}[2]{\left\langle #1, #2\right\rangle} % duality in distribution theory
+
 
 % dual space
 \newcommand{\dspace}[1]{#1^{\star}}
@@ -637,8 +641,25 @@
 \newcommand{\secondnsd}{N_2}
 
 % Laplace and Fourier transform
-\newcommand{\laplacetransform}[2]{{\mathcal L}\left[#1\right]\left(#2\right)}
-\newcommand{\fourriertransform}[2]{{\mathcal F}\left[#1\right]\left(#2\right)}
+\newcommand{\laplacetransforms}{{\mathcal L}}
+\newcommand{\laplacetransform}[2]{\laplacetransforms \left[#1\right]\left(#2\right)}
+\newcommand{\inverselaplacetransform}[2]{\inverse{\laplacetransforms} \left[#1\right]\left(#2\right)}
+
+\newcommand{\fouriertransforms}{{\mathcal F}}
+\newcommand{\fouriertransform}[2]{\fouriertransforms \left[#1\right]\left(#2\right)}
+\newcommand{\inversefouriertransform}[2]{\inverse{\fouriertransforms} \left[#1\right]\left(#2\right)}
+
+% Radon transformation
+\newcommand{\radontransforms}{{\mathcal R}}
+\newcommand{\radontransform}[2]{\radontransforms \left[#1\right]\left(#2\right)}
+\newcommand{\inverseradontransform}[2]{\inverse{\radontransforms} \left[#1\right]\left(#2\right)}
+
+% Hilbert transformation
+\newcommand{\hilberttransforms}{{\mathcal H}}
+\newcommand{\hilberttransform}[2]{\hilberttransforms \left[#1\right]\left(#2\right)}
+
+% Convolution
+\newcommand{\convolution}[2]{#1 \ast #2}
 
 % Lagrangian
 \newcommand{\lagrangian}{{\mathcal L}}
