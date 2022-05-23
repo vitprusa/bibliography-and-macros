@@ -161,10 +161,14 @@
 \newcommand{\rcgc}{\tensorc{C}}        
 \newcommand{\rcgrel}[3][]{\rcg^{#1}_{#2}\left(#3\right)}
 
+\newcommand{\rcgb}{\overline{\rcg}} % rescaled right Cauchy--Green tensor, theory of slightly compressible materials
+\newcommand{\rcgbc}{\overline{\rcgc}} % rescaled right Cauchy--Green tensor, theory of slightly compressible materials, components
+
 % left Cauchy-Green tensor
 \newcommand{\lcg}{\tensorq{B}}
 \newcommand{\lcgc}{\tensorc{B}}        
 \newcommand{\lcgrel}[3][]{\lcg^{#1}_{#2}\left(#3\right)}
+
 \newcommand{\lcgb}{\overline{\lcg}} % rescaled left Cauchy--Green tensor, theory of slightly compressible materials
 \newcommand{\lcgbc}{\overline{\lcgc}} % rescaled left Cauchy--Green tensor, theory of slightly compressible materials, components
 
@@ -221,12 +225,18 @@
 \newcommand{\henckystrain}{\tensorq{H}} % Hencky strain
 \newcommand{\henckystrainc}{\tensorc{H}} % Hencky strain, components
 
+\newcommand{\henckystrainb}{\overline{\tensorq{H}}} % Hencky strain for rescaled left Cauchy--Green tensor
+\newcommand{\henckystrainbc}{\overline{\tensorc{H}}} % Hencky strain for rescaled left Cauchy--Green tensor, components
+
 \newcommand{\devhencky}{\overline{\tensorq{H}}} % Hencky strain, deviatoric part via deviatoric deformation
 \newcommand{\devhenckyc}{\overline{\tensorc{H}}} % Hencky strain, deviatoric part via deviatoric deformation, components
 
 % Hencky strain, Lagrangian
-\newcommand{\henckystrainr}{\tensorq{G}} % Hencky strain
+\newcommand{\henckystrainr}{\tensorq{G}} % Hencky strain 
 \newcommand{\henckystrainrc}{\tensorc{G}} % Hencky strain, components
+
+\newcommand{\henckystrainrb}{\overline{\tensorq{G}}} % Hencky strain for rescaled right Cauchy--Green tensor
+\newcommand{\henckystrainrbc}{\overline{\tensorc{G}}} % Hencky strain for rescaled right Cauchy--Green tensor, components
 
 \newcommand{\devhenckyr}{\overline{\tensorq{G}}} % Hencky strain, deviatoric part via deviatoric deformation
 \newcommand{\devhenckyrc}{\overline{\tensorc{G}}} % Hencky strain, deviatoric part via deviatoric deformation, components
