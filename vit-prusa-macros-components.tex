@@ -1,9 +1,18 @@
-\newcommand{\Txx}{\tensor{\tensorc{T}}{_{\hat{x}}_{\hat{x}}}}
-\newcommand{\Txy}{\tensor{\tensorc{T}}{_{\hat{x}}_{\hat{y}}}}
-\newcommand{\Tyy}{\tensor{\tensorc{T}}{_{\hat{y}}_{\hat{y}}}}
-\newcommand{\Tzz}{\tensor{\tensorc{T}}{_{\hat{z}}_{\hat{z}}}}
-\newcommand{\Tzy}{\tensor{\tensorc{T}}{_{\hat{z}}_{\hat{y}}}}
-\newcommand{\Tyz}{\tensor{\tensorc{T}}{_{\hat{y}}_{\hat{z}}}}
+% Components of Cauchy stress tensor
+\newcommand{\Txx}{\tensor{\cstressc}{_{\hat{x}}_{\hat{x}}}}
+\newcommand{\Txy}{\tensor{\cstressc}{_{\hat{x}}_{\hat{y}}}}
+\newcommand{\Tyy}{\tensor{\cstressc}{_{\hat{y}}_{\hat{y}}}}
+\newcommand{\Tzz}{\tensor{\cstressc}{_{\hat{z}}_{\hat{z}}}}
+\newcommand{\Tzy}{\tensor{\cstressc}{_{\hat{z}}_{\hat{y}}}}
+\newcommand{\Tyz}{\tensor{\cstressc}{_{\hat{y}}_{\hat{z}}}}
+
+% Components of the deviatoric part of the Cauchy stress tensor
+\newcommand{\Tdxx}{\tensor{{\left(\cstressc_{\delta}\right)}}{_{\hat{x}}_{\hat{x}}}}
+\newcommand{\Tdxy}{\tensor{{\left(\cstressc_{\delta}\right)}}{_{\hat{x}}_{\hat{y}}}}
+\newcommand{\Tdyy}{\tensor{{\left(\cstressc_{\delta}\right)}}{_{\hat{y}}_{\hat{y}}}}
+\newcommand{\Tdzz}{\tensor{{\left(\cstressc_{\delta}\right)}}{_{\hat{z}}_{\hat{z}}}}
+\newcommand{\Tdzy}{\tensor{{\left(\cstressc_{\delta}\right)}}{_{\hat{z}}_{\hat{y}}}}
+\newcommand{\Tdyz}{\tensor{{\left(\cstressc_{\delta}\right)}}{_{\hat{y}}_{\hat{z}}}}
 
 \newcommand{\linstrainxx}{\tensor{\linstrainc}{_{\hat{x}}_{\hat{x}}}}
 \newcommand{\linstrainxy}{\tensor{\linstrainc}{_{\hat{x}}_{\hat{y}}}}
