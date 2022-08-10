@@ -118,7 +118,7 @@
 \newcommand{\cstressc}{\tensorc{T}}
 
 % Cauchy stress, thermodynamically determined part
-%\DeclareMathSymbol{\robustrho}{\mathord}{letters}{"1A} % If I want to write \fid{\thcstressrho} it sometimes happes that the greek letters in subscript get crippled, this happens expecially in MDPI class. This tirck protects \rho. It would work also for other greek letters, the codes are given in  fontdef.dtx
+%\DeclareMathSymbol{\robustrho}{\mathord}{letters}{"1A} % If I want to write \fid{\thcstressrho} it sometimes happes that the greek letters in subscript gets crippled, this happens expecially in MDPI class. This trick protects \rho. It would work also for other greek letters, the codes are given in  fontdef.dtx
 \newcommand{\thcstress}{\ensuremath{\cstress_{\mathrm{th}}}} 
 %\newcommand{\thcstressrho}{\ensuremath{\cstress_{\mathrm{th},\, \robustrho}}} % thermodynamically determined part divided by rho
 \newcommand{\thcstressrho}{\ensuremath{\cstress_{\mathrm{th},\, \mathnormal{\rho}}}} % thermodynamically determined part divided by rho
@@ -525,6 +525,9 @@
 % Truesdell derivative
 \newcommand{\tfid}[1]{\ensuremath{\accentset{\medcircle}{#1}}}
 \newcommand{\tfidd}[1]{\ensuremath{\accentset{\medcircle \! \medcircle}{#1}}}
+
+% Generic objective derivative
+\newcommand{\genericfid}[1]{\ensuremath{\accentset{\star}{#1}}}
 
 % Material derivative (\dot with \overline)
 \newcommand{\mdif}[1]{\ensuremath{\dot{\overline{#1}}}}
