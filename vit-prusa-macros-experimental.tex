@@ -610,14 +610,24 @@
 
 % products
 \newcommand{\tensortensor}[2]{\ensuremath{#1 \otimes #2}}
+
 \makeatletter
+
 \@ifpackageloaded{MnSymbol} % : as binary operator needs MnSymbol package
 {
 \newcommand{\tensordot}[2]{\ensuremath{#1 \vdotdot #2}} 
 }{%
 \newcommand{\tensordot}[2]{\ensuremath{#1 : #2}} 
 }
+
+\@ifpackageloaded{MnSymbol} % : as binary operator needs MnSymbol package
+{
+  \newcommand{\tensorddot}[2]{\ensuremath{#1 \vdots #2}} 
+}{%
+  \newcommand{\tensorddot}[2]{\ensuremath{#1 \vdots #2}} 
+}
 \makeatother
+
 \newcommand{\tensortensorbox}[2]{\ensuremath{#1 \boxtimes #2}}
 \newcommand{\vectordot}[2]{\ensuremath{#1 \bullet #2}}
 \newcommand{\vectorcross}[2]{\ensuremath{#1 \times #2}}
