@@ -1,7 +1,15 @@
 This project shall be used as a shared library for all LaTeX documents.
 
 * vit-prusa-macros-experimental.tex
-This is the file that contains macros for frequently used LaTeX constructs. (Especially in continuum mechanics.) This global should not be a subject fro frequent changes, if there is a need to redefine a macro, it should be done on the local level (i.e. in a new macro file in the project directory) using \renewcommand command.
+This is the file that contains macros for frequently used LaTeX constructs. (Especially in continuum mechanics.) This global file should not be a subject to frequent changes, if there is a need to redefine a macro, it should be done on the local level (i.e. in a new macro file in the project directory) using \renewcommand command.
+
+The following files contain specific macros for less frequent LaTeX constructs. (Macros for tensor components in Cartesian coordinate system, cylindrical coordinate system, beam theory, Colombea algebra and so forth.)
+* vit-prusa-macros-beam.tex
+* vit-prusa-macros-colombeau.tex
+* vit-prusa-macros-components.tex
+* vit-prusa-macros-cylindrical.tex
+* vit-prusa-macros-reference-natural.tex
+* vit-prusa-macros-spectral.tex
 
 * vit-prusa.bib
 This is the bibliography file. It is maintained by the bibtool script, see file make.sh. Once you add an entry to the bibliography, the bibliography must be rebuilt using bibtool.
@@ -11,6 +19,9 @@ Shaded backgorund environments (theorem, lemma).
 
 * vit-prusa-env-list.tex
 Standard environments (theorem, lemma) without shaded background.
+
+* vit-prusa-listings-style.tex
+Environment for code listings -- colour specification and so forth.
 
 * print/vit-prusa-bibliography.tex
 Compiling this file in LaTeX creates a document where all bibliography referencese are printed alphabetically.
