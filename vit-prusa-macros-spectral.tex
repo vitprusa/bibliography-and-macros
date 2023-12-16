@@ -7,6 +7,11 @@
 \newcommand{\GMatrixc}[1]{\tensor{\tensorc{G}}{_{#1}}} % Green matrix components
 \newcommand{\GMatrix}[1]{\tensorq{G}_{#1}} % Green matrix
 
+\newcommand{\GFunction}{g} % Green function
+\newcommand{\GOperator}{\mathcal G} % Green operator
+
+\newcommand{\QOperator}{\mathcal Q} % coefficients operator
+
 \newcommand{\IMatrix}[1]{\tensorq{I}_{#1}} % Integration matrix
 
 \newcommand{\Pmatrix}[2]{\tensor{{\left( \tensorc{P}^{#1} \right)}}{_{#2}}} % resampling matrix
@@ -17,7 +22,11 @@
 \newcommand{\ChebyshevT}[1]{\mathrm{T}_{#1}} % Chebyshev polynomial
 \newcommand{\cbar}[1]{\bar{c}_{#1}} % C bar coefficient in the discret orthogonality condition
 
-\newcommand{\vecelem}[1]{{\left\llbracket #1 \right\rrbracket}} % elements of vectors, numbering from one
+%\newcommand{\vecelem}[1]{{\left\llbracket #1 \right\rrbracket}} % elements of vectors, numbering from one
+
+\newcommand{\vecelem}[1]{#1} % elements of vectors, numbering from one
+
+\newcommand{\opcompose}[2]{#1 \circ #2} % composition of functions/operators
 
 \DeclareMathOperator{\DCTI}{DCT-I}
 \DeclareMathOperator{\INTEGRATE}{INTEGRATE}
