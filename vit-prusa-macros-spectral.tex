@@ -2,7 +2,8 @@
 
 \newcommand{\DMatrixc}[1]{\tensor{\tensorc{D}}{_{#1}}} % differentiation matrix components
 \newcommand{\DMatrix}[1]{\tensorq{D}_{#1}} % differentiation matrix
-\newcommand{\DMatrixTilde}[1]{\widetilde{\tensorq{D}}_{#1}} % differentiation matrix, reduced 
+\newcommand{\DMatrixTilde}[1]{\widetilde{\tensorq{D}_{#1}}} % differentiation matrix, reduced 
+\newcommand{\DDMatrixTilde}[1]{\widetilde{\tensorq{D}_{#1}^2}} % differentiation matrix, second order, reduced 
 
 \newcommand{\GMatrixc}[1]{\tensor{\tensorc{G}}{_{#1}}} % Green matrix components
 \newcommand{\GMatrix}[1]{\tensorq{G}_{#1}} % Green matrix
@@ -28,7 +29,11 @@
 
 \newcommand{\opcompose}[2]{#1 \circ #2} % composition of functions/operators
 
+\newcommand{\mkron}[2]{\tensortensor{#1}{#2}} % Kronecker product of matrices
+
 \DeclareMathOperator{\DCTI}{DCT-I}
 \DeclareMathOperator{\INTEGRATE}{INTEGRATE}
 \DeclareMathOperator{\EXTEND}{EXTEND}
 \DeclareMathOperator{\REDUCE}{REDUCE}
+\DeclareMathOperator{\VEC}{VEC}
+\DeclareMathOperator{\DVEC}{DE-VEC}
