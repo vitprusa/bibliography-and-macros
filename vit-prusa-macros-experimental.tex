@@ -71,6 +71,8 @@
 % predicates
 \newcommand{\charac}{\ensuremath{\mathrm{char}}} % characteristic quantity such as length scale, etc.
 \newcommand{\reference}{\mathrm{ref}}
+\newcommand{\boundary}{\mathrm{bdr}}
+\newcommand{\initial}{\mathrm{init}}
 \newcommand{\crit}{\mathrm{crit}}
 \newcommand{\bydefinition}{\mathrm{def}}
 \newcommand{\traceless}[1]{{#1}_{\delta}}
@@ -118,7 +120,7 @@
 \newcommand{\cstressc}{\tensorc{T}}
 
 % Cauchy stress, thermodynamically determined part
-%\DeclareMathSymbol{\robustrho}{\mathord}{letters}{"1A} % If I want to write \fid{\thcstressrho} it sometimes happes that the greek letters in subscript gets crippled, this happens expecially in MDPI class. This trick protects \rho. It would work also for other greek letters, the codes are given in  fontdef.dtx
+%\DeclareMathSymbol{\robustrho}{\mathord}{letters}{"1A} % If I want to write \fid{\thcstressrho} it sometimes happens that the greek letters in subscripts get crippled, this happens expecially in MDPI class. This trick protects \rho. It would work also for other greek letters; the codes are given in fontdef.dtx
 \newcommand{\thcstress}{\ensuremath{\cstress_{\mathrm{th}}}} 
 %\newcommand{\thcstressrho}{\ensuremath{\cstress_{\mathrm{th},\, \robustrho}}} % thermodynamically determined part divided by rho
 \newcommand{\thcstressrho}{\ensuremath{\cstress_{\mathrm{th},\, \mathnormal{\rho}}}} % thermodynamically determined part divided by rho
@@ -471,11 +473,11 @@
  
 % Specific heat at constant volume 
 \newcommand{\cheatvol}{\ensuremath{c_{\mathrm{V}}}}
-\newcommand{\cheatvolref}{\ensuremath{c_{\mathrm{V}, \reference}}} % reference value
+\newcommand{\cheatvolref}{\ensuremath{c_{\mathrm{V},\, \reference}}} % reference value
 
 % Specific heat at constant pressure 
 \newcommand{\cheatpressure}{\ensuremath{c_{\mathrm{P}}}}
-\newcommand{\cheatpressureref}{\ensuremath{c_{\mathrm{P}, \reference}}} % reference value
+\newcommand{\cheatpressureref}{\ensuremath{c_{\mathrm{P},\, \reference}}} % reference value
 
 % Density in reference configuration
 \newcommand{\rhor}{\rho_{\mathrm{R}}}
@@ -608,6 +610,8 @@
 \newcommand{\intcvolume}[2][\volume]{\int_{#1} #2\; \cvolumee} % volume integral, current configuration
 \newcommand{\intsvolume}[2][\svolume]{\int_{#1} #2\; \surfacee} % surface integral, reference configuration
 \newcommand{\intcsvolume}[2][\svolume]{\int_{#1} #2\; \csurfacee} % surface integral, current configuration
+\newcommand{\intcsvolumes}[2][\svolume]{\int_{#1} #2\; \csurfacees} % surface integral, current configuration, scalar
+\newcommand{\intsvolumes}[2][\svolume]{\int_{#1} #2\; \surfacees} % surface integral, reference configuration, scalar
 
 % surface Jacobian
 \newcommand{\surfacej}{\mathrm{j}}
@@ -637,7 +641,7 @@
 \newcommand{\vectorcross}[2]{\ensuremath{#1 \times #2}}
 \newcommand{\tensorschur}[2]{\ensuremath{#1 \circ #2}} % Schur/Hadamard product
 
-\newcommand{\vectordotalt}[3]{\ensuremath{#1 \bullet_{#3} #2}}
+\newcommand{\vectordotalt}[3]{\ensuremath{#1 \bullet_{#3} #2}} % alternative scalar product
 
 \newcommand{\liebracket}[2]{\ensuremath{\left[#1, #2\right]}}
 
@@ -664,6 +668,7 @@
 % dualities, scalar products
 \newcommand{\fadual}[4]{\left\langle #1, #2\right\rangle_{#3, #4}}
 \newcommand{\fascal}[4]{\left\langle #1, #2\right\rangle_{#3, #4}}
+\newcommand{\fascalalt}[2]{\left\langle #1, #2 \right\rangle} % alternative scalar product
 \newcommand{\ddual}[2]{\left\langle #1, #2\right\rangle} % duality in distribution theory
 
 
