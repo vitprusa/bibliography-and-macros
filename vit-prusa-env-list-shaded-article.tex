@@ -18,7 +18,7 @@
 
 %\usepackage{thmtools} Please add this to preamble!
 
-\declaretheorem[shaded,numberwithin=chapter]{theorem}
+\declaretheorem[shaded]{theorem}
 \declaretheorem[shaded,sibling=theorem]{definition}
 \declaretheorem[shaded,sibling=theorem]{corollary}
 \declaretheorem[shaded,sibling=theorem]{lemma}
@@ -28,7 +28,7 @@
 \declaretheorem[sibling=theorem]{problem}
 \declaretheorem[sibling=theorem]{remark}
 
-\numberwithin{equation}{chapter}
+\numberwithin{equation}{section}
 
 % Environment for solution, corresponds to the definition of "proof" environment as taken from amsbook.cls
 \makeatletter
@@ -45,3 +45,32 @@
 }
 \providecommand{\solutionname}{Solution}
 \makeatother
+
+
+% theorems, remarks, definitions, etc.
+% requires amsmath, amsthm
+
+%\newtheorem{theorem}{Theorem} % this must be commented out if we use \usepackage{thmtools}
+
+%\theoremstyle{lemma}
+%\newtheorem{lemma}[theorem]{Lemma}
+
+%\theoremstyle{corollary}
+%\newtheorem{corollary}[theorem]{Corollary}
+
+%\theoremstyle{definition}
+%\newtheorem{definition}[theorem]{Definition} % this must be commented out if we use \usepackage{thmtools}
+
+%\theoremstyle{proposition}
+%\newtheorem{proposition}[theorem]{Proposition}
+%\theoremstyle{assumption}
+%\newtheorem{assumption}[theorem]{Assumption} 
+%\theoremstyle{condition}
+%\newtheorem{condition}[theorem]{Condition} 
+
+%\newtheorem{example}[theorem]{Example}
+%\newtheorem{exercise}[theorem]{Exercise}
+%\newtheorem{problem}[theorem]{Problem} 
+
+%\theoremstyle{remark}
+%\newtheorem{remark}[theorem]{Remark}
