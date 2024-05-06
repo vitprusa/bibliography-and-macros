@@ -2,11 +2,16 @@
 
 \newcommand{\DMatrixc}[1]{\tensor{\tensorc{D}}{_{#1}}} % differentiation matrix components
 \newcommand{\DMatrix}[1]{\tensorq{D}_{#1}} % differentiation matrix
+
+\newcommand{\DDMatrixBC}[1]{\tensorq{D}_{#1, \, \mathrm{bc}}^2} % second order differentiation matrix, projection, boundary values
+
 \newcommand{\DMatrixTilde}[1]{\widetilde{\tensorq{D}_{#1}}} % differentiation matrix, reduced 
 \newcommand{\DDMatrixTilde}[1]{\widetilde{\tensorq{D}_{#1}^2}} % differentiation matrix, second order, reduced 
 
 \newcommand{\GMatrixc}[1]{\tensor{\tensorc{G}}{_{#1}}} % Green matrix components
 \newcommand{\GMatrix}[1]{\tensorq{G}_{#1}} % Green matrix
+
+\newcommand{\GMatrixBC}[1]{\tensorq{G}_{#1, \, \mathrm{bc}}} % Green matrix, projection, dummy columns dealing with boundary values
 
 \newcommand{\GFunction}{g} % Green function
 \newcommand{\GOperator}{\mathcal G} % Green operator
