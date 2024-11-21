@@ -123,7 +123,7 @@
 \newcommand{\cstressc}{\tensorc{T}}
 
 % Cauchy stress, thermodynamically determined part
-%\DeclareMathSymbol{\robustrho}{\mathord}{letters}{"1A} % If I want to write \fid{\thcstressrho} it sometimes happens that the greek letters in subscripts get crippled, this happens expecially in MDPI class. This trick protects \rho. It would work also for other greek letters; the codes are given in fontdef.dtx
+%\DeclareMathSymbol{\robustrho}{\mathord}{letters}{"1A} % If I want to write \fid{\thcstressrho} it sometimes happens that the greek letters in subscripts get crippled, this happens especially in MDPI class. This trick protects \rho. It would work also for other greek letters; the codes are given in fontdef.dtx
 \newcommand{\thcstress}{\ensuremath{\cstress_{\mathrm{th}}}} 
 %\newcommand{\thcstressrho}{\ensuremath{\cstress_{\mathrm{th},\, \robustrho}}} % thermodynamically determined part divided by rho
 \newcommand{\thcstressrho}{\ensuremath{\cstress_{\mathrm{th},\, \mathnormal{\rho}}}} % thermodynamically determined part divided by rho
@@ -267,6 +267,9 @@
 \newcommand{\gradsym}{\ensuremath{\tensorq{D}}}
 \newcommand{\dgradsymsymb}{\ensuremath{\gradsym_{\delta}}}
 \newcommand{\gradvl}{\ensuremath{\tensorq{L}}}
+
+% logarithmic spin
+\newcommand{\logspin}{\ensuremath{\tensorq{\Omega}}^{\mathrm{log}}}
 
 % surface velocity
 \newcommand{\unders}[1]{\ensuremath{\underaccent{\mathrm{s}}{#1}}}
@@ -523,20 +526,24 @@
 \newcommand{\fidd}[1]{\ensuremath{\accentset{\triangledown \! \triangledown}{#1}}}
 
 % Lower convected derivative
-\newcommand{\lfid}[1]{\ensuremath{\accentset{\meddiamond}{#1}}}
-\newcommand{\lfidd}[1]{\ensuremath{\accentset{\meddiamond \! \meddiamond}{#1}}}
+\newcommand{\lfid}[1]{\ensuremath{\accentset{\vartriangle}{#1}}}
+\newcommand{\lfidd}[1]{\ensuremath{\accentset{\vartriangle \! \vartriangle}{#1}}}
 
 % Jaumann derivative
-\newcommand{\jfid}[1]{\ensuremath{\accentset{\vartriangle}{#1}}}
-\newcommand{\jfidd}[1]{\ensuremath{\accentset{\vartriangle \! \vartriangle}{#1}}}
+\newcommand{\jfid}[1]{\ensuremath{\accentset{\medcircle}{#1}}}
+\newcommand{\jfidd}[1]{\ensuremath{\accentset{\medcircle \! \medcircle}{#1}}}
+
+% Logarithmic corrotational derivative
+\newcommand{\logfid}[1]{\ensuremath{\accentset{\medcircle_{\mathrm{log}}}{#1}}}
+\newcommand{\logfidd}[1]{\ensuremath{\accentset{\medcircle_{\mathrm{log}} \! \medcircle _{\mathrm{log}}}{#1}}}
 
 % Green--Naghdi derivative
 \newcommand{\gfid}[1]{\ensuremath{\accentset{\medsquare}{#1}}}
 \newcommand{\gfidd}[1]{\ensuremath{\accentset{\medsquare \! \medsquare}{#1}}}
 
 % Truesdell derivative
-\newcommand{\tfid}[1]{\ensuremath{\accentset{\medcircle}{#1}}}
-\newcommand{\tfidd}[1]{\ensuremath{\accentset{\medcircle \! \medcircle}{#1}}}
+\newcommand{\tfid}[1]{\ensuremath{\accentset{\meddiamond}{#1}}}
+\newcommand{\tfidd}[1]{\ensuremath{\accentset{\meddiamond \! \meddiamond}{#1}}}
 
 % Generic objective derivative
 \newcommand{\genericfid}[1]{\ensuremath{\accentset{\star}{#1}}}
