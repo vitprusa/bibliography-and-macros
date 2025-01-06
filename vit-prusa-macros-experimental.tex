@@ -106,6 +106,7 @@
 \relax% do nothing
 }
 \makeatother
+
 \newcommand{\tensorq}[1]{\ensuremath{\mathbb{#1}}}      % tensorial quantity
 \newcommand{\tensorc}[1]{\ensuremath{\mathrm{#1}}}      % tensorial quantity components  
 
@@ -124,6 +125,7 @@
 
 % Cauchy stress, thermodynamically determined part
 %\DeclareMathSymbol{\robustrho}{\mathord}{letters}{"1A} % If I want to write \fid{\thcstressrho} it sometimes happens that the greek letters in subscripts get crippled, this happens especially in MDPI class. This trick protects \rho. It would work also for other greek letters; the codes are given in fontdef.dtx
+% Sometimes it also helps to swith of the bm package.
 \newcommand{\thcstress}{\ensuremath{\cstress_{\mathrm{th}}}} 
 %\newcommand{\thcstressrho}{\ensuremath{\cstress_{\mathrm{th},\, \robustrho}}} % thermodynamically determined part divided by rho
 \newcommand{\thcstressrho}{\ensuremath{\cstress_{\mathrm{th},\, \mathnormal{\rho}}}} % thermodynamically determined part divided by rho
@@ -192,13 +194,15 @@
 \newcommand{\stretchvrel}[3][]{\stretchv^{#1}_{#2}\left(#3\right)}
 
 % linearized strain (symmetric part of displacement gradient), skew-symmetric part of displacement gradient
+% THIS MUST BE FIXED
 \makeatletter
 \@ifpackageloaded{bm}% 
 {%
 \newcommand{\linstrain}{\bbespilon} %requires \usepackage[bbgreekl]{mathbbol}
 % YES, the spelling is wrong, but this is how it is coded in the package
 }{%
-\newcommand{\linstrain}{\tensorq{\varepsilon}}
+\newcommand{\linstrain}{\bbespilon} %requires \usepackage[bbgreekl]{mathbbol}
+%\newcommand{\linstrain}{\tensorq{\varepsilon}}
 }
 
 \@ifpackageloaded{bm}%
@@ -212,7 +216,8 @@
 {%
 \newcommand{\linstress}{\bbtau} % stress in linearised elasticity
 }{%
-\newcommand{\linstress}{\tensorq{\tau}}
+\newcommand{\linstress}{\bbtau} % stress in linearised elasticity
+%\newcommand{\linstress}{\tensorq{\tau}}
 }
 \makeatother
 
