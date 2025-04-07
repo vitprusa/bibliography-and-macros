@@ -43,6 +43,9 @@
 \DeclareMathOperator{\arctanh}{arctanh}
 \DeclareMathOperator{\arccoth}{arccoth}
 
+% sinc function
+\DeclareMathOperator{\sinc}{sinc}
+
 % invariants of second order tensor
 \DeclareMathOperator{\invariantI}{I_1}
 \DeclareMathOperator{\invariantII}{I_2}
@@ -103,6 +106,7 @@
 \relax% do nothing
 }
 \makeatother
+
 \newcommand{\tensorq}[1]{\ensuremath{\mathbb{#1}}}      % tensorial quantity
 \newcommand{\tensorc}[1]{\ensuremath{\mathrm{#1}}}      % tensorial quantity components  
 
@@ -113,6 +117,7 @@
 
 % Identity matrix and zero matrix
 \newcommand{\identity}{\ensuremath{\tensorq{I}}} % identity
+\newcommand{\foidentity}{\ensuremath{\mathcal{I}}} % fourth order identity tensor
 \newcommand{\tensorzero}{{\mathbb{O}}} % zero tensor
 
 % Cauchy stress
@@ -120,7 +125,8 @@
 \newcommand{\cstressc}{\tensorc{T}}
 
 % Cauchy stress, thermodynamically determined part
-%\DeclareMathSymbol{\robustrho}{\mathord}{letters}{"1A} % If I want to write \fid{\thcstressrho} it sometimes happens that the greek letters in subscripts get crippled, this happens expecially in MDPI class. This trick protects \rho. It would work also for other greek letters; the codes are given in fontdef.dtx
+%\DeclareMathSymbol{\robustrho}{\mathord}{letters}{"1A} % If I want to write \fid{\thcstressrho} it sometimes happens that the greek letters in subscripts get crippled, this happens especially in MDPI class. This trick protects \rho. It would work also for other greek letters; the codes are given in fontdef.dtx
+% Sometimes it also helps to swith of the bm package.
 \newcommand{\thcstress}{\ensuremath{\cstress_{\mathrm{th}}}} 
 %\newcommand{\thcstressrho}{\ensuremath{\cstress_{\mathrm{th},\, \robustrho}}} % thermodynamically determined part divided by rho
 \newcommand{\thcstressrho}{\ensuremath{\cstress_{\mathrm{th},\, \mathnormal{\rho}}}} % thermodynamically determined part divided by rho
@@ -189,13 +195,15 @@
 \newcommand{\stretchvrel}[3][]{\stretchv^{#1}_{#2}\left(#3\right)}
 
 % linearized strain (symmetric part of displacement gradient), skew-symmetric part of displacement gradient
+% THIS MUST BE FIXED
 \makeatletter
 \@ifpackageloaded{bm}% 
 {%
 \newcommand{\linstrain}{\bbespilon} %requires \usepackage[bbgreekl]{mathbbol}
 % YES, the spelling is wrong, but this is how it is coded in the package
 }{%
-\newcommand{\linstrain}{\tensorq{\varepsilon}}
+\newcommand{\linstrain}{\bbespilon} %requires \usepackage[bbgreekl]{mathbbol}
+%\newcommand{\linstrain}{\tensorq{\varepsilon}}
 }
 
 \@ifpackageloaded{bm}%
@@ -209,7 +217,8 @@
 {%
 \newcommand{\linstress}{\bbtau} % stress in linearised elasticity
 }{%
-\newcommand{\linstress}{\tensorq{\tau}}
+\newcommand{\linstress}{\bbtau} % stress in linearised elasticity
+%\newcommand{\linstress}{\tensorq{\tau}}
 }
 \makeatother
 
@@ -264,6 +273,10 @@
 \newcommand{\gradsym}{\ensuremath{\tensorq{D}}}
 \newcommand{\dgradsymsymb}{\ensuremath{\gradsym_{\delta}}}
 \newcommand{\gradvl}{\ensuremath{\tensorq{L}}}
+
+% logarithmic spin
+\newcommand{\logspin}{\genspin[\mathrm{log}]}
+\newcommand{\genspin}[1][\star]{\ensuremath{\tensorq{\Omega}}^{#1}}
 
 % surface velocity
 \newcommand{\unders}[1]{\ensuremath{\underaccent{\mathrm{s}}{#1}}}
@@ -390,6 +403,7 @@
 % distributions
 \newcommand{\diracdelta}{\delta}
 \newcommand{\Heaviside}{H}
+\newcommand{\UnitTriangle}{U_{\mathrm{Triangle}}}
 
 % hypergeometric function
 \newcommand{\hypergeom}[4]{\ensuremath{ \mathrm{F}\left( \left[#1, #2 \right]; \left[ #3 \right]; #4\right)}}
@@ -519,20 +533,28 @@
 \newcommand{\fidd}[1]{\ensuremath{\accentset{\triangledown \! \triangledown}{#1}}}
 
 % Lower convected derivative
-\newcommand{\lfid}[1]{\ensuremath{\accentset{\meddiamond}{#1}}}
-\newcommand{\lfidd}[1]{\ensuremath{\accentset{\meddiamond \! \meddiamond}{#1}}}
+\newcommand{\lfid}[1]{\ensuremath{\accentset{\vartriangle}{#1}}}
+\newcommand{\lfidd}[1]{\ensuremath{\accentset{\vartriangle \! \vartriangle}{#1}}}
 
 % Jaumann derivative
-\newcommand{\jfid}[1]{\ensuremath{\accentset{\vartriangle}{#1}}}
-\newcommand{\jfidd}[1]{\ensuremath{\accentset{\vartriangle \! \vartriangle}{#1}}}
+\newcommand{\jfid}[1]{\ensuremath{\accentset{\medcircle}{#1}}}
+\newcommand{\jfidd}[1]{\ensuremath{\accentset{\medcircle \! \medcircle}{#1}}}
+
+% Generic corrotational derivative
+\newcommand{\gencofid}[1]{\ensuremath{\accentset{\medcircle_{\star}}{#1}}}
+\newcommand{\gencofidd}[1]{\ensuremath{\accentset{\medcircle_{\star} \! \medcircle _{\star}}{#1}}}
+
+% Logarithmic corrotational derivative
+\newcommand{\logfid}[1]{\ensuremath{\accentset{\medcircle_{\mathrm{log}}}{#1}}}
+\newcommand{\logfidd}[1]{\ensuremath{\accentset{\medcircle_{\mathrm{log}} \! \medcircle _{\mathrm{log}}}{#1}}}
 
 % Green--Naghdi derivative
 \newcommand{\gfid}[1]{\ensuremath{\accentset{\medsquare}{#1}}}
 \newcommand{\gfidd}[1]{\ensuremath{\accentset{\medsquare \! \medsquare}{#1}}}
 
 % Truesdell derivative
-\newcommand{\tfid}[1]{\ensuremath{\accentset{\medcircle}{#1}}}
-\newcommand{\tfidd}[1]{\ensuremath{\accentset{\medcircle \! \medcircle}{#1}}}
+\newcommand{\tfid}[1]{\ensuremath{\accentset{\meddiamond}{#1}}}
+\newcommand{\tfidd}[1]{\ensuremath{\accentset{\meddiamond \! \meddiamond}{#1}}}
 
 % Generic objective derivative
 \newcommand{\genericfid}[1]{\ensuremath{\accentset{\star}{#1}}}
