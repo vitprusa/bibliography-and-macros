@@ -26,6 +26,7 @@
 \DeclareMathOperator{\residue}{res}
 \DeclareMathOperator{\ad}{ad} % adjoint ad_X (Y) = [X,Y]  
 \DeclareMathOperator{\distanceop}{dist} % distance in a metric space
+\DeclareMathOperator{\bregmandivergence}{D} % Bregman divergence
 \DeclareMathOperator{\principalvalue}{p.v.} % Cauchy principal value
 
 
@@ -449,13 +450,23 @@
 \newcommand{\asym}[1]{\ensuremath{\Asym \left( #1 \right)}}
 \newcommand{\sym}[1]{\ensuremath{\Sym \left( #1 \right)}}
 
+% Purely thermal and mechanical parts
+\newcommand{\thermp}{{\mathrm{therm}}}
+\newcommand{\mechp}{{\mathrm{mech}}}
+
 % Energy, free energy, entropy, temperature
 \newcommand{\tenergy}{\ensuremath{e}_{\mathrm{tot}}} % specific total energy (energy per unit mass), sum of specific internal energy and the specific kinetic energy
 \newcommand{\ienergy}{\ensuremath{e}} % specific internal energy (energy per unit mass)
+\newcommand{\volienergy}{\overline{\ienergy}} % specific internal energy (energy per unit volume)
+
 \newcommand{\menergy}{\ensuremath{e}_{\mathrm{mech}}} % specific mechanical energy (energy per unit mass), kinetic energy plus internal energy minus thermal contribution
 \newcommand{\kenergy}{\ensuremath{e_{\mathrm{kin}}}} % specific kinetic energy (kinetic energy per unit mass)
+
 \newcommand{\fenergy}{\ensuremath{\psi}} % specific free energy
+
 \newcommand{\entropy}{\ensuremath{\eta}} % specific entropy
+\newcommand{\volentropy}{\overline{\entropy}} % specific entropy (entropy per unit volume)
+
 \newcommand{\entalphy}{\ensuremath{h}} % specific enthalpy
 \newcommand{\gibbs}{\ensuremath{g}} % specific Gibbs free energy
 
@@ -481,7 +492,7 @@
 \newcommand{\netentropy}{\ensuremath{S}} % net entropy
 \newcommand{\netheat}{\ensuremath{Q}} % net heat
 
-% classical entropy, classical energy, classical volume -- for use in calculations in classical thermodynamics
+% Classical entropy, classical energy, classical volume -- for use in calculations in classical thermodynamics
 \newcommand{\ctentropy}{S}
 \newcommand{\ctenergy}{U}
 \newcommand{\ctvolume}{V}
@@ -632,10 +643,10 @@
 \newcommand{\linee}{\diff \vec{X}}
 
 % surface and volume elements (current configuration)
-\newcommand{\cvolumee}{\diff \mathrm{v}}
-\newcommand{\csurfacee}{{\diff \vec{s}}}
-\newcommand{\csurfacees}{\diff \mathrm{s}}
-\newcommand{\clinee}{{\diff \vec{x}}}
+\newcommand{\cvolumee}{{\diff} \mathrm{v}}
+\newcommand{\csurfacee}{{\diff} \vec{s}}
+\newcommand{\csurfacees}{{\diff} \mathrm{s}}
+\newcommand{\clinee}{{\diff} \vec{x}}
 
 % volume and surface integral
 \newcommand{\intvolume}[2][\volume]{\int_{#1} #2\; \volumee} % volume integral, reference configuration
