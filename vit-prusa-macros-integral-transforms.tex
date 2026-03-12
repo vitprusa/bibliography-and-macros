@@ -1,0 +1,62 @@
+\newcommand{\FourierTransform}[1]{\fouriertransforms \left[#1\right]}
+\newcommand{\InverseFourierTransform}[1]{\inverse{\fouriertransforms} \left[#1\right]}
+
+% Semidiscrete Fourier transform
+\newcommand{\FourierTransformSemidiscrete}[1]{\fouriertransforms_h \left[#1\right]}
+\newcommand{\InverseFourierTransformSemidiscrete}[1]{\inverse{\fouriertransforms}_h \left[#1\right]}
+
+\newcommand{\discreteconvolution}[2]{#1 \ast_h #2}
+\renewcommand{\tensorschur}[2]{\ensuremath{#1 \odot #2}} % Schur/Hadamard product
+
+% Discrete Fourier transform
+\newcommand{\FourierTransformDiscrete}[1]{\fouriertransforms_h^h \left[ #1 \right]}
+\newcommand{\InverseFourierTransformDiscrete}[1]{{\inverse{\fouriertransforms}}_h^h \left[ #1 \right]}
+\newcommand{\InverseFourierTransformDiscreteX}[1]{{\inverse{\fouriertransforms}}_h^{h,x} \left[ #1 \right]}
+
+\newcommand{\discreteperiodicconvolution}[2]{#1 \ast_h^h #2}
+
+\newcommand{\FourierTransformDiscreteMatrix}{\tensorq{F}_h^h}
+
+\newcommand{\DiagonalMatrix}{\tensorq{D}}
+
+% Fourier series
+\newcommand{\FourierSeries}[1]{\fouriertransforms^h \left[#1\right]}
+\newcommand{\InverseFourierSeries}[1]{{\inverse{\fouriertransforms}}^h \left[#1\right]}
+
+% Sine transform
+\newcommand{\sinetransforms}{\mathcal{S}}
+\newcommand{\SineTransform}[1]{\sinetransforms \left[ #1 \right]}
+\newcommand{\InverseSineTransform}[1]{\inverse{\sinetransforms} \left[ #1 \right]}
+
+\newcommand{\SineTransformSemidiscrete}[1]{\sinetransforms_h \left[#1\right]}
+\newcommand{\InverseSineTransformSemidiscrete}[1]{\inverse{\sinetransforms}_h \left[#1\right]}
+
+\newcommand{\SineTransformDiscrete}[1]{\sinetransforms_h^h \left[ #1 \right]}
+\newcommand{\InverseSineTransformDiscrete}[1]{{\inverse{\sinetransforms}}_h^h \left[ #1 \right]}
+
+\newcommand{\SineTransformDiscreteMatrix}{\tensorq{S}_h^h}
+
+% Fourier series
+\newcommand{\SineSeries}[1]{\sinetransforms^h \left[#1\right]}
+\newcommand{\InverseSineSeries}[1]{{\inverse{\sinetransforms}}^h \left[#1\right]}
+
+\newcommand{\CosineSeries}[1]{\cosinetransforms^h \left[#1\right]}
+\newcommand{\InverseCosineSeries}[1]{{\inverse{\cosinetransforms}}^h \left[#1\right]}
+
+% Cosine transform
+\newcommand{\cosinetransforms}{\mathcal{C}}
+\newcommand{\CosineTransform}[1]{\cosinetransforms \left[ #1 \right]}
+\newcommand{\InverseCosineTransform}[1]{\inverse{\cosinetransforms} \left[ #1 \right]}
+
+\newcommand{\CosineTransformSemidiscrete}[1]{\cosinetransforms_h \left[#1\right]}
+\newcommand{\InverseCosineTransformSemidiscrete}[1]{\inverse{\cosinetransforms}_h \left[#1\right]}
+
+\newcommand{\CosineTransformDiscrete}[1]{\cosinetransforms_h^h \left[ #1 \right]}
+\newcommand{\InverseCosineTransformDiscrete}[1]{{\inverse{\cosinetransforms}}_h^h \left[ #1 \right]}
+
+% Discrete Dirac function,  bandwidth limited interpolant
+
+\newcommand{\Sdiracdelta}{S}
+
+% J matrix -- matrix with ones on the secondary diagonal
+\newcommand{\jmatrix}{\tensorq{J}}
