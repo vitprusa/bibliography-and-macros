@@ -35,6 +35,10 @@
 \DeclareMathOperator{\rangeop}{{\mathcal R}}
 \DeclareMathOperator{\rankop}{rank}
 
+% Matlab's diag operator
+\DeclareMathOperator{\diag}{diag}
+
+
 % jump
 \newcommand{\jumpdis}[1]{\ensuremath{\left\lsem #1 \right\rsem}} % difference between function values at the point of jump discontinuity
 
@@ -127,7 +131,7 @@
 
 % Cauchy stress, thermodynamically determined part
 %\DeclareMathSymbol{\robustrho}{\mathord}{letters}{"1A} % If I want to write \fid{\thcstressrho} it sometimes happens that the greek letters in subscripts get crippled, this happens especially in MDPI class. This trick protects \rho. It would work also for other greek letters; the codes are given in fontdef.dtx
-% Sometimes it also helps to swith of the bm package.
+% Sometimes it also helps to switch of the bm package.
 \newcommand{\thcstress}{\ensuremath{\cstress_{\mathrm{th}}}} 
 %\newcommand{\thcstressrho}{\ensuremath{\cstress_{\mathrm{th},\, \robustrho}}} % thermodynamically determined part divided by rho
 \newcommand{\thcstressrho}{\ensuremath{\cstress_{\mathrm{th},\, \mathnormal{\rho}}}} % thermodynamically determined part divided by rho
