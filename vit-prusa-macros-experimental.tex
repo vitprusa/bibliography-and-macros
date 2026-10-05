@@ -115,10 +115,12 @@
 \newcommand{\tensorq}[1]{\ensuremath{\mathbb{#1}}}      % tensorial quantity
 \newcommand{\tensorc}[1]{\ensuremath{\mathrm{#1}}}      % tensorial quantity components  
 
-\newcommand{\conjugate}[1]{#1^\star}
-\newcommand{\transpose}[1]{#1^\top}
-\newcommand{\transposei}[1]{#1^{-\top}}
-\newcommand{\inverse}[1]{#1^{-1}}
+\newcommand{\conjugate}[1]{#1^\star} % conjugate
+\newcommand{\transpose}[1]{#1^\top} % transpose
+\newcommand{\transposei}[1]{#1^{-\top}} % transpose and inverse
+\newcommand{\inverse}[1]{#1^{-1}} % inverse
+
+\newcommand{\legendre}[1]{#1^\star} % Legendre transform
 
 % Identity matrix and zero matrix
 \newcommand{\identity}{\ensuremath{\tensorq{I}}} % identity
@@ -692,6 +694,7 @@
 \newcommand{\tensorschur}[2]{\ensuremath{#1 \circ #2}} % Schur/Hadamard product
 
 \newcommand{\vectordotalt}[3]{\ensuremath{#1 \bullet_{#3} #2}} % alternative scalar product
+\newcommand{\vectorinner}[2]{\ensuremath{\left(#1, #2 \right)}} % abstract inner product
 
 \newcommand{\liebracket}[2]{\ensuremath{\left[#1, #2\right]}}
 
