@@ -96,6 +96,7 @@
 \newcommand{\diff}{\mathrm{d}}
 \newcommand{\Diff}[1][]{\mathrm{D}_{#1}} % For Frechet and Gateaux derivative
 \newcommand{\hDiff}[2][]{\mathrm{D}^{#1}_{#2}} % Higher order Frechet and Gateaux derivative
+\newcommand{\hessian}[1]{\tensorq{H}_{#1}} % Hessian matrix
 
 % inexact differential
 \newcommand{\dbar}{{\mathchar'26\mkern-12mu \diff}}
@@ -471,17 +472,19 @@
 \newcommand{\tenergy}{\ensuremath{e}_{\mathrm{tot}}} % specific total energy (energy per unit mass), sum of specific internal energy and the specific kinetic energy
 \newcommand{\ienergy}{\ensuremath{e}} % specific internal energy (energy per unit mass)
 \newcommand{\volienergy}{\overline{\ienergy}} % specific internal energy (energy per unit volume)
+\newcommand{\voltenergy}{\volienergy_{\mathrm{tot}}} % total energy per unit volume, sum of internal energy per unit volume and kinetic energy per unit volume
 
 \newcommand{\menergy}{\ensuremath{e}_{\mathrm{mech}}} % specific mechanical energy (energy per unit mass), kinetic energy plus internal energy minus thermal contribution
 \newcommand{\kenergy}{\ensuremath{e_{\mathrm{kin}}}} % specific kinetic energy (kinetic energy per unit mass)
 
-\newcommand{\fenergy}{\ensuremath{\psi}} % specific free energy
+\newcommand{\fenergy}{\ensuremath{\psi}} % specific free energy (per unit mass)
 
-\newcommand{\entropy}{\ensuremath{\eta}} % specific entropy
+\newcommand{\entropy}{\ensuremath{\eta}} % specific entropy (per unit mass)
 \newcommand{\volentropy}{\overline{\entropy}} % specific entropy (entropy per unit volume)
+\newcommand{\volentropygen}{\overline{\entropy}_{\mathrm{gen}}} % specific entropy (entropy per unit volume), formally including the kinetic energy term
 
-\newcommand{\entalphy}{\ensuremath{h}} % specific enthalpy
-\newcommand{\gibbs}{\ensuremath{g}} % specific Gibbs free energy
+\newcommand{\entalphy}{\ensuremath{h}} % specific enthalpy (per unit mass)
+\newcommand{\gibbs}{\ensuremath{g}} % specific Gibbs free energy (per unit mass)
 
 % Decomposition of Helmholtz free energy to thermal and mechancial part
 \newcommand{\fenergyth}{\fenergy^{\mathrm{thermal}}} % purely thermal part of Helmholtz free energy
