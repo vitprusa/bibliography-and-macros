@@ -15,6 +15,7 @@
 \newcommand{\vqmax}{q_{\mathrm{max}}} % maximum length of the spring
 
 \newcommand{\tempsolvent}{\temp_{\mathrm{s}}} % temperature of the solvent
+\newcommand{\rhosolvent}{\rho_{\mathrm{s}}} % density of the solvent
 
 \newcommand{\divx}{\mathrm{div}_{\vec{x}}} % divergence in x-space
 \newcommand{\divq}{\mathrm{div}_{\vec{q}}} % divergence in q-space
@@ -42,6 +43,19 @@
 
 \newcommand{\rbead}[1]{\vec{r}_{#1}} % position of the bead
 \newcommand{\wiener}[1]{\vec{W}_{#1}} % Wiener process (acting on the bead #1)
+\newcommand{\wienerpm}[1]{\vec{W}^{#1}} % sum/difference of Wiener processes
 \newcommand{\tempbead}[1]{\temp_{\mathrm{s}, #1}} % solvent temperature at the position of the bead, linearised
 \newcommand{\ubead}[1]{\vec{u}_{#1}} % velocity of the bead (dumbbell-local-temperature-revisited-version-3)
 \newcommand{\mbead}{m} % mass of the bead (dumbbell-local-temperature-revisited-version-3)
+\newcommand{\springconst}{H} % spring constant, Hookean spring
+\newcommand{\fenergysolvent}{\fenergy_{\mathrm{s}}} % free energy of the solvent
+\newcommand{\fenergydumbbells}{\fenergy_{\mathrm{p}}} % polymeric (dumbbell) part of the specific free energy
+\newcommand{\fenergyperdumbbell}{f_{\mathrm{d}}} % free energy per dumbbell with the connector vector q (not per unit mass)
+\newcommand{\ienergyperdumbbell}{e_{\mathrm{d}}} % energy per dumbbell with the connector vector q (not per unit mass)
+\newcommand{\entropyperdumbbell}{s_{\mathrm{d}}} % entropy per dumbbell with the connector vector q (not per unit mass)
+\newcommand{\thpressuresolvent}{p_{\mathrm{th}, \mathrm{s}}} % thermodynamic pressure, solvent
+\newcommand{\constK}{K} % scaling constant K
+\newcommand{\polystress}{\tensorq{P}} % polymeric contribution to the stress, without the isotropic part
+\newcommand{\chempot}{\mu} % derivative of the polymeric part of the free energy with respect to the distribution function
+\newcommand{\affx}{\vec{X}_{\prob,\,\vec{x}}} % affinity, physical space
+\newcommand{\affq}{\vec{X}_{\prob,\,\vec{q}}} % affinity, configurational space
